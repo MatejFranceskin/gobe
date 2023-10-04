@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import sqlite3
+import re
+from unidecode import unidecode
 
 def url_request(url):
     while True:
@@ -20,7 +22,7 @@ def processSlikaURL(vrsta_id, url, author):
 
 def extractFromSlikeURL(vrsta_id, name):
     n = name.split()
-    url = "https://www.gobe.si/Slike/" + n[0] + n[1].capitalize()
+    url = "https://www.gobe.si/Slike/" + n[0] + n[1].capitalize().replace("-judae", "-Judae")
     response = url_request(url)
 
     if response.status_code == 200:
@@ -180,7 +182,7 @@ def extractFromZasciteniSeznamURL(url):
                 break
     conn.commit()
 
-def extractUzitnostUrl(url, id):
+def extractUzitnostUrl(url, id, name):
     response = url_request(url)
 
     if response.status_code == 200:
@@ -242,16 +244,41 @@ def extractUzitnostUrl(url, id):
                     print(edibility)
                     exit()
                 s = "UPDATE vrste SET edibility = '{}' WHERE id = {}".format(edibility, id)
-                print(s)
+#                print(s)
                 cursor.execute(s)
-                break
+
+            if "SINONIMI" in srow:
+                if name in ["Amanita battarrae", "Russula camarophylla", "Neoboletus luridiformis", "Limacella delicata", "Hygrophorus persicolor", "Craterellus undulatus", "Bovistella utriformis", "Ceriporia reticulata", "Psathyrella vernalis", "Lepiota helveola", "Lepiota brunneolilacea"]:
+                    continue
+                srow = srow.removeprefix('<p class="vspace">').replace('<strong>', '').replace('</strong>', '').replace('</p>', '').replace('<span class="-pm--3">', '').replace('</span>', '').strip()
+                sinonimi = srow.removeprefix('SINONIMI: ')
+                sin_arr = []
+                for sin in sinonimi.split(','):
+                    s_i = sin.find("<em>")
+                    e_i = sin.find("</em>")
+                    if (s_i != -1 and e_i != -1):
+                        sin_arr.append(sin[s_i+4:e_i])
+
+                found = False
+                for staroIme in imenaOSGS2013:
+                    if name == staroIme[0]:
+                        found = True
+                        break
+
+                if not found:
+                    for staroIme in imenaOSGS2013:
+                        if staroIme[0] in sin_arr:
+#                            print(oldName + " ---> " + name)
+                            s = "UPDATE vrste SET name_old = '{}', name_slo_old = '{}' WHERE id = {}".format(staroIme[0], staroIme[1], id)
+                            cursor.execute(s)
+                            break
         conn.commit()
 
 def checkUzitnost():
-    cursor.execute('''SELECT id,link FROM vrste WHERE edibility = ""''')
+    cursor.execute('''SELECT id,link,name FROM vrste WHERE edibility = ""''')
     records = cursor.fetchall()
     for row in records:
-        extractUzitnostUrl(row[1], row[0])
+        extractUzitnostUrl(row[1], row[0], row[2])
 
 def checkSlike():
     cursor.execute('''SELECT id, name FROM vrste''')
@@ -262,12 +289,46 @@ def checkSlike():
             extractFromSlikeURL(record[0], record[1])
     conn.commit()
 
+def extractOSGS2013():
+    file = open('osgs2013.txt', 'r')
+    list = []
+    for line in file.readlines():
+        sline = line.strip()
+        if line.startswith("\t"):
+            continue
+        if not line.startswith("  ") or not sline:
+            continue
+        if not sline.split('.')[0].isnumeric():
+            list[-1] += " " + sline
+            continue
+        list.append(sline)
+
+    for l in list:
+        l = re.sub("[\(\[].*?[\)\]]", "", l)
+        l = l.replace(" ex ", " ").replace(" & ", " ")
+        words = l.split()
+        name = words[1] + " " + words[2]
+        wi = 3
+        if words[3] == "var.":
+            name += " var. " + words[4]
+            wi = 5
+        slo_name = ""
+        for i in range(wi, len(words)):
+            if words[i].lower() != words[i] or words[i].replace(',', '').isnumeric():
+                continue
+            slo_name += words[i] + " "
+
+#        print(words[0].replace('.', '') + " # " + name + " # " + slo_name)
+        imenaOSGS2013.append((unidecode(name.strip()), slo_name.strip()))
+
 conn = sqlite3.connect('gobe.db')
 
 conn.execute('''CREATE TABLE IF NOT EXISTS vrste(
          id             INTEGER PRIMARY KEY AUTOINCREMENT,
          name           TEXT NOT NULL,
          name_slo       TEXT NOT NULL,
+         name_old       TEXT DEFAULT '',
+         name_slo_old   TEXT DEFAULT '',
          link           TEXT,
          list80         INTEGER DEFAULT 0 NOT NULL,
          list240        INTEGER DEFAULT 0 NOT NULL,
@@ -282,24 +343,28 @@ conn.execute('''CREATE TABLE IF NOT EXISTS slike(
          vrsta_id       INTEGER NOT NULL,
          link           TEXT NOT NULL,
          author         TEXT NOT NULL);''')
-         
+
 cursor = conn.cursor()
 
+imenaOSGS2013 = []
+
+extractOSGS2013()
 extractFromCelotniSeznamURL("https://www.gobe.si/Gobe/Gobe")
+extractFromCelotniSeznamURL("https://www.gobe.si/Protozoa")
+checkUzitnost()
 extractFromRdeciSeznamURL("https://www.gobe.si/Gobe/RdeciSeznam")
 extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamZacetni", "list80")
 extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamNadaljevalni", "list240")
 extractFromZasciteniSeznamURL("https://www.gobe.si/Gobe/ZasciteneGobe")
-checkUzitnost()
 checkSlike()
 
 #sqlite_select_query = '''SELECT * FROM vrste WHERE status != "" ORDER BY name ASC'''
-#sqlite_select_query = '''SELECT * FROM vrste ORDER BY name ASC'''
+#sqlite_select_query = '''SELECT name_old, name_slo_old, name, name_slo FROM vrste WHERE name_old != "" ORDER BY name ASC'''
 #cursor.execute(sqlite_select_query)
 #records = cursor.fetchall()
 #print("Total rows are:  ", len(records))
 #for row in records:
-#    print(row)
+#    print(row[0] + ", " + row[1] + " ===> " + row[2] + ", " + row[3])
 
 #sqlite_select_query = '''SELECT * FROM slike'''
 #cursor.execute(sqlite_select_query)
@@ -307,6 +372,17 @@ checkSlike()
 #print("Total rows are:  ", len(records))
 #for row in records:
 #    print(row)
+
+#print("#######################################################")
+#print("Stara imena, ki manjkajo v bazi:")
+#for staroIme in imenaOSGS2013:
+#    oldName = staroIme[0]
+#    cursor.execute('''SELECT id FROM vrste WHERE name = ? OR name_old = ?''', (oldName,oldName))
+#    records = cursor.fetchall()
+#    if not records:
+#        print(oldName + "; " + staroIme[1])
+#        continue
+#print("#######################################################")
 
 cursor.close()
 conn.commit()

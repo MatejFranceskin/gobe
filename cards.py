@@ -6,10 +6,12 @@ import requests
 import sqlite3
 
 class GobaOpis:
-  def __init__(self, id, ime, latinsko_ime, uzitnost, status, url, slika):
+  def __init__(self, id, ime, latinsko_ime, uzitnost, status, url, slika, staro_ime, staro_latinsko_ime):
     self.id = id
     self.ime = ime
     self.latinsko_ime = latinsko_ime
+    self.staro_ime = staro_ime
+    self.staro_latinsko_ime = staro_latinsko_ime
     self.uzitnost = uzitnost
     self.status = status
     self.url = url
@@ -21,6 +23,12 @@ def createCard(pdf, x1, y1, x2, y2, opis):
     text3 = opis.uzitnost.upper()
     text4 = opis.status.upper()
     text5 = str(opis.id)
+    text6 = ""
+    if opis.staro_ime:
+        text1 = opis.staro_ime.upper()
+        text2 = opis.staro_latinsko_ime
+        text6 = opis.ime.upper() + ", " + opis.latinsko_ime
+#        print("Staro ime: " + text1 + " " + text2 + " Novo ime: " + opis.ime.upper() + " " + opis.latinsko_ime)
     imagePath = opis.slika
     url = opis.url
 
@@ -44,7 +52,7 @@ def createCard(pdf, x1, y1, x2, y2, opis):
         text1 = t[0]
         text1a = t[1]
         text1_margin_factor = 0.2
-        text2_margin_factor = 0.18
+        text2_margin_factor = 0.17
     
     text_x = x1
     text1_y = y1 + text1_margin_factor * height
@@ -66,7 +74,6 @@ def createCard(pdf, x1, y1, x2, y2, opis):
 
     text5_h = text5_size_factor * height
     text5_y = y2
-
 
     if not text4:
         text1_y += 0.05 * height
@@ -130,6 +137,11 @@ def createCard(pdf, x1, y1, x2, y2, opis):
     pdf.set_font("ArialUni", '', text5_h)
     pdf.text(x2 - pdf.get_string_width(text5) - 2, text5_y - 1, text5)
 
+    if text6:
+        text6_width = pdf.get_string_width(text6)
+        w = (width - text6_width - image_width) / 2
+        pdf.text(text_x + w, text5_y - 1, text6)
+
 def url_request_file(url, filename):
     while True:
         try:
@@ -153,7 +165,7 @@ conn = sqlite3.connect('gobe.db')
 cursor = conn.cursor()
 
 opisi = []
-sqlite_select_query = '''SELECT id,name,name_slo,link,protected,status,edibility FROM vrste ORDER BY name ASC'''
+sqlite_select_query = '''SELECT id,name,name_slo,link,protected,status,edibility,name_old,name_slo_old FROM vrste ORDER BY name ASC'''
 cursor.execute(sqlite_select_query)
 records = cursor.fetchall()
 for record in records:
@@ -181,7 +193,7 @@ for record in records:
             status += "ogrožena vrsta"
         if status and record[5]:
             status += " (" + record[5] + ")"
-        opisi.append(GobaOpis(record[0], record[2], record[1], record[6], status, record[3], filename))
+        opisi.append(GobaOpis(record[0], record[2], record[1], record[6], status, record[3], filename, record[8], record[7]))
         break
 
 pdf_n = 1

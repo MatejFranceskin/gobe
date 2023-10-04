@@ -57,7 +57,7 @@
 
 
 Mikološka zveza Slovenije                     OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                            9
-      44. Amaníta battárrae (Boud.) Bon (1985)                              dvobarvni lupinar                              PU
+      44. Amaníta battárrae (Boud.) Bon (1985)                              dvobarvni lupinar                              PU
       45. Amaníta béckeri Huijsman (1962)                                   beckerjev lupinar                              PU
       46. Amaníta caesárea (Scop.) Pers. (1801)                             knežja mušnica                           U, Z, RS
       47. Amaníta cecíliae (Berk. & Broome) Bas (1984)                      pozlačeni lupinar                              PU
@@ -122,7 +122,7 @@ Mikološka zveza Slovenije                     OPERATIVNI SEZNAM GLIV SLOVENIJE 
 
 
 Mikološka zveza Slovenije                       OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                     10
-13.     ARTÓMYCES                                                       GRMULJE
+13.     ARTÓMYCES                                                       GRMULJE
       95. Artómyces pyxidátus (Pers.) Jülich (1982)                            cvetoča grmulja                   NU, RS
 
 14.     ASTERÓPHORA                                                     ZAJEDALKE
@@ -183,7 +183,7 @@ Mikološka zveza Slovenije                       OPERATIVNI SEZNAM GLIV SLOVENIJ
 
 
 Mikološka zveza Slovenije                      OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                  11
-  123. Bolétus erýthropus Pers. (1796)                                   žametasti goban                                 PU
+  123. Bolétus erýthropus Pers. (1796)                                   žametasti goban                                 PU
   124. Bolétus féchtneri Velen. (1922)                                   fechtnerjev goban                                U
   125. Bolétus ferrugíneus Schaeff. (1762)                               datljev goban                              U, 2657
   126. Bolétus flávus With. (1801)                                       rumenkasti goban                           U, 2658
@@ -245,7 +245,7 @@ Mikološka zveza Slovenije                      OPERATIVNI SEZNAM GLIV SLOVENIJE
 
 
 Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                         12
-37.   CANTHARÉLLUS                                                LISIČKE
+37.   CANTHARÉLLUS                                                LISIČKE
   162. Cantharéllus amethýsteus (Quél.) Sacc. (1887)                      luskata lisička                              U, 273
   163. Cantharéllus cibárius Fr. (1821)                                   navadna lisička                                   U
   164. Cantharéllus cinéreus (Pers.) Fr. (1821)                           siva lisička                                      U
@@ -305,7 +305,7 @@ Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013
 
 
 Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                         13
-52.   CLAVULÍNA                                                  GRIVAČE
+52.   CLAVULÍNA                                                  GRIVAČE
   188. Clavulína amethýstina (Bull.) Donk (1933)                          modrikasta grivača                 U
   189. Clavulína cinérea (Bull.) J. Schröt. (1889)                        siva grivača                       U
   190. Clavulína coralloídes (L.) J. Schröt. (1888)                       grebenasta grivača                 U
@@ -367,7 +367,7 @@ Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 20
 
 
 Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                           14
-61.   CONÓCYBE                                                       STOžKE
+61.   CONÓCYBE                                                       STOžKE
   228. Conócybe pubéscens (Gillet) Kühner (1935)                            puhasta stožka                                   NU
   229. Conócybe subovális Kühner & Watling (1980)                           oblasta stožka                                   NU
   230. Conócybe ténera (Schaeff.) Fayod (1889)                              ožlebičena stožka                                NU
@@ -431,7 +431,7 @@ Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 20
 
 
 Mikološka zveza Slovenije                     OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                          15
-  278. Cortinárius caeruléscens (Schaeff.) Fr. (1838)                       višnjeva koprenka                               U
+  278. Cortinárius caeruléscens (Schaeff.) Fr. (1838)                       višnjeva koprenka                               U
   279. Cortinárius caeruléscens var. depállens (M.M. Moser) Quadr. (1985) višnjeva koprenka, zbledeli različek              U
   280. Cortinárius cáesiocanéscens M.M. Moser (1952)                        sivomodrikasta koprenka                       UN
   281. Cortinárius cágei Melot (1990)                                       dvobarvna koprenka                        NU, 508
@@ -498,7 +498,7 @@ Mikološka zveza Slovenije                     OPERATIVNI SEZNAM GLIV SLOVENIJE 
 
 
 Mikološka zveza Slovenije                OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                            16
-  340. Cortinárius hinnuloídes Rob. Henry (1941)                             jasminova koprenka                              NU
+  340. Cortinárius hinnuloídes Rob. Henry (1941)                             jasminova koprenka                              NU
   341. Cortinárius holopháeus J.E. Lange (1935)                              vretenasta koprenka                        NU, 2718
   342. Cortinárius humícola (Quél.) Maire (1911)                             kosmičasta koprenka                             NU
   343. Cortinárius imbútus var. vílior (P. Karst.) P. Karst. (1883)          prežeta koprenka, malovredni različek       NU, 787
@@ -565,7 +565,7 @@ Mikološka zveza Slovenije                OPERATIVNI SEZNAM GLIV SLOVENIJE 2013 
 
 
 Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                              17
-  402. Cortinárius purpuráscens (Fr.) Fr. (1838)                              škrlateča koprenka                              U
+  402. Cortinárius purpuráscens (Fr.) Fr. (1838)                              škrlateča koprenka                              U
   403. Cortinárius purpuráscens f. genuínus Rob. Henry (1976)                 škrlateča koprenka, izvirna oblika              U
   404. Cortinárius purpuráscens f. lívidus M.M. Moser (1952)                  škrlateča koprenka, modrozelena oblika          U
   405. Cortinárius purpúreus (Bull.) Bidaud, Moënne-Locc. & Reumaux (1994) bagrena koprenka                             NU, 681
@@ -632,7 +632,7 @@ Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013
 
 
 Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                             18
-  465. Cortinárius vulpínus (Velen.) Rob. Henry (1947)                lisičja koprenka              NU
+  465. Cortinárius vulpínus (Velen.) Rob. Henry (1947)                lisičja koprenka              NU
   466. Cortinárius xánthochlórus Rob. Henry (1966)                    rumenozelena koprenka         NU
   467. Cortinárius xánthophýllus (Cooke) Rob. Henry (1943)            rumenolistna koprenka         NU
 
@@ -694,7 +694,7 @@ Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013
 
 
 Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                    19
-80.   DALDÍNIA                                                     OGLARKE
+80.   DALDÍNIA                                                     OGLARKE
   496. Daldínia concéntrica (Bolton) Ces. & De Not. (1863)              slojevita oglarka                              NU
 
 81.   DATRÓNIA                                                     ZVITOPORI
@@ -756,7 +756,7 @@ Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 201
 
 
 Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                       20
-   529. Entolóma sericátum (Britzelm.) Sacc. (1895)                    svilasta rdečelistka          UN
+   529. Entolóma sericátum (Britzelm.) Sacc. (1895)                    svilasta rdečelistka          UN
    530. Entolóma sericéllum (Fr.) P. Kumm. (1871)                      bela rdečelistka          S, 2751
    531. Entolóma seríceum Quél. (1872)                                 bleščeča rdečelistka            S
    532. Entolóma serrulátum (Pers.) Hesler (1967)                      črnomodra rdečelistka           S
@@ -819,7 +819,7 @@ Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 201
 
 
 Mikološka zveza Slovenije                      OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                 21
-104.   GLOEÓPORUS                                                      POKRIVAČE
+104.   GLOEÓPORUS                                                      POKRIVAČE
    566. Gloeóporus taxícola (Pers.) Gilb. & Ryvarden (1985)                obrobljena pokrivača              NU, 1730
 
 105.   GOMPHÍDIUS                                                      SLINARJI
@@ -881,7 +881,7 @@ Mikološka zveza Slovenije                      OPERATIVNI SEZNAM GLIV SLOVENIJE
 
 
 Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                   22
-   599. Hebelóma crustulinifórme (Bull.) Quél. (1872)              solzeča medlenka                    NU
+   599. Hebelóma crustulinifórme (Bull.) Quél. (1872)              solzeča medlenka                    NU
    600. Hebelóma fastíbile (Pers.) P. Kumm. (1871)                 kopučasta medlenka                  NU
    601. Hebelóma hiemále Bres. (1892)                              zimska medlenka               NU, 3006
    602. Hebelóma laterínum (Batsch) Vesterh. (2005)                kakavova medlenka        NU, 1057, 3008
@@ -945,7 +945,7 @@ Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 201
 
 
 Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                        23
-   643. Hýdnum ruféscens Schaeff. (1774)                                    rdečkasti ježek                                 U
+   643. Hýdnum ruféscens Schaeff. (1774)                                    rdečkasti ježek                                 U
    644. Hýdnum umbilicátum Peck (1902)                                      lijasti ježek                                   U
 
 125.   HYGRÓCYBE                                                     VLAžNICE
@@ -1011,7 +1011,7 @@ Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 201
 
 
 Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                           24
-   699. Hygróphorus lucórum Kalchbr. (1874)                             macesnova polževka                            U
+   699. Hygróphorus lucórum Kalchbr. (1874)                             macesnova polževka                            U
    700. Hygróphorus marzúolus (Fr.) Bres. (1893)                        marčna polževka                               U
    701. Hygróphorus mesótephrus Berk. & Broome (1854)                   obuta polževka                                U
    702. Hygróphorus nemóreus (Pers.) Fr. (1838)                         gozdna polževka                               U
@@ -1075,7 +1075,7 @@ Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 201
 
 
 Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                     25
-   743. Inócybe asteróspora Quél. (1879)                              zvezdastotrosna razcepljenka                         S
+   743. Inócybe asteróspora Quél. (1879)                              zvezdastotrosna razcepljenka                         S
    744. Inócybe bongárdii (Weinm.) Quél. (1872)                       bongardova razcepljenka                              U
    745. Inócybe calóspora Quél. (1881)                                bodičastotrosna razcepljenka                       NU
    746. Inócybe cervícolor (Pers.) Quél. (1886)                       srnjerjava razcepljenka                            NU
@@ -1140,7 +1140,7 @@ Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 201
 
 
 Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                          26
-141.   LACCÁRIA                                                    BLEDIVKE
+141.   LACCÁRIA                                                    BLEDIVKE
    794. Laccária amethýstina Cooke (1884)                              vijoličasta bledivka              U
    795. Laccária bícolor (Maire) P.D. Orton (1960)                     dvobarvna bledivka                U
    796. Laccária laccáta (Scop.) Cooke (1884)                          rdečkasta bledivka                U
@@ -1206,7 +1206,7 @@ Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013
 
 
 Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                      27
-   851. Lactárius ruginósus Romagn. (1957)                                 rebrava mlečnica                                NU
+   851. Lactárius ruginósus Romagn. (1957)                                 rebrava mlečnica                                NU
    852. Lactárius salmonícolor R. Heim & Leclair (1953)                    lososova sirovka                                  U
    853. Lactárius sanguífluus (Paulet) Fr. (1838)                          krvosočna sirovka                                 U
    854. Lactárius scrobiculátus (Scop.) Fr. (1838)                         jamičasta mlečnica                               PU
@@ -1270,7 +1270,7 @@ Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 20
 
 
 Mikološka zveza Slovenije                      OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                        28
-152.   LENZÍTES                                                     LENZOVKE
+152.   LENZÍTES                                                     LENZOVKE
    894. Lenzítes betulína (L.) Fr. (1838)                               brezova lenzovka                                    NU
 
 153.   LEÓTIA                                                       KAPIČARKE
@@ -1334,7 +1334,7 @@ Mikološka zveza Slovenije                      OPERATIVNI SEZNAM GLIV SLOVENIJE
 
 
 Mikološka zveza Slovenije                     OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                         29
-160.   LIMACÉLLA                                                   SPOLZENKE
+160.   LIMACÉLLA                                                   SPOLZENKE
    939. Limacélla delicáta var. gliodérma (Fr.) Gminder (1994)             okusna spolzenka, lepljivi različek         U
    940. Limacélla guttáta (Pers.) Konrad & Maubl. (1949)                   pokapana spolzenka                          U
 
@@ -1397,7 +1397,7 @@ Mikološka zveza Slovenije                     OPERATIVNI SEZNAM GLIV SLOVENIJE 
 
 
 Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                     30
-169.   MARÁSMIUS                                                 SEHLICE
+169.   MARÁSMIUS                                                 SEHLICE
    980. Marásmius androsáceus (L.) Fr. (1838)                        nitasta sehlica                   NU
    981. Marásmius bulliárdii Quél. (1878)                            bulliardova sehlica               NU
    982. Marásmius cocháerens (Pers.) Cooke & Quél. (1878)            trdobetna sehlica                 NU
@@ -1461,7 +1461,7 @@ Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 20
 
 
 Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                      31
-  1025. Mycéna pterígena (Fr.) P. Kumm. (1871)                            steljina čeladica             NU
+  1025. Mycéna pterígena (Fr.) P. Kumm. (1871)                            steljina čeladica             NU
   1026. Mycéna púra (Pers.) P. Kumm. (1871)                               redkvičasta čeladica           S
   1027. Mycéna renáti Quél. (1886)                                        renejeva čeladica             NU
   1028. Mycéna rósea Gramberg (1912)                                      strupena čeladica              S
@@ -1524,7 +1524,7 @@ Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 20
 
 
 Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                        32
-188.   PANÉLLUS                                                          ZGRUČEVCI
+188.   PANÉLLUS                                                          ZGRUČEVCI
   1061. Panéllus mítis (Pers.) Singer (1936)                                 mili zgručevec                  NU
   1062. Panéllus stípticus (Bull.) P. Karst. (1879)                          trpki zgručevec                 NU
 
@@ -1586,7 +1586,7 @@ Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 201
 
 
 Mikološka zveza Slovenije                    OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                           33
-  1097. Phéllinus populícola Niemelä (1975)                                topolov plutač                         NU
+  1097. Phéllinus populícola Niemelä (1975)                                topolov plutač                         NU
   1098. Phéllinus punctátus Pilát (1942)                                   ploščati plutač                        NU
   1099. Phéllinus robústus (P. Karst.) Bourdot & Galzin (1928)             hrastov plutač                         NU
   1100. Phéllinus trémulae (Bondartsev) Bondartsev & P.N. Borisov (1953)   trepetlikin plutač                     NU
@@ -1648,7 +1648,7 @@ Mikološka zveza Slovenije                    OPERATIVNI SEZNAM GLIV SLOVENIJE 2
 
 
 Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                 34
-211.   PLEURÓTUS                                               OSTRIGARJI
+211.   PLEURÓTUS                                               OSTRIGARJI
   1132. Pleurótus cornucópiae (Paulet) Rolland (1910)               trobljasti ostrigar              MU
   1133. Pleurótus drýinus (Pers.) P. Kumm. (1871)                   hrastov ostrigar                 MU
   1134. Pleurótus erýngii (DC.) Quél. (1872)                        možinin ostrigar                 MU
@@ -1711,7 +1711,7 @@ Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 20
 
 
 Mikološka zveza Slovenije                    OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                    35
-  1175. Psathyrélla leucótephra (Berk. & Broome) P.D. Orton (1960)       dimastolistna črnivka             NU
+  1175. Psathyrélla leucótephra (Berk. & Broome) P.D. Orton (1960)       dimastolistna črnivka             NU
   1176. Psathyrélla maculáta (C.S. Parker) A.H. Sm. (1972)               pegasta črnivka                   UN
   1177. Psathyrélla multipedáta (Peck) A.H. Sm. (1941)                   stonoga črnivka                   NU
   1178. Psathyrélla pértinax (Fr.) Örstadius (2007)                      zgrbančena črnivka           NU, 2096
@@ -1774,7 +1774,7 @@ Mikološka zveza Slovenije                    OPERATIVNI SEZNAM GLIV SLOVENIJE 2
 
 
 Mikološka zveza Slovenije                    OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                         36
-  1212. Ramária pállida (Schaeff.) Ricken (1920)                             bleda griva                                      S
+  1212. Ramária pállida (Schaeff.) Ricken (1920)                             bleda griva                                      S
   1213. Ramária rubélla (Schaeff.) R.H. Petersen (1974)                      panjeva griva                                   NU
   1214. Ramária ruféscens (Schaeff.) Corner (1950)                           rdečkasta griva                                  U
   1215. Ramária sanguínea (Pers.) Quél. (1888)                               krvobetna griva                                  U
@@ -1838,74 +1838,74 @@ Mikološka zveza Slovenije                    OPERATIVNI SEZNAM GLIV SLOVENIJE 2
 
 
 Mikološka zveza Slovenije                    OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                            37
- 1258. Rússula bádia Quél. (1880)                                cedrovna golobica                        S
- 1259. Rússula betulárum Hora (1960)                             brezovinska golobica                     S
- 1260. Rússula brúnneoviolácea Crawshay (1930)                   rjavovijoličasta golobica                U
- 1261. Rússula caerúlea (Pers.) Fr. (1838)                       grbičasta golobica                 U, 2226
- 1262. Rússula carpíni R. Girard & Heinem. (1956)                gabrova golobica                         U
- 1263. Rússula cávipes Britzelm. (1893)                          votlobetna golobica                    NU
- 1264. Rússula chloroídes (Krombh.) Bres. (1900)                 ozkolistna golobica                      U
- 1265. Rússula clarofláva Grove (1888)                           brezova golobica                         U
- 1266. Rússula crémeoavellánea Singer (1936)                     lešnikasta golobica                      U
- 1267. Rússula cúprea (Krombh.) J.E. Lange (1926)                žgoča golobica                         NU
- 1268. Rússula cúrtipes F.H. Møller & Jul. Schäff. (1935)        kratkobetna golobica                     U
- 1269. Rússula cyanoxántha (Schaeff.) Fr. (1863)                 modrikasta golobica                      U
- 1270. Rússula decípiens (Singer) Bon (1985)                     goljufiva golobica                     NU
- 1271. Rússula decolórans (Fr.) Fr. (1838)                       siveča golobica                          U
- 1272. Rússula délica Fr. (1838)                                 modrolistna golobica                     U
- 1273. Rússula densifólia Secr. ex Gillet (1876)                 gostolistna golobica                   NU
- 1274. Rússula emética (Schaeff.) Pers. (1796)                   bljuvna golobica                         S
- 1275. Rússula exálbicans (Pers.) Melzer & Zvára (1927)          razbarvana golobica         NU, 2265, 2299
- 1276. Rússula fagínea Romagn. ex Romagn. (1967)                 bukova golobica                          U
- 1277. Rússula farínipes Romell (1893)                           prožna golobica                        NU
- 1278. Rússula féllea (Fr.) Fr. (1838)                           žolta golobica                         NU
- 1279. Rússula fírmula Jul. Schäff. (1940)                       trdikasta golobica                     NU
- 1280. Rússula flavíspora Romagn. (1967)                         žoltotrosna golobica                   UN
- 1281. Rússula fóetens Pers. (1796)                              smrdljiva golobica                       S
- 1282. Rússula fónt-quéri Singer (1936)                          žleboroba golobica                       U
- 1283. Rússula frágilis Fr. (1838)                               krhka golobica                           S
- 1284. Rússula frágrans Romagn. (1954)                           dišeča golobica                        NU
- 1285. Rússula fuliginósa Sarnari (1993)                         čadasta golobica                       NU
- 1286. Rússula fuscorubroídes Bon (1976)                         temnoškrlatasta golobica               NU
- 1287. Rússula galóchroa (Fr.) Fr. (1874)                        mlečnobela golobica                      U
- 1288. Rússula gráta Britzelm. (1898)                            mandljeva golobica               NU, 2297
- 1289. Rússula gravéolens Romell (1885)                          hrastova golobica                        U
- 1290. Rússula grísea Fr. (1838)                                 sivkasta golobica                        U
- 1291. Rússula griseáscens (Bon & Gaugué) Marti (1984)           sivobetna golobica                       U
- 1292. Rússula helódes Melzer (1929)                             barjanska golobica                     NU
- 1293. Rússula heterophýlla (Fr.) Fr. (1838)                     rjavozelena golobica                     U
- 1294. Rússula illóta Romagn. (1954)                             blatna golobica                        NU
- 1295. Rússula insígnis Quél. (1888)                             mila golobica                            U
- 1296. Rússula íntegra (L.) Fr. (1838)                           usnjasta golobica                        U
- 1297. Rússula intermédia P. Karst. (1888)                       lundellova golobica              NU, 2302
- 1298. Rússula ionochlóra Romagn. (1952)                         siva golobica                            U
- 1299. Rússula láeta Jul. Schäff. (1952)                         spolzka golobica                         U
- 1300. Rússula lángei Bon (1970)                                 langejeva golobica                       U
- 1301. Rússula lepidícolor Romagn. (1962)                        čvrsta golobica                    U, 2860
- 1302. Rússula lilácea Quél. (1877)                              zasluzena golobica                       U
- 1303. Rússula luteotácta Rea (1922)                             rumeneča golobica                      NU
- 1304. Rússula maculáta Quél. (1877)                             pegasta golobica                       NU
- 1305. Rússula medulláta Romagn. (1997)                          sivozelena golobica                      U
- 1306. Rússula mellíolens Quél. (1897)                           medova golobica                          U
- 1307. Rússula mélzeri Zvára (1927)                              melzerjeva golobica                      U
- 1308. Rússula minútula Velen. (1920)                            drobcena golobica                        U
- 1309. Rússula mustelína Fr. (1838)                              lešnikova golobica                       U
- 1310. Rússula nauseósa (Pers.) Fr. (1838)                       gorska golobica                          U
- 1311. Rússula nígricans Fr. (1838)                              črneča golobica                        NU
- 1312. Rússula nítida (Pers.) Fr. (1838)                         bleščava golobica                        U
- 1313. Rússula nóbilis Velen. (1920)                             baržunasta golobica         NU, 2314, 2244
- 1314. Rússula ochrácea Fr. (1838)                               okrastobela golobica               U, 2954
- 1315. Rússula ochroléuca Fr. (1838)                             okrasta golobica                         U
- 1316. Rússula odoráta Romagn. (1950)                            vonljiva golobica                  U, 2861
- 1317. Rússula olivácea (Schaeff.) Fr. (1838)                    olivna golobica                         PU
- 1318. Rússula oliváceovioláscens Gillet (1874)                  olivnolilasta golobica                 NU
- 1319. Rússula pallidóspora J. Blum ex Romagn. (1967)            rumenolistna golobica                    U
- 1320. Rússula paludósa Britzelm. (1891)                         jagodna golobica                         U
+  1258. Rússula bádia Quél. (1880)                                cedrovna golobica                        S
+  1259. Rússula betulárum Hora (1960)                             brezovinska golobica                     S
+  1260. Rússula brúnneoviolácea Crawshay (1930)                   rjavovijoličasta golobica                U
+  1261. Rússula caerúlea (Pers.) Fr. (1838)                       grbičasta golobica                 U, 2226
+  1262. Rússula carpíni R. Girard & Heinem. (1956)                gabrova golobica                         U
+  1263. Rússula cávipes Britzelm. (1893)                          votlobetna golobica                    NU
+  1264. Rússula chloroídes (Krombh.) Bres. (1900)                 ozkolistna golobica                      U
+  1265. Rússula clarofláva Grove (1888)                           brezova golobica                         U
+  1266. Rússula crémeoavellánea Singer (1936)                     lešnikasta golobica                      U
+  1267. Rússula cúprea (Krombh.) J.E. Lange (1926)                žgoča golobica                         NU
+  1268. Rússula cúrtipes F.H. Møller & Jul. Schäff. (1935)        kratkobetna golobica                     U
+  1269. Rússula cyanoxántha (Schaeff.) Fr. (1863)                 modrikasta golobica                      U
+  1270. Rússula decípiens (Singer) Bon (1985)                     goljufiva golobica                     NU
+  1271. Rússula decolórans (Fr.) Fr. (1838)                       siveča golobica                          U
+  1272. Rússula délica Fr. (1838)                                 modrolistna golobica                     U
+  1273. Rússula densifólia Secr. ex Gillet (1876)                 gostolistna golobica                   NU
+  1274. Rússula emética (Schaeff.) Pers. (1796)                   bljuvna golobica                         S
+  1275. Rússula exálbicans (Pers.) Melzer & Zvára (1927)          razbarvana golobica         NU, 2265, 2299
+  1276. Rússula fagínea Romagn. ex Romagn. (1967)                 bukova golobica                          U
+  1277. Rússula farínipes Romell (1893)                           prožna golobica                        NU
+  1278. Rússula féllea (Fr.) Fr. (1838)                           žolta golobica                         NU
+  1279. Rússula fírmula Jul. Schäff. (1940)                       trdikasta golobica                     NU
+  1280. Rússula flavíspora Romagn. (1967)                         žoltotrosna golobica                   UN
+  1281. Rússula fóetens Pers. (1796)                              smrdljiva golobica                       S
+  1282. Rússula fónt-quéri Singer (1936)                          žleboroba golobica                       U
+  1283. Rússula frágilis Fr. (1838)                               krhka golobica                           S
+  1284. Rússula frágrans Romagn. (1954)                           dišeča golobica                        NU
+  1285. Rússula fuliginósa Sarnari (1993)                         čadasta golobica                       NU
+  1286. Rússula fuscorubroídes Bon (1976)                         temnoškrlatasta golobica               NU
+  1287. Rússula galóchroa (Fr.) Fr. (1874)                        mlečnobela golobica                      U
+  1288. Rússula gráta Britzelm. (1898)                            mandljeva golobica               NU, 2297
+  1289. Rússula gravéolens Romell (1885)                          hrastova golobica                        U
+  1290. Rússula grísea Fr. (1838)                                 sivkasta golobica                        U
+  1291. Rússula griseáscens (Bon & Gaugué) Marti (1984)           sivobetna golobica                       U
+  1292. Rússula helódes Melzer (1929)                             barjanska golobica                     NU
+  1293. Rússula heterophýlla (Fr.) Fr. (1838)                     rjavozelena golobica                     U
+  1294. Rússula illóta Romagn. (1954)                             blatna golobica                        NU
+  1295. Rússula insígnis Quél. (1888)                             mila golobica                            U
+  1296. Rússula íntegra (L.) Fr. (1838)                           usnjasta golobica                        U
+  1297. Rússula intermédia P. Karst. (1888)                       lundellova golobica              NU, 2302
+  1298. Rússula ionochlóra Romagn. (1952)                         siva golobica                            U
+  1299. Rússula láeta Jul. Schäff. (1952)                         spolzka golobica                         U
+  1300. Rússula lángei Bon (1970)                                 langejeva golobica                       U
+  1301. Rússula lepidícolor Romagn. (1962)                        čvrsta golobica                    U, 2860
+  1302. Rússula lilácea Quél. (1877)                              zasluzena golobica                       U
+  1303. Rússula luteotácta Rea (1922)                             rumeneča golobica                      NU
+  1304. Rússula maculáta Quél. (1877)                             pegasta golobica                       NU
+  1305. Rússula medulláta Romagn. (1997)                          sivozelena golobica                      U
+  1306. Rússula mellíolens Quél. (1897)                           medova golobica                          U
+  1307. Rússula mélzeri Zvára (1927)                              melzerjeva golobica                      U
+  1308. Rússula minútula Velen. (1920)                            drobcena golobica                        U
+  1309. Rússula mustelína Fr. (1838)                              lešnikova golobica                       U
+  1310. Rússula nauseósa (Pers.) Fr. (1838)                       gorska golobica                          U
+  1311. Rússula nígricans Fr. (1838)                              črneča golobica                        NU
+  1312. Rússula nítida (Pers.) Fr. (1838)                         bleščava golobica                        U
+  1313. Rússula nóbilis Velen. (1920)                             baržunasta golobica         NU, 2314, 2244
+  1314. Rússula ochrácea Fr. (1838)                               okrastobela golobica               U, 2954
+  1315. Rússula ochroléuca Fr. (1838)                             okrasta golobica                         U
+  1316. Rússula odoráta Romagn. (1950)                            vonljiva golobica                  U, 2861
+  1317. Rússula olivácea (Schaeff.) Fr. (1838)                    olivna golobica                         PU
+  1318. Rússula oliváceovioláscens Gillet (1874)                  olivnolilasta golobica                 NU
+  1319. Rússula pallidóspora J. Blum ex Romagn. (1967)            rumenolistna golobica                    U
+  1320. Rússula paludósa Britzelm. (1891)                         jagodna golobica                         U
 
 
 
 Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                         38
-  1321. Rússula parazúrea Jul. Schäff. (1931)                       sivomodra golobica                      U
+  1321. Rússula parazúrea Jul. Schäff. (1931)                       sivomodra golobica                      U
   1322. Rússula pectináta Fr. (1838)                                grebenasta golobica                    NU
   1323. Rússula pectinatoídes Peck (1907)                           rjavobetna golobica                    NU
   1324. Rússula pelargónia Niolle (1941)                            gorečnična golobica                    NU
@@ -1969,7 +1969,7 @@ Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013
 
 
 Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                          39
-244.   SCHIZÓPORA                                                  RAZPORKE
+244.   SCHIZÓPORA                                                  RAZPORKE
   1370. Schizópora flavípora (Berk. & M.A. Curtis ex Cooke) Ryvarden (1985) oranžna razporka             NU
   1371. Schizópora paradóxa (Schrad.) Donk (1967)                          nenavadna razporka            NU
 
@@ -2030,7 +2030,7 @@ Mikološka zveza Slovenije                  OPERATIVNI SEZNAM GLIV SLOVENIJE 201
 
 
 Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                        40
-258.   STROBILÚRUS                                                    STORžEVKE
+258.   STROBILÚRUS                                                    STORžEVKE
   1401. Strobilúrus esculéntus (Wulfen) Singer (1962)                     smrekova storževka                           U
 
 259.   STROPHÁRIA                                                     STRNIŠČNICE
@@ -2093,7 +2093,7 @@ Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 20
 
 
 Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                     41
-267.   TRICHOGLÓSSUM                                                JEZIKOVCI
+267.   TRICHOGLÓSSUM                                                JEZIKOVCI
   1444. Trichoglóssum hirsútum (Pers.) Boud. (1907)                       kosmati jezikovec                              NU
 
 268.   TRICHOLÓMA                                                   KOLOBARNICE
@@ -2159,7 +2159,7 @@ Mikološka zveza Slovenije                   OPERATIVNI SEZNAM GLIV SLOVENIJE 20
 
 
 Mikološka zveza Slovenije                 OPERATIVNI SEZNAM GLIV SLOVENIJE 2013                                          42
-  1502. Tricholóma víridifucátum Bon (1976)                              šarasta kolobarnica                   U
+  1502. Tricholóma víridifucátum Bon (1976)                              šarasta kolobarnica                   U
   1503. Tricholóma víridilutéscens M.M. Moser (1978)                     citronasta kolobarnica                U
 
 269.   TRICHOLOMÉLLA                                                ČEDNOGLAVKE
