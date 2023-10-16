@@ -9,6 +9,9 @@ switch($_GET['type']) {
     case "2":
         $where = "WHERE list240>0";
         break;
+    case "3":
+        $where = "WHERE edibility LIKE '%strupena%'";
+        break;
 }
 $query = "SELECT * FROM vrste " . $where . " ORDER BY RANDOM() LIMIT 5";
 

@@ -2,6 +2,7 @@
 <meta charset="UTF-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
+var quizType = "1";
 var answer = "";
 var link = "";
 var comment = "";
@@ -13,7 +14,7 @@ function getNext() {
     $(".result").hide();
     $("#image").attr("src", "");
     $.ajax({
-        url: "gobe.php?type=2",
+        url: "gobe.php?type=" + quizType,
         type: "GET",
         success: function(result) {
             const q = JSON.parse(result);
@@ -68,8 +69,17 @@ function optionClick(option) {
     $("#score").html(correct + ":" + wrong);
 }
 
-$(document).ready(function() {
+function setType(type) {
+    quizType = type;
+    for (let i = 0; i < 4; i++) {
+        $("#type" + i).css("background-color","white");
+    }
+    $("#type" + type).css("background-color","#4CAF50");
     getNext();
+}
+
+$(document).ready(function() {
+    setType(quizType);
     $("#next").click(function() {
         getNext();
     });
@@ -87,6 +97,18 @@ $(document).ready(function() {
     });
     $("#option5").click(function() {
         optionClick($("#option5").html());
+    });
+    $("#type0").click(function() {
+        setType("0");
+    });
+    $("#type1").click(function() {
+        setType("1");
+    });
+    $("#type2").click(function() {
+        setType("2");
+    });
+    $("#type3").click(function() {
+        setType("3");
     });
 });
 </script>
@@ -171,6 +193,14 @@ $(document).ready(function() {
 </tr>
 <tr class="next">
     <td class="next-td"><button class="next-button" id="next">NAPREJ</button></td>
+</tr>
+<tr class="options">
+    <td class="next-td">
+        <button class="next-button" id="type0">VSE</button>
+        <button class="next-button" id="type1">80</button>
+        <button class="next-button" id="type2">240</button>
+        <button class="next-button" id="type3">STRUPENE</button>
+    </td>
 </tr>
 </table>
 </body>
