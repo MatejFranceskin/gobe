@@ -24,7 +24,7 @@ def createCard(pdf, x1, y1, x2, y2, opis):
     text4 = opis.status.upper()
     text5 = str(opis.id)
     text6 = ""
-    if opis.staro_ime:
+    if stara_imena and opis.staro_ime:
         text1 = opis.staro_ime.upper()
         text2 = opis.staro_latinsko_ime
         text6 = opis.ime.upper() + ", " + opis.latinsko_ime
@@ -153,6 +153,7 @@ def url_request_file(url, filename):
         except:
             print("Retrying " + url)
 
+stara_imena = False
 page_width = 210
 page_height = 296
 n_columns = 2

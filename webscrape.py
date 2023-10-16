@@ -334,7 +334,8 @@ conn.execute('''CREATE TABLE IF NOT EXISTS vrste(
          list240        INTEGER DEFAULT 0 NOT NULL,
          protected      INTEGER DEFAULT 0 NOT NULL,
          status         TEXT DEFAULT '',
-         edibility      TEXT DEFAULT '');''')
+         edibility      TEXT DEFAULT '',
+         comment        TEXT DEFAULT '');''')
          
 conn.execute('''CREATE UNIQUE INDEX IF NOT EXISTS idx_name ON vrste(name);''')
 

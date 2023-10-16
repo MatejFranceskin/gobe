@@ -1,0 +1,177 @@
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+var answer = "";
+var link = "";
+var comment = "";
+var wrong = 0;
+var correct = 0;
+
+function getNext() {
+    $(".next").hide();
+    $(".result").hide();
+    $("#image").attr("src", "");
+    $.ajax({
+        url: "gobe.php?type=2",
+        type: "GET",
+        success: function(result) {
+            const q = JSON.parse(result);
+            answer = q.answer;
+            link = q.link;
+            $("#image").attr("src", q.image);
+            $("#option1").html(q.options[0]);
+            $("#option2").html(q.options[1]);
+            $("#option3").html(q.options[2]);
+            $("#option4").html(q.options[3]);
+            $("#option5").html(q.options[4]);
+            comment = "";
+            if (q.protected > 0) {
+                comment = "zaščitena";
+            }
+            if (q.status != "") {
+                if (comment != "") {
+                    comment += ", ";
+                }
+                comment += "rdeči seznam (" + q.status + ")";
+            }
+            if (q.edibility != "" && q.edibility != null) {
+                if (comment != "") {
+                    comment += ", ";
+                }
+                comment += q.edibility;
+            }
+            if (q.comment != "" && q.comment != null) {
+                if (comment != "") {
+                    comment += ", ";
+                }
+                comment += q.comment;
+            }
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+}
+
+function optionClick(option) {
+    if (option == answer) {
+        $("#result").html("Pravilno!<br><a href=\"" + link + "\">" + answer + "</a><br>" + comment);
+        $(".next").show();
+        correct++;
+    } else {
+        $("#result").html("Narobe!");
+        $(".next").hide();
+        wrong++;
+    }
+    $(".result").show();
+    $("#score").html(correct + ":" + wrong);
+}
+
+$(document).ready(function() {
+    getNext();
+    $("#next").click(function() {
+        getNext();
+    });
+    $("#option1").click(function() {
+        optionClick($("#option1").html());
+    });
+    $("#option2").click(function() {
+        optionClick($("#option2").html());
+    });
+    $("#option3").click(function() {
+        optionClick($("#option3").html());
+    });
+    $("#option4").click(function() {
+        optionClick($("#option4").html());
+    });
+    $("#option5").click(function() {
+        optionClick($("#option5").html());
+    });
+});
+</script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .imgbox {
+        display: grid;
+        height: 100%;
+    }
+    .center-fit {
+        max-width: 100%;
+        max-height: 100vh;
+        margin: auto;
+    }    
+    .option-button {
+        padding: 5px
+    }    
+    .option-td {
+        padding: 5px
+    }    
+    .next-button {
+        padding: 10px
+    }    
+    .next-td {
+        padding: 5px
+    }    
+    table,
+    td,
+    th {
+        border: 1px solid;
+    }
+    table {
+        text-align: center;
+    }
+    td {
+        vertical-align: center;
+    }      
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+    <td>
+        <div class="imgbox">
+            <img class="center-fit" id="image" src="">
+        </div>
+    </td>
+</tr>
+<tr>
+    <td class="option-td"><button class="option-button" id="option1">Option1</button></td>
+</tr>
+<tr>
+    <td class="option-td"><button class="option-button" id="option2">Option2</button></td>
+</tr>
+<tr>
+    <td class="option-td"><button class="option-button" id="option3">Option3</button></td>
+</tr>
+<tr>
+    <td class="option-td"><button class="option-button" id="option4">Option4</button></td>
+</tr>
+<tr>
+    <td class="option-td"><button class="option-button" id="option5">Option5</button></td>
+</tr>
+<tr>
+    <td><br></td>
+</tr>
+<tr>
+    <td><p id="score"></p></td
+</tr>
+<tr class="result">
+    <td></td>
+</tr>
+<tr class="result">
+    <td><p id="result"></p></td
+</tr>
+<tr class="result">
+    <td></td>
+</tr>
+<tr class="next">
+    <td class="next-td"><button class="next-button" id="next">NAPREJ</button></td>
+</tr>
+</table>
+</body>
+</html>
