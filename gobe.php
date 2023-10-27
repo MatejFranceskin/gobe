@@ -10,7 +10,16 @@ switch($_GET['type']) {
         $where = "WHERE list240>0";
         break;
     case "3":
-        $where = "WHERE edibility LIKE '%strupena%'";
+        $where = "WHERE name LIKE '%boletus%' OR name LIKE '%leccin%' OR name LIKE '%suill%' OR name LIKE '%imperator%' OR name LIKE '%tylopilus%' OR name LIKE '%baorangia%' OR name LIKE '%lanmaoa%' OR name LIKE '%imleria%' OR name LIKE '%xerocom%' OR name LIKE '%chalciporus%' OR name LIKE '%gyroporus%' OR name LIKE '%porphyrellus%' OR name LIKE '%gyrodon%' OR name LIKE '%phylloporus%' OR name LIKE '%strobilomyces%'";
+        break;
+    case "4":
+    $where = "WHERE edibility LIKE '%strupena%'";
+    break;
+    case "5":
+        $where = "WHERE protected>0";
+        break;
+    case "6":
+        $where = "WHERE status!=''";
         break;
 }
 $query = "SELECT * FROM vrste " . $where . " ORDER BY RANDOM() LIMIT 5";

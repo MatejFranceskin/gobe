@@ -8,8 +8,16 @@ var link = "";
 var comment = "";
 var wrong = 0;
 var correct = 0;
+var samoImena = false;
 
 function getNext() {
+    $(".option-td").hide();
+    if (samoImena) {
+        $("#ime").val("");
+        $(".vnosImena").show();
+    } else {
+        $(".vnosImena").hide();
+    }
     $(".next").hide();
     $(".result").hide();
     $("#image").attr("src", "");
@@ -44,7 +52,7 @@ function getNext() {
             }
             if (q.comment != "" && q.comment != null) {
                 if (comment != "") {
-                    comment += ", ";
+                    comment += "<br>";
                 }
                 comment += q.comment;
             }
@@ -57,11 +65,16 @@ function getNext() {
 
 function optionClick(option) {
     if (option == answer) {
-        $("#result").html("Pravilno!<br><a href=\"" + link + "\">" + answer + "</a><br>" + comment);
+        $("#result").html("Pravilno!<br><a href=\"" + link + "\" target=\"_blank\">" + answer + "</a><br>" + comment);
         $(".next").show();
+        $(".option-td").hide();
         correct++;
     } else {
-        $("#result").html("Narobe!");
+		if (!samoImena) {
+			$("#result").html("Narobe!");
+		} else {
+			$("#result").html("Narobe!<br><a href=\"" + link + "\" target=\"_blank\">" + answer + "</a><br>" + comment);
+		}
         $(".next").hide();
         wrong++;
     }
@@ -69,17 +82,87 @@ function optionClick(option) {
     $("#score").html(correct + ":" + wrong);
 }
 
+function normalize(ime) {
+	return ime.toLowerCase().replace(',', '').replace('-', '').trim().replace('č', 'c').replace('š', 's').replace('ž', 'z');
+}
+
+const levenshteinDistance = (s, t) => {
+  if (!s.length) return t.length;
+  if (!t.length) return s.length;
+  const arr = [];
+  for (let i = 0; i <= t.length; i++) {
+    arr[i] = [i];
+    for (let j = 1; j <= s.length; j++) {
+      arr[i][j] =
+        i === 0
+          ? j
+          : Math.min(
+              arr[i - 1][j] + 1,
+              arr[i][j - 1] + 1,
+              arr[i - 1][j - 1] + (s[j - 1] === t[i - 1] ? 0 : 1)
+            );
+    }
+  }
+  return arr[t.length][s.length];
+};
+
+function preveriIme() {
+    var ime = normalize($("#ime").val());
+	var pravoIme = normalize(answer);
+	var imeA = ime.split(" ");
+	var pravoImeA = pravoIme.split(" ");
+	var correct = true;
+	
+	if (imeA.length == pravoImeA.length) {
+		for (let i = 0; i < imeA.length; i++) {
+			if (levenshteinDistance(imeA[i], pravoImeA[i]) > 2) {
+				correct = false;
+				break;
+			}
+		}
+	} else {
+		correct = false;
+	}
+	if (correct) {
+	    optionClick(answer);
+	} else {
+	    optionClick("");
+	}
+	$(".next").show();
+}
+
 function setType(type) {
     quizType = type;
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 7; i++) {
         $("#type" + i).css("background-color","white");
     }
     $("#type" + type).css("background-color","#4CAF50");
     getNext();
 }
 
+function onImageLoad(image) {
+    if (!samoImena) {
+        setTimeout( function() {
+            $(".option-td").show();
+        }, 3000);
+    }
+}
+
 $(document).ready(function() {
     setType(quizType);
+	$("#samoImena").css("background-color","white");	
+	$("#samoImena").click(function() {
+		samoImena = !samoImena;
+		if (!samoImena) {
+	        $("#samoImena").css("background-color","white");
+        } else {
+		    $("#samoImena").css("background-color","#4CAF50");
+        }
+        getNext();
+    });
+	$("#preveriIme").click(function() {
+        preveriIme();
+    });
     $("#next").click(function() {
         getNext();
     });
@@ -110,6 +193,15 @@ $(document).ready(function() {
     $("#type3").click(function() {
         setType("3");
     });
+    $("#type4").click(function() {
+        setType("4");
+    });
+    $("#type5").click(function() {
+        setType("5");
+    });
+    $("#type6").click(function() {
+        setType("6");
+    });
 });
 </script>
 <style>
@@ -127,17 +219,26 @@ $(document).ready(function() {
         margin: auto;
     }    
     .option-button {
-        padding: 5px
+        padding: 5px;
+        font-size: 25px;
     }    
     .option-td {
         padding: 5px
     }    
     .next-button {
-        padding: 10px
-    }    
+        padding: 10px;
+        font-size: 30px;
+    }
+	.vnos-text {
+        padding: 10px;
+        font-size: 25px;
+	}
     .next-td {
         padding: 5px
-    }    
+    }
+    .result-text {
+        font-size: 20px;
+    }
     table,
     td,
     th {
@@ -157,7 +258,7 @@ $(document).ready(function() {
 <tr>
     <td>
         <div class="imgbox">
-            <img class="center-fit" id="image" src="">
+            <img class="center-fit" id="image" src="" onload="onImageLoad(this);" />
         </div>
     </td>
 </tr>
@@ -176,17 +277,26 @@ $(document).ready(function() {
 <tr>
     <td class="option-td"><button class="option-button" id="option5">Option5</button></td>
 </tr>
+<tr class="vnosImena">
+  <td>
+  <label class="vnos-text" for="ime">Ime:</label>
+  <input class="vnos-text" type="text" id="ime" name="ime" size="50">
+  <button class="vnos-text" id="preveriIme">Preveri</button>
+  </td>
+</tr>
 <tr>
     <td><br></td>
 </tr>
 <tr>
-    <td><p id="score"></p></td
+<td>
+    <p class="result-text" id="score"></p>
+</td>
 </tr>
 <tr class="result">
     <td></td>
 </tr>
 <tr class="result">
-    <td><p id="result"></p></td
+    <td><p class="result-text" id="result"></p></td
 </tr>
 <tr class="result">
     <td></td>
@@ -196,10 +306,15 @@ $(document).ready(function() {
 </tr>
 <tr class="options">
     <td class="next-td">
+		<button class="next-button" id="samoImena">IMENA</button>
         <button class="next-button" id="type0">VSE</button>
         <button class="next-button" id="type1">80</button>
         <button class="next-button" id="type2">240</button>
-        <button class="next-button" id="type3">STRUPENE</button>
+        <button class="next-button" id="type3">CEVARKE</button>
+        <br>
+        <button class="next-button" id="type4">STRUPENE</button>
+        <button class="next-button" id="type5">ZAŠČITENE</button>
+        <button class="next-button" id="type6">OGROŽENE</button>
     </td>
 </tr>
 </table>
