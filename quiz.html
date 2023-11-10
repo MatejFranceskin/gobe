@@ -9,81 +9,112 @@ var comment = "";
 var wrong = 0;
 var correct = 0;
 var samoImena = false;
+var gobeJson = null;
+var gobeJsonQuestions = [];
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+function getSuccess() {
+    const q = gobeJson[gobeJsonQuestions[0]];
+    answer = q.name;
+    link = q.link;
+    $("#image").attr("src", q.images[Math.floor(Math.random() * q.images.length)]);
+    options = [];
+    options.push(answer);
+    while (options.length < 5) {
+        var i = Math.floor(Math.random() * gobeJson.length);
+        if (options.indexOf(gobeJson[i].name) === -1) {
+            options.push(gobeJson[i].name);
+        }
+    }
+    shuffleArray(options);
+    $("#option1").html(options[0]);
+    $("#option2").html(options[1]);
+    $("#option3").html(options[2]);
+    $("#option4").html(options[3]);
+    $("#option5").html(options[4]);
+    comment = "";
+    if (q.protected > 0) {
+        comment = "zaščitena";
+    }
+    if (q.status != "") {
+        if (comment != "") {
+            comment += ", ";
+        }
+        comment += "rdeči seznam (" + q.status + ")";
+    }
+    if (q.edibility != "" && q.edibility != null) {
+        if (comment != "") {
+            comment += ", ";
+        }
+        comment += q.edibility;
+    }
+    if (q.comment != "" && q.comment != null) {
+        if (comment != "") {
+            comment += "<br>";
+        }
+        comment += q.comment;
+    }
+}
 
 function getNext() {
+    shuffleArray(gobeJsonQuestions);
     $(".option-td").hide();
     if (samoImena) {
         $("#ime").val("");
-        $(".vnosImena").show();
+        $(".vnos-text").show();
     } else {
-        $(".vnosImena").hide();
+        $(".vnos-text").hide();
     }
-    $(".next").hide();
+    $("#next").hide();
     $(".result").hide();
     $("#image").attr("src", "");
-    $.ajax({
-        url: "gobe.php?type=" + quizType,
-        type: "GET",
-        success: function(result) {
-            const q = JSON.parse(result);
-            answer = q.answer;
-            link = q.link;
-            $("#image").attr("src", q.image);
-            $("#option1").html(q.options[0]);
-            $("#option2").html(q.options[1]);
-            $("#option3").html(q.options[2]);
-            $("#option4").html(q.options[3]);
-            $("#option5").html(q.options[4]);
-            comment = "";
-            if (q.protected > 0) {
-                comment = "zaščitena";
-            }
-            if (q.status != "") {
-                if (comment != "") {
-                    comment += ", ";
+    if (gobeJsonQuestions.length == 0 || gobeJson == null) {
+        $.ajax({
+            url: "gobe.php?type=" + quizType,
+            type: "GET",
+            success: function(result) {
+                gobeJson = JSON.parse(result);
+                gobeJsonQuestions = [];
+                for (var i = 0; i < gobeJson.length; i++) {
+                    gobeJsonQuestions.push(i);
                 }
-                comment += "rdeči seznam (" + q.status + ")";
+                getSuccess();
+            },
+            error: function(error) {
+                console.log(error);
             }
-            if (q.edibility != "" && q.edibility != null) {
-                if (comment != "") {
-                    comment += ", ";
-                }
-                comment += q.edibility;
-            }
-            if (q.comment != "" && q.comment != null) {
-                if (comment != "") {
-                    comment += "<br>";
-                }
-                comment += q.comment;
-            }
-        },
-        error: function(error) {
-            console.log(error);
-        }
-    });
+        });
+    } else {
+        getSuccess();
+    }
 }
 
 function optionClick(option) {
-    if (option == answer) {
+    $("#next").show();
+	$(".vnos-text").hide();
+    $(".option-td").hide();
+if (option == answer) {
         $("#result").html("Pravilno!<br><a href=\"" + link + "\" target=\"_blank\">" + answer + "</a><br>" + comment);
-        $(".next").show();
-        $(".option-td").hide();
         correct++;
+        gobeJsonQuestions.shift();
     } else {
-		if (!samoImena) {
-			$("#result").html("Narobe!");
-		} else {
-			$("#result").html("Narobe!<br><a href=\"" + link + "\" target=\"_blank\">" + answer + "</a><br>" + comment);
-		}
-        $(".next").hide();
+        $("#result").html("Narobe!<br><a href=\"" + link + "\" target=\"_blank\">" + answer + "</a><br>" + comment);
         wrong++;
     }
     $(".result").show();
-    $("#score").html(correct + ":" + wrong);
+    $("#score").html(correct + ":" + wrong + "/" + gobeJsonQuestions.length);
 }
 
 function normalize(ime) {
-	return ime.toLowerCase().replace(',', '').replace('-', '').trim().replace('č', 'c').replace('š', 's').replace('ž', 'z');
+    return ime.toLowerCase().replace(',', '').replace('-', '').trim().replace('č', 'c').replace('š', 's').replace('ž', 'z');
 }
 
 const levenshteinDistance = (s, t) => {
@@ -108,27 +139,28 @@ const levenshteinDistance = (s, t) => {
 
 function preveriIme() {
     var ime = normalize($("#ime").val());
-	var pravoIme = normalize(answer);
-	var imeA = ime.split(" ");
-	var pravoImeA = pravoIme.split(" ");
-	var correct = true;
-	
-	if (imeA.length == pravoImeA.length) {
-		for (let i = 0; i < imeA.length; i++) {
-			if (levenshteinDistance(imeA[i], pravoImeA[i]) > 2) {
-				correct = false;
-				break;
-			}
-		}
-	} else {
-		correct = false;
-	}
-	if (correct) {
-	    optionClick(answer);
-	} else {
-	    optionClick("");
-	}
-	$(".next").show();
+    var pravoIme = normalize(answer);
+    var imeA = ime.split(" ");
+    var pravoImeA = pravoIme.split(" ");
+    var correct = true;
+    
+    if (imeA.length == pravoImeA.length) {
+        for (let i = 0; i < imeA.length; i++) {
+            if (levenshteinDistance(imeA[i], pravoImeA[i]) > 2) {
+                correct = false;
+                break;
+            }
+        }
+    } else {
+        correct = false;
+    }
+    if (correct) {
+        optionClick(answer);
+    } else {
+        optionClick("");
+    }
+    $("#next").show();
+	$(".vnos-text").hide();
 }
 
 function setType(type) {
@@ -137,6 +169,7 @@ function setType(type) {
         $("#type" + i).css("background-color","white");
     }
     $("#type" + type).css("background-color","#4CAF50");
+    gobeJson = null;
     getNext();
 }
 
@@ -150,17 +183,28 @@ function onImageLoad(image) {
 
 $(document).ready(function() {
     setType(quizType);
-	$("#samoImena").css("background-color","white");	
-	$("#samoImena").click(function() {
-		samoImena = !samoImena;
-		if (!samoImena) {
-	        $("#samoImena").css("background-color","white");
+    $("#samoImena").css("background-color","white");    
+    $("#samoImena").click(function() {
+        samoImena = !samoImena;
+        if (!samoImena) {
+            $("#samoImena").css("background-color","white");
         } else {
-		    $("#samoImena").css("background-color","#4CAF50");
+            $("#samoImena").css("background-color","#4CAF50");
         }
-        getNext();
+		if (samoImena) {
+			$(".vnos-text").show();
+			$(".option-td").hide();
+		} else {
+			$(".vnos-text").hide();
+			$(".option-td").show();
+		}
     });
-	$("#preveriIme").click(function() {
+	$('#ime').keypress(function(e){
+        if (e.keyCode==13) {
+            preveriIme();
+		}
+    });
+    $("#preveriIme").click(function() {
         preveriIme();
     });
     $("#next").click(function() {
@@ -229,10 +273,10 @@ $(document).ready(function() {
         padding: 10px;
         font-size: 30px;
     }
-	.vnos-text {
+    .vnos-text {
         padding: 10px;
-        font-size: 25px;
-	}
+        font-size: 30px;
+    }
     .next-td {
         padding: 5px
     }
@@ -281,7 +325,8 @@ $(document).ready(function() {
   <td>
   <label class="vnos-text" for="ime">Ime:</label>
   <input class="vnos-text" type="text" id="ime" name="ime" size="50">
-  <button class="vnos-text" id="preveriIme">Preveri</button>
+  <button class="vnos-text" id="preveriIme">PREVERI</button>
+  <button class="next-button" id="next">NAPREJ</button>
   </td>
 </tr>
 <tr>
@@ -301,12 +346,9 @@ $(document).ready(function() {
 <tr class="result">
     <td></td>
 </tr>
-<tr class="next">
-    <td class="next-td"><button class="next-button" id="next">NAPREJ</button></td>
-</tr>
 <tr class="options">
     <td class="next-td">
-		<button class="next-button" id="samoImena">IMENA</button>
+        <button class="next-button" id="samoImena">IMENA</button>
         <button class="next-button" id="type0">VSE</button>
         <button class="next-button" id="type1">80</button>
         <button class="next-button" id="type2">240</button>

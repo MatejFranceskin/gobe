@@ -1,3 +1,4 @@
 /pictures*
 *.pkl
 *.pdf
+.~lock*
