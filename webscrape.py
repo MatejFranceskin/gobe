@@ -3,6 +3,11 @@ from bs4 import BeautifulSoup
 import sqlite3
 import re
 from unidecode import unidecode
+import time 
+import pandas as pd 
+from selenium import webdriver 
+from selenium.webdriver import Chrome 
+from selenium.webdriver.common.by import By 
 
 def url_request(url):
     while True:
@@ -220,6 +225,8 @@ def extractUzitnostUrl(url, id, name):
                     edibility = "mlada užitna"
                 elif (edibility.startswith("užitna")):
                     edibility = "užitna"
+                elif (edibility.startswith("užiten")):
+                    edibility = "užitna"
                 elif (edibility.startswith("zelo dobra užitna goba")):
                     edibility = "užitna"
                 elif (edibility.startswith("užitni so klobuki")):
@@ -289,37 +296,95 @@ def checkSlike():
             extractFromSlikeURL(record[0], record[1])
     conn.commit()
 
+def extractFromMycobank(id):
+    options = webdriver.ChromeOptions() 
+    options.add_argument("--headless")
+    options.page_load_strategy = "none"
+    driver = Chrome(options=options)
+#    driver.implicitly_wait(5)
+    url = 'https://www.mycobank.org/page/Name%20details%20page/field/Mycobank%20%23/' + id
+    driver.get(url) 
+    time.sleep(5)
+    page = driver.page_source
+    i = page.find("Current name")
+    if (i >= 0):
+        j = page.find("<span", i)
+        if (j >= 0):
+            k = page.find(">", j)
+            if (k >= 0):
+                l = page.find("</span>", k)
+                if (l >= 0):
+                    name = page[k+1:l]
+                    return name
+    driver.close()
+    return ""
+
 def extractOSGS2013():
-    file = open('osgs2013.txt', 'r')
-    list = []
-    for line in file.readlines():
-        sline = line.strip()
-        if line.startswith("\t"):
-            continue
-        if not line.startswith("  ") or not sline:
-            continue
-        if not sline.split('.')[0].isnumeric():
-            list[-1] += " " + sline
-            continue
-        list.append(sline)
+    first_index = 0;
+    with open('osgs2013.csv', 'r') as csvfile:
+        csv = csvfile.readlines()
+        fi = csv[-1].split(";")[0]
+        first_index = int(fi.split(".")[0])
 
-    for l in list:
-        l = re.sub("[\(\[].*?[\)\]]", "", l)
-        l = l.replace(" ex ", " ").replace(" & ", " ")
-        words = l.split()
-        name = words[1] + " " + words[2]
-        wi = 3
-        if words[3] == "var.":
-            name += " var. " + words[4]
-            wi = 5
-        slo_name = ""
-        for i in range(wi, len(words)):
-            if words[i].lower() != words[i] or words[i].replace(',', '').isnumeric():
-                continue
-            slo_name += words[i] + " "
+    file = open('OSGS__20130907.txt', 'r')
+    lines = file.readlines()
+    i = 0
+    while i < len(lines):
+        if lines[i].strip() == "":
+            i += 1
+            continue
+        if lines[i + 2].strip().startswith("SGS98"):
+            i += 7
+            continue
+        index = lines[i].strip()
+        id_if = lines[i + 1].strip()
+        sgs98 = lines[i + 2].strip()
+        if sgs98.endswith(","):
+            sgs98 += " " + lines[i + 3].strip()
+            i += 1
+        old_lat_name = lines[i + 3].strip()
+        old_slo_name = lines[i + 4].strip()
+        if old_slo_name.endswith(",") or lines[i + 5].strip().startswith("razl"):
+            old_slo_name += " " + lines[i + 5].strip()
+            i += 1
+        status = lines[i + 5].strip()
+        ostala_imena = lines[i + 6].strip()
+        if ostala_imena.endswith(","):
+            ostala_imena += " " + lines[i + 7].strip()
+            i += 1
+        if not lines[i + 7].strip().endswith("."):
+            ostala_imena += " " + lines[i + 7].strip()
+            i += 1
+        words = old_lat_name.split()
+        if len(words) < 3:
+            break
+        old_lat_name = words[0] + " " + words[1]
+        if words[2] == "var.":
+            old_lat_name += " var. " + words[3]
 
-#        print(words[0].replace('.', '') + " # " + name + " # " + slo_name)
-        imenaOSGS2013.append((unidecode(name.strip()), slo_name.strip()))
+        i += 7
+
+        if (int(index.split(".")[0]) <= first_index):
+            print("Skipping " + index + " " + id_if)
+            continue
+
+        while True:
+            if (id_if == "205150" or id_if == "171303" or id_if == "355892" or id_if == "544424" or id_if == "461558"):
+                lat_name = unidecode(old_lat_name) + " x"
+            else:
+                lat_name = extractFromMycobank(id_if)
+            words = lat_name.split()
+            if len(words) > 2:
+                break
+            print("Retrying " + old_lat_name + " " + id_if)
+
+        lat_name = words[0] + " " + words[1]
+        if len(words) > 2 and words[2] == "var.":
+            lat_name += " var. " + words[3]
+        entry = index + ";" + id_if + ";" + sgs98 + ";" + lat_name + ";" + old_lat_name + ";" + old_slo_name + ";" + status + ";" + ostala_imena            
+        print(entry)    
+        with open('osgs2013.csv', 'a') as csvfile:
+            csvfile.write(entry + "\n")
 
 conn = sqlite3.connect('gobe.db')
 
@@ -350,14 +415,14 @@ cursor = conn.cursor()
 imenaOSGS2013 = []
 
 extractOSGS2013()
-extractFromCelotniSeznamURL("https://www.gobe.si/Gobe/Gobe")
-extractFromCelotniSeznamURL("https://www.gobe.si/Protozoa")
-checkUzitnost()
-extractFromRdeciSeznamURL("https://www.gobe.si/Gobe/RdeciSeznam")
-extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamZacetni", "list80")
-extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamNadaljevalni", "list240")
-extractFromZasciteniSeznamURL("https://www.gobe.si/Gobe/ZasciteneGobe")
-checkSlike()
+#extractFromCelotniSeznamURL("https://www.gobe.si/Gobe/Gobe")
+#extractFromCelotniSeznamURL("https://www.gobe.si/Protozoa")
+#checkUzitnost()
+#extractFromRdeciSeznamURL("https://www.gobe.si/Gobe/RdeciSeznam")
+#extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamZacetni", "list80")
+#extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamNadaljevalni", "list240")
+#extractFromZasciteniSeznamURL("https://www.gobe.si/Gobe/ZasciteneGobe")
+#checkSlike()
 
 #sqlite_select_query = '''SELECT * FROM vrste WHERE status != "" ORDER BY name ASC'''
 #sqlite_select_query = '''SELECT name_old, name_slo_old, name, name_slo FROM vrste WHERE name_old != "" ORDER BY name ASC'''
