@@ -4,9 +4,10 @@ import qrcode
 import os
 import requests
 import sqlite3
+import time
 
 class GobaOpis:
-  def __init__(self, id, ime, latinsko_ime, uzitnost, status, url, slika, staro_ime, staro_latinsko_ime):
+  def __init__(self, id, ime, latinsko_ime, uzitnost, status, url, slika, staro_ime, staro_latinsko_ime,sgs2020):
     self.id = id
     self.ime = ime
     self.latinsko_ime = latinsko_ime
@@ -15,7 +16,8 @@ class GobaOpis:
     self.uzitnost = uzitnost
     self.status = status
     self.url = url
-    self.slika = slika
+    self.slika = slika  
+    self.sgs2020 = sgs2020
 
 def createCard(pdf, x1, y1, x2, y2, opis):
     text1 = opis.ime.upper()
@@ -23,6 +25,10 @@ def createCard(pdf, x1, y1, x2, y2, opis):
     text3 = opis.uzitnost.upper()
     text4 = opis.status.upper()
     text5 = str(opis.id)
+    if opis.sgs2020:
+        text7 = str(opis.sgs2020)
+    else:
+        text7 = str("0000")
     text6 = ""
     if stara_imena and opis.staro_ime:
         text1 = opis.staro_ime.upper()
@@ -35,6 +41,7 @@ def createCard(pdf, x1, y1, x2, y2, opis):
     width = x2 - x1
     height = y2 - y1
 
+    pdf.set_line_width(0.01)
     pdf.rect(x1, y1, width, height)
 
     image_width = 0.27 * width
@@ -81,9 +88,16 @@ def createCard(pdf, x1, y1, x2, y2, opis):
         text2_y += 0.05 * height
         text3_y += 0.05 * height
 
+    pdf.set_font("Arial", 'B', 11)
+    pdf.text(x1+2, y1+5, text7 )
+    pdf.set_font("Arial", 'BI', 6)
+    pdf.text(x1+2, y1+47, "© MZS 2020" )
+
     pdf.set_font("ArialUni", '', text1_h)
+
     text1_width = pdf.get_string_width(text1)
     w = (width - text1_width - image_width) / 2
+    
     pdf.text(text_x + w, text1_y, text1)
 
     if text1a:
@@ -91,29 +105,32 @@ def createCard(pdf, x1, y1, x2, y2, opis):
         w = (width - text1a_width - image_width) / 2
         pdf.text(text_x + w, text1a_y, text1a)
 
-    pdf.set_font("ArialUni", '', text2_h)
+    pdf.set_font("Arial", 'I', text2_h)
     text2_width = pdf.get_string_width(text2)
     w = (width - text2_width - image_width) / 2
     pdf.text(text_x + w, text2_y, text2)
-
+   
     pdf.set_font("ArialUni", '', text3_h)
     text3_width = pdf.get_string_width(text3) + 0.2
     w = (width - text3_width - image_width) / 2
     if text3 == "UŽITNA" or text3 == "MLADA UŽITNA":
-        pdf.set_fill_color(23, 189, 56)
+        pdf.set_fill_color(166, 255, 165)
     elif text3 == "POGOJNO UŽITNA":
-        pdf.set_fill_color(227, 217, 18)
+        pdf.set_fill_color(255, 255, 150)
     elif text3 == "NEUŽITNA" or text3 == "UŽITNOST NEZNANA":
-        pdf.set_fill_color(173, 117, 3)
+        pdf.set_fill_color(233, 169, 67)
     elif text3 == "STRUPENA":
-        pdf.set_fill_color(255, 130, 3)
+        pdf.set_fill_color(255, 110, 110)
     elif text3 == "SMRTNO STRUPENA":
-        pdf.set_fill_color(235, 64, 52)
+        pdf.set_fill_color(235, 50, 50)
+        pdf.set_text_color(255, 255, 0)
     else:
         pdf.set_fill_color(255, 255, 255)
 
     pdf.rect(text_x + w - 1, text3_y - text3_h * 0.35 + 0.4, text3_width + 2, text3_h * 0.35 + 0.12, 'F')
     pdf.text(text_x + w, text3_y, text3)
+
+    pdf.set_text_color(0, 0, 0)
 
     pdf.set_font("ArialUni", '', text4_h)
     text4_width = pdf.get_string_width(text4)
@@ -125,17 +142,28 @@ def createCard(pdf, x1, y1, x2, y2, opis):
 #    im.close()
 
 #    image_y = y2 - image_width / ratio
-    
-    pdf.image(imagePath, x2 - image_width - 0.05 * height, y1 + 0.05 * height, image_width)
 
-    img = qrcode.make(url)
+    pdf.image(imagePath, x2 - image_width*0.8 - 0.05 * height, y1 + 0.05 * height, image_width*0.8)
+
+    qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
+        box_size=11,
+        border=1,
+    )
+    qr.add_data(url)
+    qr.make(fit=True)
+
+    img = qr.make_image(fill_color="black", back_color="white")
+    #img = qrcode.make(url)
+    
     qrn = "qr"+ text2.strip() +".png"
     img.save(qrn)
-    pdf.image(qrn, x2 - qr_image_width - 5, y2 - qr_image_width - 1, qr_image_width, qr_image_width)
+    pdf.image(qrn, x2 - qr_image_width - 4, y2 - qr_image_width - 1.5, qr_image_width+2, qr_image_width+1)
     os.remove(qrn)
 
-    pdf.set_font("ArialUni", '', text5_h)
-    pdf.text(x2 - pdf.get_string_width(text5) - 2, text5_y - 1, text5)
+    #pdf.set_font("ArialUni", '', text5_h)
+    #pdf.text(x2 - pdf.get_string_width(text5) - 2, text5_y - 1, text5)
 
     if text6:
         text6_width = pdf.get_string_width(text6)
@@ -155,7 +183,7 @@ def url_request_file(url, filename):
 
 stara_imena = False
 page_width = 210
-page_height = 296
+page_height = 297
 n_columns = 2
 n_rows = 6
 n_pages_per_pdf = 200
@@ -166,11 +194,11 @@ conn = sqlite3.connect('gobe.db')
 cursor = conn.cursor()
 
 opisi = []
-sqlite_select_query = '''SELECT id,name,name_slo,link,protected,status,edibility,name_old,name_slo_old FROM vrste ORDER BY name ASC'''
+sqlite_select_query = '''SELECT id,name,name_slo,link,protected,status,edibility,name_old,name_slo_old,sgs2020 FROM vrste ORDER BY name ASC'''
 cursor.execute(sqlite_select_query)
 records = cursor.fetchall()
 for record in records:
-#    if len(opisi) > 120:
+#    if len(opisi) >= 120:
 #        break
     cursor.execute('''SELECT link FROM slike WHERE vrsta_id = ? LIMIT 1''', (record[0],))
     slike = cursor.fetchall()
@@ -180,7 +208,8 @@ for record in records:
             url = url[:-4] + "1.jpg"
         filename = "pictures/" + slika[0].split('/')[-1]
         if not os.path.isfile(filename):
-            url_request_file(url, filename)
+            url= "https://www.gobe.si/img.php?src=thumb_" + slika[0].split('/')[-1] + "&w=180&h=180&crop-to-fit"   # https://www.gobe.si/img.php?src=thumb_Russula_aurea.jpg&w=130&h=130&crop-to-fit
+            url_request_file(url, filename)     
         status = ""
         if record[4]:
             status = "zavarovana vrsta"
@@ -194,10 +223,10 @@ for record in records:
             status += "ogrožena vrsta"
         if status and record[5]:
             status += " (" + record[5] + ")"
-        opisi.append(GobaOpis(record[0], record[2], record[1], record[6], status, record[3], filename, record[8], record[7]))
+        opisi.append(GobaOpis(record[0], record[2], record[1], record[6], status, record[3], filename, record[8], record[7], record[9]))
         break
 
-pdf_n = 1
+pdf_n = int(time.time()) 
 opis_index = 0
 num = len(opisi)
 
