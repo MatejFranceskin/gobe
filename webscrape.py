@@ -129,6 +129,11 @@ def extractFromCelotniSeznamURL(url):
             if len(data) == 0:
                 s = "INSERT INTO vrste(name, name_slo, link) VALUES('{}','{}','{}')".format(arr[0], arr[1], arr[2].strip())
                 cursor.execute(s)
+                print(s)
+            else:
+                s = "UPDATE vrste SET name_slo = '{}',link='{}' WHERE name = '{}'".format(arr[1], arr[2].strip(), arr[0])
+                cursor.execute(s)
+                print(s)
 
 def extractFromRdeciSeznamURL(url):
     response = url_request(url)
@@ -254,31 +259,6 @@ def extractUzitnostUrl(url, id, name):
 #                print(s)
                 cursor.execute(s)
 
-            if "SINONIMI" in srow:
-                if name in ["Amanita battarrae", "Russula camarophylla", "Neoboletus luridiformis", "Limacella delicata", "Hygrophorus persicolor", "Craterellus undulatus", "Bovistella utriformis", "Ceriporia reticulata", "Psathyrella vernalis", "Lepiota helveola", "Lepiota brunneolilacea"]:
-                    continue
-                srow = srow.removeprefix('<p class="vspace">').replace('<strong>', '').replace('</strong>', '').replace('</p>', '').replace('<span class="-pm--3">', '').replace('</span>', '').strip()
-                sinonimi = srow.removeprefix('SINONIMI: ')
-                sin_arr = []
-                for sin in sinonimi.split(','):
-                    s_i = sin.find("<em>")
-                    e_i = sin.find("</em>")
-                    if (s_i != -1 and e_i != -1):
-                        sin_arr.append(sin[s_i+4:e_i])
-
-                found = False
-                for staroIme in imenaOSGS2013:
-                    if name == staroIme[0]:
-                        found = True
-                        break
-
-                if not found:
-                    for staroIme in imenaOSGS2013:
-                        if staroIme[0] in sin_arr:
-#                            print(oldName + " ---> " + name)
-                            s = "UPDATE vrste SET name_old = '{}', name_slo_old = '{}' WHERE id = {}".format(staroIme[0], staroIme[1], id)
-                            cursor.execute(s)
-                            break
         conn.commit()
 
 def checkUzitnost():
@@ -301,7 +281,6 @@ def extractFromMycobank(id):
     options.add_argument("--headless")
     options.page_load_strategy = "none"
     driver = Chrome(options=options)
-#    driver.implicitly_wait(5)
     url = 'https://www.mycobank.org/page/Name%20details%20page/field/Mycobank%20%23/' + id
     driver.get(url) 
     time.sleep(5)
@@ -365,11 +344,11 @@ def extractOSGS2013():
         i += 7
 
         if (int(index.split(".")[0]) <= first_index):
-            print("Skipping " + index + " " + id_if)
+#            print("Skipping " + index + " " + id_if)
             continue
 
         while True:
-            if (id_if == "205150" or id_if == "171303" or id_if == "355892" or id_if == "544424" or id_if == "461558"):
+            if id_if in ["205150", "171303", "355892", "544424", "461558"]:
                 lat_name = unidecode(old_lat_name) + " x"
             else:
                 lat_name = extractFromMycobank(id_if)
@@ -386,12 +365,46 @@ def extractOSGS2013():
         with open('osgs2013.csv', 'a') as csvfile:
             csvfile.write(entry + "\n")
 
+    with open('osgs2013.csv', 'r') as csvfile:
+        for line in csvfile.readlines():
+            arr = line.split(";")
+            sgs98id = int(arr[0].removesuffix("."))
+            id_if = int(arr[1])
+            lat_name = arr[3]
+            old_lat_name = arr[4]
+            old_slo_name = arr[5]
+            edibility = arr[6]
+            if edibility.startswith("UN"):
+                edibility = "užitnost neznana"
+            elif edibility.startswith("PU"):
+                edibility = "pogojno užitna"
+            elif (edibility.startswith("SS")):
+                edibility = "smrtno strupena"
+            elif (edibility.startswith("S")):
+                edibility = "strupena"
+            elif (edibility.startswith("NU")):
+                edibility = "neužitna"
+            elif (edibility.startswith("MU")):
+                edibility = "mlada užitna"
+            elif (edibility.startswith("U")):
+                edibility = "užitna"
+            slo_name = ""
+            if unidecode(old_lat_name) == unidecode(lat_name):
+                slo_name = old_slo_name
+            cursor.execute("SELECT id FROM vrste WHERE name = ?", (lat_name,))
+            data = cursor.fetchall()
+            if len(data) == 0:
+                s = "INSERT INTO vrste(id_osgs, id_if, name, name_old, name_slo, name_slo_old, edibility) VALUES('{}','{}','{}','{}','{}','{}','{}')".format(sgs98id, id_if, lat_name, old_lat_name, slo_name, old_slo_name, edibility)
+                cursor.execute(s)
+
 conn = sqlite3.connect('gobe.db')
 
 conn.execute('''CREATE TABLE IF NOT EXISTS vrste(
          id             INTEGER PRIMARY KEY AUTOINCREMENT,
+         id_osgs        INTEGER DEFAULT 0 NOT NULL,
+         id_if          INTEGER DEFAULT 0 NOT NULL,
          name           TEXT NOT NULL,
-         name_slo       TEXT NOT NULL,
+         name_slo       TEXT DEFAULT '',
          name_old       TEXT DEFAULT '',
          name_slo_old   TEXT DEFAULT '',
          link           TEXT,
@@ -415,22 +428,23 @@ cursor = conn.cursor()
 imenaOSGS2013 = []
 
 extractOSGS2013()
-#extractFromCelotniSeznamURL("https://www.gobe.si/Gobe/Gobe")
-#extractFromCelotniSeznamURL("https://www.gobe.si/Protozoa")
-#checkUzitnost()
-#extractFromRdeciSeznamURL("https://www.gobe.si/Gobe/RdeciSeznam")
-#extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamZacetni", "list80")
-#extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamNadaljevalni", "list240")
-#extractFromZasciteniSeznamURL("https://www.gobe.si/Gobe/ZasciteneGobe")
+extractFromCelotniSeznamURL("https://www.gobe.si/Gobe/Gobe")
+extractFromCelotniSeznamURL("https://www.gobe.si/Protozoa")
+checkUzitnost()
+extractFromRdeciSeznamURL("https://www.gobe.si/Gobe/RdeciSeznam")
+extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamZacetni", "list80")
+extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamNadaljevalni", "list240")
+extractFromZasciteniSeznamURL("https://www.gobe.si/Gobe/ZasciteneGobe")
 #checkSlike()
 
 #sqlite_select_query = '''SELECT * FROM vrste WHERE status != "" ORDER BY name ASC'''
-#sqlite_select_query = '''SELECT name_old, name_slo_old, name, name_slo FROM vrste WHERE name_old != "" ORDER BY name ASC'''
-#cursor.execute(sqlite_select_query)
-#records = cursor.fetchall()
-#print("Total rows are:  ", len(records))
-#for row in records:
-#    print(row[0] + ", " + row[1] + " ===> " + row[2] + ", " + row[3])
+#sqlite_select_query = '''SELECT * FROM vrste ORDER BY name ASC'''
+sqlite_select_query = '''SELECT name_old, name_slo_old, name, name_slo FROM vrste WHERE name_old != "" AND id_osgs>0 AND name_slo == "" ORDER BY name ASC'''
+cursor.execute(sqlite_select_query)
+records = cursor.fetchall()
+print("Total rows are:  ", len(records))
+for row in records:
+    print(row[0] + ", " + row[1] + " ===> " + row[2] + ", " + row[3])
 
 #sqlite_select_query = '''SELECT * FROM slike'''
 #cursor.execute(sqlite_select_query)
@@ -438,17 +452,6 @@ extractOSGS2013()
 #print("Total rows are:  ", len(records))
 #for row in records:
 #    print(row)
-
-#print("#######################################################")
-#print("Stara imena, ki manjkajo v bazi:")
-#for staroIme in imenaOSGS2013:
-#    oldName = staroIme[0]
-#    cursor.execute('''SELECT id FROM vrste WHERE name = ? OR name_old = ?''', (oldName,oldName))
-#    records = cursor.fetchall()
-#    if not records:
-#        print(oldName + "; " + staroIme[1])
-#        continue
-#print("#######################################################")
 
 cursor.close()
 conn.commit()
