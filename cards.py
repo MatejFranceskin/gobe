@@ -28,13 +28,16 @@ def createCard(pdf, x1, y1, x2, y2, opis):
     if opis.sgs2020:
         text7 = str(opis.sgs2020)
     else:
-        text7 = str("0000")
+        text7 = ""
     text6 = ""
-    if stara_imena and opis.staro_ime:
-        text1 = opis.staro_ime.upper()
-        text2 = opis.staro_latinsko_ime
-        text6 = opis.ime.upper() + ", " + opis.latinsko_ime
-#        print("Staro ime: " + text1 + " " + text2 + " Novo ime: " + opis.ime.upper() + " " + opis.latinsko_ime)
+    if opis.staro_ime:
+        if stara_imena:
+            text1 = opis.staro_ime.upper()
+            text2 = opis.staro_latinsko_ime
+            text6 = opis.ime.upper() + ", " + opis.latinsko_ime
+        else:
+            text6 = opis.staro_ime.upper() + ", " + opis.staro_latinsko_ime
+        print("Staro ime: " + opis.staro_ime.upper() + " " + opis.staro_latinsko_ime + " Novo ime: " + opis.ime.upper() + " " + opis.latinsko_ime)
     imagePath = opis.slika
     url = opis.url
 
@@ -88,10 +91,11 @@ def createCard(pdf, x1, y1, x2, y2, opis):
         text2_y += 0.05 * height
         text3_y += 0.05 * height
 
-    pdf.set_font("Arial", 'B', 11)
-    pdf.text(x1+2, y1+5, text7 )
-    pdf.set_font("Arial", 'BI', 6)
-    pdf.text(x1+2, y1+47, "© MZS 2020" )
+    if (len(text7)>0):
+        pdf.set_font("Arial", 'B', 11)
+        pdf.text(x1+2, y1+5, text7 )
+    #pdf.set_font("Arial", 'BI', 6)
+    #pdf.text(x1+2, y1+47, "© MZS 2020" )
 
     pdf.set_font("ArialUni", '', text1_h)
 
@@ -143,7 +147,7 @@ def createCard(pdf, x1, y1, x2, y2, opis):
 
 #    image_y = y2 - image_width / ratio
 
-    pdf.image(imagePath, x2 - image_width*0.8 - 0.05 * height, y1 + 0.05 * height, image_width*0.8)
+    pdf.image(imagePath, x2 - image_width - 0.05 * height, y1 + 0.05 * height, image_width)
 
     qr = qrcode.QRCode(
         version=1,
@@ -159,10 +163,10 @@ def createCard(pdf, x1, y1, x2, y2, opis):
     
     qrn = "qr"+ text2.strip() +".png"
     img.save(qrn)
-    pdf.image(qrn, x2 - qr_image_width - 4, y2 - qr_image_width - 1.5, qr_image_width+2, qr_image_width+1)
+    pdf.image(qrn, x2 - qr_image_width - 5, y2 - qr_image_width - 1, qr_image_width, qr_image_width)
     os.remove(qrn)
 
-    #pdf.set_font("ArialUni", '', text5_h)
+    pdf.set_font("ArialUni", '', text5_h)
     #pdf.text(x2 - pdf.get_string_width(text5) - 2, text5_y - 1, text5)
 
     if text6:
@@ -183,7 +187,7 @@ def url_request_file(url, filename):
 
 stara_imena = False
 page_width = 210
-page_height = 297
+page_height = 296
 n_columns = 2
 n_rows = 6
 n_pages_per_pdf = 200
@@ -204,8 +208,6 @@ for record in records:
     slike = cursor.fetchall()
     for slika in slike:
         url = slika[0]
-        if url.endswith("Amanita_caesarea.jpg"):
-            url = url[:-4] + "1.jpg"
         filename = "pictures/" + slika[0].split('/')[-1]
         if not os.path.isfile(filename):
             url= "https://www.gobe.si/img.php?src=thumb_" + slika[0].split('/')[-1] + "&w=180&h=180&crop-to-fit"   # https://www.gobe.si/img.php?src=thumb_Russula_aurea.jpg&w=130&h=130&crop-to-fit
@@ -236,10 +238,16 @@ while opis_index < num:
     pdf.add_font("ArialUni", "", "arialuni.ttf", uni=True)
 
     strani_n = 1
+    cards_n = 0
     while opis_index < num:
         for i in range(n_columns):
-            for j in range(n_rows):
-                createCard(pdf, i * card_width, j * card_height, (i + 1) * card_width, (j + 1) * card_height, opisi[opis_index])
+            j = 0
+            while j < n_rows:
+                if opisi[opis_index].sgs2020:
+                    cards_n = cards_n + 1
+                    print("Creating card " + str(cards_n) + ": " + opisi[opis_index].latinsko_ime)
+                    createCard(pdf, i * card_width, j * card_height, (i + 1) * card_width, (j + 1) * card_height, opisi[opis_index])
+                    j = j + 1
                 opis_index += 1
                 if opis_index >= num:
                     break
