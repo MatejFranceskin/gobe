@@ -279,6 +279,13 @@ def extractUzitnostUrl(url, id, name):
                 sgs2020 = srow[s_i+9:e_i]
                 s = "UPDATE vrste SET sgs2020 = {} WHERE id = {}".format(sgs2020, id)
                 cursor.execute(s)
+            if "<p><strong>" in srow:
+                s_i = srow.find("<p><strong>")
+                e_i = srow.find("</strong>")
+                full_name = srow[s_i+11:e_i]
+                print("full_name: " + full_name)
+                s = "UPDATE vrste SET full_name = '{}' WHERE id = {}".format(full_name, id)
+                cursor.execute(s)
         conn.commit()
 
 def checkUzitnost():
@@ -336,6 +343,7 @@ conn.execute('''CREATE TABLE IF NOT EXISTS vrste(
          name_slo       TEXT NOT NULL,
          name_old       TEXT DEFAULT '',
          name_slo_old   TEXT DEFAULT '',
+         full_name      TEXT DEFAULT '',
          link           TEXT,
          list80         INTEGER DEFAULT 0 NOT NULL,
          list240        INTEGER DEFAULT 0 NOT NULL,

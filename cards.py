@@ -7,7 +7,7 @@ import sqlite3
 import time
 
 class GobaOpis:
-  def __init__(self, id, ime, latinsko_ime, uzitnost, status, url, slika, staro_ime, staro_latinsko_ime,sgs2020):
+  def __init__(self, id, ime, latinsko_ime, uzitnost, status, url, slika, staro_ime, staro_latinsko_ime, sgs2020, full_name):
     self.id = id
     self.ime = ime
     self.latinsko_ime = latinsko_ime
@@ -18,10 +18,18 @@ class GobaOpis:
     self.url = url
     self.slika = slika  
     self.sgs2020 = sgs2020
+    self.full_name = full_name
 
 def createCard(pdf, x1, y1, x2, y2, opis):
+    if (opis.latinsko_ime == "Clitocybe ditopa"):
+        opis.full_name = "Clitócybe dítopa"
+    a = opis.full_name.split()
+    if len(a) > 1:
+        full_name = a[0] + " " + a[1]
+    else:
+        full_name = opis.latinsko_ime
     text1 = opis.ime.upper()
-    text2 = opis.latinsko_ime
+    text2 = full_name
     text3 = opis.uzitnost.upper()
     text4 = opis.status.upper()
     text5 = str(opis.id)
@@ -198,7 +206,7 @@ conn = sqlite3.connect('gobe.db')
 cursor = conn.cursor()
 
 opisi = []
-sqlite_select_query = '''SELECT id,name,name_slo,link,protected,status,edibility,name_old,name_slo_old,sgs2020 FROM vrste ORDER BY name ASC'''
+sqlite_select_query = '''SELECT id,name,name_slo,link,protected,status,edibility,name_old,name_slo_old,sgs2020,full_name FROM vrste ORDER BY sgs2020 ASC'''
 cursor.execute(sqlite_select_query)
 records = cursor.fetchall()
 for record in records:
@@ -225,13 +233,15 @@ for record in records:
             status += "ogrožena vrsta"
         if status and record[5]:
             status += " (" + record[5] + ")"
-        opisi.append(GobaOpis(record[0], record[2], record[1], record[6], status, record[3], filename, record[8], record[7], record[9]))
+        opisi.append(GobaOpis(record[0], record[2], record[1], record[6], status, record[3], filename, record[8], record[7], record[9], record[10]))
         break
 
-pdf_n = int(time.time()) 
+pdf_time = int(time.time())
+pdf_n = 1
 opis_index = 0
 num = len(opisi)
 
+multipage = False
 while opis_index < num:
     pdf = FPDF('P', 'mm', 'A4')
     pdf.add_page()
@@ -258,9 +268,13 @@ while opis_index < num:
             strani_n += 1
 
         if strani_n > n_pages_per_pdf:
+            multipage = True
             break;
 
-    pdfname = "GobjeVizitke" + str(pdf_n) + ".pdf"
+    if multipage:
+        pdfname = "GobjeVizitke_" + str(pdf_time) + "_" + str(pdf_n) + ".pdf"
+    else:        
+        pdfname = "GobjeVizitke_" + str(pdf_time) + ".pdf"
     pdf.output(pdfname, 'F')
     print("PDF " + str(pdf_n))
     pdf_n = pdf_n + 1
