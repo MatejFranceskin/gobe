@@ -1,0 +1,561 @@
+{| class="wikitable sortable"
+! znanstveno ime
+! slovensko ime
+! Stanje ogroženosti
+! class="unsortable" | Slika
+|-
+|Amanita caesarea
+|[[knežja mušnica]]
+|redka, zavarovana
+|[[File:Amanita_caesarea.JPG|frameless|thumb]]
+|-
+|Amanita ovoidea
+|[[jajčasta mušnica]]
+|redka
+|[[File:Amanita_ovoidea.JPG|frameless|thumb]]
+|-
+|Amanita strobiliformis
+|[[velikoluska mušnica]]
+|redka, zavarovana
+|[[File:2011-08-28_Amanita_strobiliformis_crop.jpg|frameless|thumb]]
+|-
+|Amanita verna
+|[[pomladanska mušnica]]
+|redka, zavarovana
+|[[File:Amanita_verna-01.jpg|frameless|thumb]]
+|-
+|Artomyces pyxidatus
+|[[cvetoča grmulja]]
+|redka
+|[[File:Artomyces_pyxidatus_(24257412348).jpg|frameless|thumb]]
+|-
+|Aureoboletus gentilis
+|[[lepljivi zlatopor]]
+|redka, zavarovana
+|[[File:2012-08-29_Aureoboletus_gentilis_(Secretan)Wallroth_256338.jpg|frameless|thumb]]
+|-
+|Boletopsis leucomelaena
+|[[črni gobanovec]]
+|redka
+|[[File:Boletopsis_leucomelaena_BW40.jpg|frameless|thumb]]
+|-
+|Boletus thalassinus
+|[[modrinasti goban]]
+|ranljiva
+|
+|-
+|Bondarzewia mesenterica
+|[[gorska bondarčevka]]
+|redka, zavarovana
+|[[File:Bondarzewia_montana.jpg|frameless|thumb]]
+|-
+|Buchwaldoboletus hemichrysus
+|[[zlatični privihanec]]
+|ranljiva, zavarovana
+|[[File:Buchwaldoboletus-hemichrysus(384).JPG|frameless|thumb]]
+|-
+|Buchwaldoboletus lignicola
+|[[jelov privihanec]]
+|ranljiva, zavarovana
+|[[File:Buchwaldoboletus_lignicola.jpg|frameless|thumb]]
+|-
+|Butyriboletus regius
+|[[kraljevi maslenec]]
+|redka, zavarovana
+|[[File:Butyriboletus_regius_НПП_\u0413уцульщина\.jpg|frameless|thumb]]
+|-
+|Calocybe carnea
+|[[mesnobarvna lepoglavka]]
+|ranljiva
+|[[File:Calocybe_carnea.jpg|frameless|thumb]]
+|-
+|Caloscypha fulgens
+|[[žareča kupica]]
+|ranljiva
+|[[File:2011-07-15_Caloscypha_fulgens_71739.jpg|frameless|thumb]]
+|-
+|Calvatia gigantea
+|[[orjaška plešivka]]
+|redka, zavarovana
+|[[File:Arion_vulgaris_mit_Calvatia_gigantea_CS1.jpg|frameless|thumb]]
+|-
+|Camarops tubulina
+|[[počrnela bolinka]]
+|ogrožena, zavarovana
+|
+|-
+|Catathelasma imperiale
+|[[kolobarna dvovenčnica]]
+|redka, zavarovana
+|[[File:Catathelasma_imperiale.JPG|frameless|thumb]]
+|-
+|Clathrus ruber
+|[[navadna mrežnica]]
+|redka, zavarovana
+|[[File:Brachycera_on_Clathrus_ruber_mushroom.jpg|frameless|thumb]]
+|-
+|Clavaria fragilis
+|[[krhka kijevka]]
+|redka
+|[[File:Clavaria_fragilis_(3914552333).jpg|frameless|thumb]]
+|-
+|Clitopaxillus alexandri
+|[[zelenkasta podviharka]]
+|redka
+|[[File:Clitocybe_alexandri_a1.jpg|frameless|thumb]]
+|-
+|Coprinopsis picacea
+|[[pisana tintovka]]
+|redka
+|[[File:Coprinopsis_picacea.jpg|frameless|thumb]]
+|-
+|Cortinarius praestans
+|[[nagubana koprenka]]
+|ogrožena, zavarovana
+|[[File:Cortinarius_praestans.JPG|frameless|thumb]]
+|-
+|Cuphophyllus colemannianus
+|[[rjava tratnica]]
+|ogrožena
+|[[File:2007-10-07_Cuphophyllus_colemannianus_gills.jpg|frameless|thumb]]
+|-
+|Cuphophyllus fornicatus
+|[[oblokasta tratnica]]
+|ogrožena
+|[[File:2007-10-06_Neohygrocybe_fornicata_369505.jpg|frameless|thumb]]
+|-
+|Cuphophyllus lacmus
+|[[modrikasta tratnica]]
+|ranljiva
+|
+|-
+|Cuphophyllus pratensis
+|[[travniška tratnica]]
+|ogrožena
+|[[File:2010-11-20_Cuphophyllus_pratensis.jpg|frameless|thumb]]
+|-
+|Dentipellis fragilis
+|[[drobljivi kožozob]]
+|ogrožena, zavarovana
+|
+|-
+|Dermoloma cuneifolium
+|[[klinolistna žametovka]]
+|ranljiva
+|[[File:Dermoloma_cuneifolium_583093_Puddu_151210.jpg|frameless|thumb]]
+|-
+|Entoloma bloxamii
+|[[modrikasta rdečelistka]]
+|ranljiva
+|[[File:2009-11-19_Entoloma_bloxamii_1_28482jpg.jpg|frameless|thumb]]
+|-
+|Entoloma incanum
+|[[zelenkasta rdečelistka]]
+|ranljiva
+|[[File:2007-09-29_Entoloma_incanum.jpg|frameless|thumb]]
+|-
+|Entoloma porphyrophaeum
+|[[porfirasta rdečelistka]]
+|ogrožena
+|[[File:Entoloma_porphyrophaeum_(25049146607).jpg|frameless|thumb]]
+|-
+|Entoloma prunuloides
+|[[mokarična rdečelistka]]
+|ogrožena
+|[[File:Entoloma_prunuloides_567067.jpg|frameless|thumb]]
+|-
+|Fistulina hepatica
+|[[jetrasta cevača]]
+|redka
+|[[File:Beefsteak_fungus_-_Fistulina_hepatica_(8071757553).jpg|frameless|thumb]]
+|-
+|Fomitopsis officinalis
+|[[lekarniška kresilača]]
+|prizadeta, zavarovana
+|[[File:Fomitopsis_officinalis.JPG|frameless|thumb]]
+|-
+|Ganoderma lucidum
+|[[svetlikava pološčenka]]
+|redka, zavarovana
+|[[File:Ganoderma_lucidum_01.jpg|frameless|thumb]]
+|-
+|Ganoderma pfeifferi
+|[[bakrenasta pološčenka]]
+|ranljiva
+|[[File:2012-01-19_Ganoderma_pfeifferi_196230_(cropped).jpg|frameless|thumb]]
+|-
+|Geoglossum cookeanum
+|[[puhasti jezik]]
+|ogrožena
+|[[File:Geoglossum_cookeanum.jpg|frameless|thumb]]
+|-
+|Geoglossum fallax
+|[[varljivi jezik]]
+|ogrožena
+|[[File:Geoglossum_fallax_168082448.jpg|frameless|thumb]]
+|-
+|Gliophorus irrigatus
+|[[orošena vlažničarka]]
+|ogrožena
+|[[File:Gliophorus_irrigatus_131013w.JPG|frameless|thumb]]
+|-
+|Gloioxanthomyces vitellinus
+|[[rumenjačna navlaženka]]
+|ogrožena
+|[[File:Hygrocybe_vitellina.jpg|frameless|thumb]]
+|-
+|Glutinoglossum glutinosum
+|[[lepljivi jezičevec]]
+|ogrožena
+|[[File:Glutinoglossum_glutinosum_107350532.jpg|frameless|thumb]]
+|-
+|Gomphus clavatus
+|[[čokata žilolistka]]
+|redka, zavarovana
+|[[File:'Pig's_Ear_Gomphus',_Gomphus_clavatus_(9773757053).jpg|frameless|thumb]]
+|-
+|Grifola frondosa
+|[[velika zraščenka]]
+|redka, zavarovana
+|[[File:Grifola_frondosa_-_Hen_of_the_Woods_at_Wheatrig,_Ayrshire.JPG|frameless|thumb]]
+|-
+|Gyrodon lividus
+|[[navadni jelšar]]
+|redka
+|[[File:Erlengrübling_Gyrodon_lividus.jpg|frameless|thumb]]
+|-
+|Gyromitra esculenta
+|[[pomladanski hrček]]
+|redka
+|[[File:Gyromitra_esculenta_(26718904747).jpg|frameless|thumb]]
+|-
+|Gyromitra gigas
+|[[orjaški hrček]]
+|prizadeta
+|[[File:Gyromitra_gigas_19315169.jpg|frameless|thumb]]
+|-
+|Gyromitra parma
+|[[ščitasti hrček]]
+|prizadeta
+|[[File:Gyromitra_parma_(Provincia_di_Reggio_Emilia,_Italia).jpg|frameless|thumb]]
+|-
+|Gyroporus castaneus
+|[[rjavi bledotrosnik]]
+|redka
+|[[File:Gyroporus_castaneus_(29932339097).jpg|frameless|thumb]]
+|-
+|Gyroporus cyanescens
+|[[modreči bledotrosnik]]
+|redka
+|[[File:2007-08-15_Gyroporus_cyanescens.jpg|frameless|thumb]]
+|-
+|Hapalopilus croceus
+|[[žafranasti mehkopor]]
+|prizadeta
+|[[File:Hapalopilus_croceus_72480.jpg|frameless|thumb]]
+|-
+|Hericium coralloides
+|[[koralasti bradovec]]
+|ranljiva, zavarovana
+|[[File:Hericium_coralloides_(coral_tooth_fungus).jpg|frameless|thumb]]
+|-
+|Hericium erinaceus
+|[[resasti bradovec]]
+|redka, zavarovana
+|[[File:Hericium_erinaceus_101875852.jpg|frameless|thumb]]
+|-
+|Hericium flagellum
+|[[jelkov bradovec]]
+|redka, zavarovana
+|[[File:2010-09-19_Hericium_coralloides.jpg|frameless|thumb]]
+|-
+|Hydnellum aurantiacum
+|[[oranžna ježevka]]
+|redka
+|[[File:Hydnellum_aurantiacum,_known_as_the_Orange_Tooth_Fungus_(9618136186).jpg|frameless|thumb]]
+|-
+|Hydnellum caeruleum
+|[[višnjeva ježevka]]
+|redka
+|[[File:Hydnellum_caeruleum_12437038.jpg|frameless|thumb]]
+|-
+|Hydnellum compactum
+|[[klena ježevka]]
+|ogrožena
+|[[File:Hydnellum_compactum_01.JPG|frameless|thumb]]
+|-
+|Hydnellum ioeides
+|[[nenavadna ježevka]]
+|ranljiva
+|
+|-
+|Hydnellum suaveolens
+|[[vonjava ježevka]]
+|ranljiva
+|[[File:Hydnellum_suaveolens_51703.jpg|frameless|thumb]]
+|-
+|Hygrocybe aurantiosplendens
+|[[oranžnordeča vlažnica]]
+|ogrožena
+|[[File:Hygrocybe_aurantiosplendens_(2)_(49070236612).jpg|frameless|thumb]]
+|-
+|Hygrocybe citrinovirens
+|[[zelenkasta vlažnica]]
+|ogrožena
+|[[File:Hygrocybe_citrinovirens;_100_9095.jpg|frameless|thumb]]
+|-
+|Hygrocybe glutinipes
+|[[sluzobetna vlažnica]]
+|ogrožena
+|[[File:2010-08-16_Hygrocybe_glutinipes.jpg|frameless|thumb]]
+|-
+|Hygrocybe helobia
+|[[močvirska vlažnica]]
+|ogrožena
+|[[File:2011-06-28_Hygrocybe_helobia_(Arnolds)_Bon_154471.jpg|frameless|thumb]]
+|-
+|Hygrocybe ingrata
+|[[zavržena vlažnica]]
+|ogrožena
+|[[File:Dingy_Waxcap_from_iNaturalist_photo_143784385.jpg|frameless|thumb]]
+|-
+|Hygrocybe intermedia
+|[[varljiva vlažnica]]
+|ranljiva
+|[[File:Hygrocybe_intermedia.jpg|frameless|thumb]]
+|-
+|Hygrocybe nitrata
+|[[klorova vlažnica]]
+|ogrožena
+|[[File:2008-10-19_Hygrocybe_nitrata_20200.jpg|frameless|thumb]]
+|-
+|Hygrocybe ovina
+|[[ovčja vlažnica]]
+|redka
+|[[File:Hygrocybe_ovina.jpg|frameless|thumb]]
+|-
+|Hygrocybe punicea
+|[[velika vlažnica]]
+|ogrožena
+|[[File:Hygrocybe_punicea_2.jpg|frameless|thumb]]
+|-
+|Hygrocybe quieta
+|[[zažetotrosna vlažnica]]
+|ogrožena
+|[[File:2009-10-01_Hygrocybe_quieta_26372.jpg|frameless|thumb]]
+|-
+|Hygrocybe spadicea
+|[[planinska vlažnica]]
+|ogrožena
+|[[File:Hygrocybe_spadicea.jpg|frameless|thumb]]
+|-
+|Hygrocybe splendidissima
+|[[bleščeča vlažnica]]
+|ogrožena
+|[[File:Hygrocybe_splendidissima_(29945417341).jpg|frameless|thumb]]
+|-
+|Hygrophorus camarophyllus
+|[[švedska polževka]]
+|redka
+|[[File:Hygrophorus_camarophyllus-2083890.jpg|frameless|thumb]]
+|-
+|Hygrophorus capreolarius
+|[[vinska polževka]]
+|redka
+|
+|-
+|Hygrophorus speciosus
+|[[lepa polževka]]
+|redka
+|[[File:Hygrophorus_speciosus,_Eureka.jpg|frameless|thumb]]
+|-
+|Hymenochaete cruenta
+|[[rdeča usnjevka]]
+|ogrožena, zavarovana
+|[[File:2009-04-13_Hymenochaete_cruenta_41015.jpg|frameless|thumb]]
+|-
+|Imperator torosus
+|[[težki velegoban]]
+|redka, zavarovana
+|[[File:Boletus_torosus_1.JPG|frameless|thumb]]
+|-
+|Lactarius lilacinus
+|[[lilasta mlečnica]]
+|ranljiva
+|[[File:Lactarius_lilacinus-Cooke.jpg|frameless|thumb]]
+|-
+|Lactarius musteus
+|[[moštna mlečnica]]
+|ranljiva
+|[[File:2007-09-01_Lactarius_musteus_Fr_67820.jpg|frameless|thumb]]
+|-
+|Lanmaoa fragrans
+|[[dišeči zlatocevar]]
+|redka, zavarovana
+|[[File:Lanmaoa_fragrans_25983281.jpg|frameless|thumb]]
+|-
+|Leccinellum crocipodium
+|[[žlahtni dedek]]
+|ogrožena, zavarovana
+|[[File:Leccinellum_crocipodium_(16676948736).jpg|frameless|thumb]]
+|-
+|Leccinum holopus
+|[[beli ded]]
+|redka
+|[[File:2010-09-02_Leccinum_holopus_crop.jpg|frameless|thumb]]
+|-
+|Leptoporus mollis
+|[[mehka skutovka]]
+|ogrožena, zavarovana
+|[[File:Leptoporus_mollis.jpg|frameless|thumb]]
+|-
+|Leucopaxillus tricolor
+|[[tribarvna velepodvihanka]]
+|redka, zavarovana
+|[[File:Värviline_lehtervahelik.jpg|frameless|thumb]]
+|-
+|Metuloidea fragrans
+|[[dišeči iglopor]]
+|redka
+|[[File:Metuloidea_fragrans.jpg|frameless|thumb]]
+|-
+|Mitrula paludosa
+|[[močvirska kapica]]
+|ogrožena, zavarovana
+|[[File:Mitrula_paludosa_(33993390230).jpg|frameless|thumb]]
+|-
+|Phellodon violascens
+|[[vijoličasti plutozob]]
+|ranljiva
+|
+|-
+|Phylloporus rhodoxanthus
+|[[rdeči prekatnik]]
+|redka, zavarovana
+|[[File:Phylloporus_rhodoxanthus.jpg|frameless|thumb]]
+|-
+|Phyllotopsis nidulans
+|[[gnezdasti listar]]
+|prizadeta
+|[[File:Phyllotopsis_nidulans_102769050.jpg|frameless|thumb]]
+|-
+|Pluteus hispidulus
+|[[čopasta ščitovka]]
+|ogrožena, zavarovana
+|[[File:Pluteus_hispidulus_306480214.jpg|frameless|thumb]]
+|-
+|Pogonoloma macrorhizum
+|[[glavati risnikovec]]
+|redka, zavarovana
+|
+|-
+|Polyporus umbellatus
+|[[razvejani luknjičar]]
+|redka, zavarovana
+|[[File:Polyporus_umbellatus.jpg|frameless|thumb]]
+|-
+|Porphyrellus porphyrosporus
+|[[navadni porfirnik]]
+|redka, zavarovana
+|[[File:2011-10-03_Porphyrellus_porphyrosporus_crop.jpg|frameless|thumb]]
+|-
+|Porpolomopsis calyptriformis
+|[[rožnati risnik]]
+|ranljiva
+|[[File:Frosty_Porpolomopsis_calyptriformis_(50176359311).jpg|frameless|thumb]]
+|-
+|Pseudoinonotus dryadeus
+|[[roseči luknjevec]]
+|ranljiva
+|[[File:Pseudoinonotus_dryadeus.jpg|frameless|thumb]]
+|-
+|Pseudoplectania melaena
+|[[temneča polpletenka]]
+|redka
+|[[File:Pseudoplectania_melaena_11468.jpg|frameless|thumb]]
+|-
+|Pycnoporellus fulgens
+|[[bliskov gostoluknjičar]]
+|redka
+|[[File:Pycnoporellus_fulgens_12433923.jpg|frameless|thumb]]
+|-
+|Rhodofomes roseus
+|[[rožnati kresilnik]]
+|ranljiva
+|[[File:Fomitopsis_rosea,_Phlebia_centrifuga_(6103582396).jpg|frameless|thumb]]
+|-
+|Rubroboletus dupainii
+|[[Dupainov rubinovec]]
+|redka, zavarovana
+|[[File:Rubroboletus_dupainii_1.jpg|frameless|thumb]]
+|-
+|Rubroboletus satanas
+|[[vražji rubinovec]]
+|redka, zavarovana
+|[[File:Rubroboletus_satanas_-_Borowik_szatański.jpg|frameless|thumb]]
+|-
+|Russula rhodopus
+|[[rdečebetna golobica]]
+|redka
+|[[File:2007-08-25_Russula_rhodopus_Zvára_71534.jpg|frameless|thumb]]
+|-
+|Russula seperina
+|[[istrska golobica]]
+|ranljiva
+|
+|-
+|Russula zvarae
+|[[Zvarova golobica]]
+|ogrožena, zavarovana
+|
+|-
+|Suillus flavidus
+|[[rumena lupljivka]]
+|ranljiva
+|[[File:Třeboňsko_-_Suillus_flavidus_01.jpg|frameless|thumb]]
+|-
+|Suillus tridentinus
+|[[tridentinska lupljivka]]
+|redka
+|[[File:2011-10-03_Suillus_tridentinus.jpg|frameless|thumb]]
+|-
+|Tolypocladium ophioglossoides
+|[[kačonov glavatež]]
+|ogrožena, zavarovana
+|[[File:Tolypocladium_ophioglossoides_154210457.jpg|frameless|thumb]]
+|-
+|Tricholoma apium
+|[[začimbena kolobarnica]]
+|redka
+|[[File:Tricholoma_apium_161365163.jpg|frameless|thumb]]
+|-
+|Tricholoma caligatum
+|[[krokodilja kolobarnica]]
+|redka, zavarovana
+|[[File:Tricholoma_caligatum.jpg|frameless|thumb]]
+|-
+|Tricholosporum goniospermum
+|[[navadna križnotrosnica]]
+|redka
+|
+|-
+|Verpa bohemica
+|[[češki smrčkovec]]
+|ogrožena, zavarovana
+|[[File:Verpa_bohemica1.jpg|frameless|thumb]]
+|-
+|Verpa digitaliformis
+|[[poveznjeni smrčkovec]]
+|ogrožena, zavarovana
+|[[File:Verpa_digitaliformis_Pers_85097.jpg|frameless|thumb]]
+|-
+|Vibrissea truncorum
+|[[oranžna potočka]]
+|ogrožena, zavarovana
+|[[File:Vibrissea_truncorum.jpg|frameless|thumb]]
+|-
+|Volvariella bombycina
+|[[svilasta nožničarka]]
+|redka
+|[[File:Volvariella_bombycina1.jpg|frameless|thumb]]
+|}

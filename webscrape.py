@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import sqlite3
 import re
+import sys
 from unidecode import unidecode
 
 def url_request(url):
@@ -19,6 +20,53 @@ def processSlikaURL(vrsta_id, url, author):
     data = cursor.fetchall()
     if len(data) == 0:
         cursor.execute('INSERT INTO slike(vrsta_id, link, author) VALUES(?,?,?)', (vrsta_id, url, author))
+
+def extractImageFromWikidata(vrsta_id, name):
+    pic_searches = [name.replace(" ", "+").replace("-", "+").replace("_", "+").replace("var.", "+")]
+    for pic_search in pic_searches:
+        url = str(r'https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|categories&+generator=search&gsrsearch=File:') + str(pic_search) + str('&format=jsonfm&origin=*&iiprop=extmetadata&iiextmetadatafilter=ImageDescription|ObjectName')
+        response = url_request(url)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        spans = soup.find_all('span', {'class': 's2'})
+        lines = [span.get_text() for span in spans]
+        new_list = [item.replace('"', '') for item in lines]
+        new_list2 = [x for x in new_list if x.startswith('File')]
+        new_list3 = [x[5:] for x in new_list2]
+        new_list4 = [x.replace(' ','_') for x in new_list3]
+        list = []
+        for image in new_list4:
+            if image.lower().endswith(".pdf") or image.lower().endswith(".png") or image.lower().endswith(".svg"):
+                continue;
+            i = image.find("\\")
+            if (i >= 0 and len(image) > i + 1 and image[i + 1] != "u"):
+                continue
+            if (image.count(".") > 1):
+                continue
+            list.append(image);
+
+        srch = pic_search.split('+')
+        for image in list:
+            found = True
+            for s in srch:
+                if s not in image:
+                    found = False
+                    break
+            if found:   
+                processSlikaURL(vrsta_id, "https://commons.wikimedia.org/wiki/File:" + image, "wikimedia")
+                if (take_only_first_image):
+                    return;
+
+        for image in list:
+            for s in srch:
+                if s in image:
+                    processSlikaURL(vrsta_id, "https://commons.wikimedia.org/wiki/File:" + image, "wikimedia")
+                    if (take_only_first_image):
+                        return;
+
+        for image in list:
+            processSlikaURL(vrsta_id, "https://commons.wikimedia.org/wiki/File:" + image, "wikimedia")
+            if (take_only_first_image):
+                return;
 
 def extractFromSlikeURL(vrsta_id, name):
     n = name.split()
@@ -42,6 +90,8 @@ def extractFromSlikeURL(vrsta_id, name):
             url = img.get('src')
             if (url.startswith("/slike/") and url.endswith(".jpg")):
                 processSlikaURL(vrsta_id, "https://www.gobe.si" + url, author)
+                if (take_only_first_image):
+                    return;
 
         for row in rows:
             arr = []
@@ -56,6 +106,8 @@ def extractFromSlikeURL(vrsta_id, name):
             links = row.find_all('img')
             for link in links:
                 processSlikaURL(vrsta_id, "https://www.gobe.si/slike/" + link.get('src').removeprefix("/slikethumb/thumb_"), author)
+                if (take_only_first_image):
+                    return;
                 break
 
     else:
@@ -177,7 +229,22 @@ def extractFromZasciteniSeznamURL(url):
             arr = []
             links = row.find_all('a')
             for link in links:
-                s = "UPDATE vrste SET protected = 1 WHERE link = '{}'".format(link.get('href'))
+                name = unidecode(link.contents[0].strip())
+                if name == "Laricifomes officinalis":
+                    name = "Fomitopsis officinalis"
+                if name == "Elaphocordyceps ophioglossoides":
+                    name = "Tolypocladium ophioglossoides"
+                if name == "Boletus fragrans":
+                    name = "Lanmaoa fragrans"
+                if name == "Leucopaxillus macrorhizus":
+                    name = "Pogonoloma macrorhizum"
+                if name == "Bondarzewia montana":
+                    name = "Bondarzewia mesenterica"
+                sys.stdout.buffer.write(name.encode('utf8'))
+                sys.stdout.buffer.write('\n'.encode('utf8'))
+                s = "UPDATE vrste SET protected = 1 WHERE name = '{}'".format(name)
+                cursor.execute(s)
+                s = "UPDATE vrste SET protected = 1 WHERE name_old = '{}'".format(name)
                 cursor.execute(s)
                 break
     conn.commit()
@@ -283,7 +350,7 @@ def extractUzitnostUrl(url, id, name):
                 s_i = srow.find("<p><strong>")
                 e_i = srow.find("</strong>")
                 full_name = srow[s_i+11:e_i]
-                print("full_name: " + full_name)
+#                print("full_name: " + full_name)
                 s = "UPDATE vrste SET full_name = '{}' WHERE id = {}".format(full_name, id)
                 cursor.execute(s)
         conn.commit()
@@ -301,10 +368,11 @@ def checkSlike():
         cursor.execute('''SELECT id FROM slike WHERE vrsta_id = ?''', (record[0],))
         if not cursor.fetchall():
             extractFromSlikeURL(record[0], record[1])
+#            extractImageFromWikidata(record[0], record[1])
     conn.commit()
 
 def extractOSGS2013():
-    file = open('osgs2013.txt', 'r')
+    file = open('osgs2013.txt', mode="r", encoding="utf-8")
     list = []
     for line in file.readlines():
         sline = line.strip()
@@ -355,6 +423,8 @@ conn.execute('''CREATE TABLE IF NOT EXISTS vrste(
          
 conn.execute('''CREATE UNIQUE INDEX IF NOT EXISTS idx_name ON vrste(name);''')
 
+#conn.execute('''DROP TABLE IF EXISTS slike''')
+
 conn.execute('''CREATE TABLE IF NOT EXISTS slike(
          id             INTEGER PRIMARY KEY AUTOINCREMENT,
          vrsta_id       INTEGER NOT NULL,
@@ -363,25 +433,26 @@ conn.execute('''CREATE TABLE IF NOT EXISTS slike(
 
 cursor = conn.cursor()
 
+take_only_first_image = True
 imenaOSGS2013 = []
 
-extractOSGS2013()
-extractFromCelotniSeznamURL("https://www.gobe.si/Gobe/Gobe")
-extractFromCelotniSeznamURL("https://www.gobe.si/Protozoa")
-checkUzitnost()
-extractFromRdeciSeznamURL("https://www.gobe.si/Gobe/RdeciSeznam")
-extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamZacetni", "list80")
-extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamNadaljevalni", "list240")
-extractFromZasciteniSeznamURL("https://www.gobe.si/Gobe/ZasciteneGobe")
+#extractOSGS2013()
+#extractFromCelotniSeznamURL("https://www.gobe.si/Gobe/Gobe")
+#extractFromCelotniSeznamURL("https://www.gobe.si/Protozoa")
+#checkUzitnost()
+#extractFromRdeciSeznamURL("https://www.gobe.si/Gobe/RdeciSeznam")
+#extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamZacetni", "list80")
+#extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamNadaljevalni", "list240")
+#extractFromZasciteniSeznamURL("https://www.gobe.si/Gobe/ZasciteneGobe")
 checkSlike()
 
 #sqlite_select_query = '''SELECT * FROM vrste WHERE status != "" ORDER BY name ASC'''
-#sqlite_select_query = '''SELECT name_old, name_slo_old, name, name_slo FROM vrste WHERE name_old != "" ORDER BY name ASC'''
+#sqlite_select_query = '''SELECT name, name_slo, link FROM vrste ORDER BY name ASC'''
 #cursor.execute(sqlite_select_query)
 #records = cursor.fetchall()
 #print("Total rows are:  ", len(records))
 #for row in records:
-#    print(row[0] + ", " + row[1] + " ===> " + row[2] + ", " + row[3])
+#    print(row[0] + ";" + row[1] + ";" + row[2])
 
 #sqlite_select_query = '''SELECT * FROM slike'''
 #cursor.execute(sqlite_select_query)
@@ -400,6 +471,14 @@ checkSlike()
 #        print(oldName + "; " + staroIme[1])
 #        continue
 #print("#######################################################")
+
+#sqlite_select_query = '''SELECT * FROM vrste WHERE protected != 0 ORDER BY name ASC'''
+#cursor.execute(sqlite_select_query)
+#records = cursor.fetchall()
+#for row in records:
+#    sys.stdout.buffer.write(row[1].encode('utf8'))
+#    sys.stdout.buffer.write('\n'.encode('utf8'))
+#print("Total rows are:  ", len(records))
 
 cursor.close()
 conn.commit()

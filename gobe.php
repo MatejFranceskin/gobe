@@ -28,13 +28,16 @@ $query = "SELECT * FROM vrste " . $where . " ORDER BY RANDOM()";
 $result = $db->query($query);
 
 while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-    $query_slika = "SELECT * FROM slike WHERE vrsta_id = {$row['id']} ORDER BY RANDOM()";
+#    $query_slika = "SELECT * FROM slike WHERE vrsta_id = {$row['id']} ORDER BY RANDOM()";
+    $query_slika = "SELECT * FROM slike WHERE vrsta_id = {$row['id']} AND author = quiz ORDER BY link";
     $result2 = $db->query($query_slika);
     $slike = array();
     while ($res = $result2->fetchArray(SQLITE3_ASSOC)) {
         $slike[] = $res['link'];
     }
-    $name = "{$row['name']}, {$row['name_slo']}";
+	$full_name = $row['full_name'];
+	$a =  explode(' ', $full_name);
+    $name = "{$a[0]} {$a[1]}, {$row['name_slo']}";
     $objects[] = (object) [
         'images' => $slike,
         'name' => $name,

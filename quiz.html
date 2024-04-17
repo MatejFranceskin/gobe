@@ -25,7 +25,7 @@ function getSuccess() {
     const q = gobeJson[gobeJsonQuestions[0]];
     answer = q.name;
     link = q.link;
-    $("#image").attr("src", q.images[Math.floor(Math.random() * q.images.length)]);
+    $("#image").attr("src", q.images[0]);
     options = [];
     options.push(answer);
     while (options.length < 5) {
@@ -114,7 +114,7 @@ if (option == answer) {
 }
 
 function normalize(ime) {
-    return ime.toLowerCase().replace(',', '').replace('-', '').trim().replace('č', 'c').replace('š', 's').replace('ž', 'z');
+    return ime.toLowerCase().replace(',', '').replace('-', '').trim().replace('č', 'c').replace('š', 's').replace('ž', 'z').normalize("NFD").replace(/\p{Diacritic}/gu, "")
 }
 
 const levenshteinDistance = (s, t) => {
@@ -175,9 +175,7 @@ function setType(type) {
 
 function onImageLoad(image) {
     if (!samoImena) {
-        setTimeout( function() {
-            $(".option-td").show();
-        }, 3000);
+		$(".option-td").show();
     }
 }
 
