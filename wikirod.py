@@ -1,65 +1,100 @@
-import re
+from bs4 import BeautifulSoup
 import sys
-from unidecode import unidecode
 import sqlite3
-import locale
+import requests
+from unidecode import unidecode
 
-def extractOSGS2013():
-    file = open('osgs2013.txt', mode="r", encoding="utf-8")
-    list = []
-    for line in file.readlines():
-        sline = line.strip()
-        if line.startswith("\t"):
-            continue
-        if not line.startswith("  ") or not sline:
-            continue
-        if not sline.split('.')[0].isnumeric():
-            list[-1] += " " + sline
-            continue
-        list.append(sline)
+def url_request(url):
+    while True:
+        try:
+#            print("Getting " + url)
+            response = requests.get(url, headers={"User-Agent": "Chrome/112.0.0.0"})
+            return response
+        except:
+            print("Retrying " + url)
 
-    for l in list:
-        l = re.sub("[\(\[].*?[\)\]]", "", l)
-        l = l.replace(" ex ", " ").replace(" & ", " ")
-        words = l.split()
-        name = words[1] + " " + words[2]
-        wi = 3
-        if words[3] == "var.":
-            name += " var. " + words[4]
-            wi = 5
-        slo_name = ""
-        for i in range(wi, len(words)):
-            if words[i].lower() != words[i] or words[i].replace(',', '').isnumeric():
+def extractImageFromWikidata(name):
+    pic_searches = [name.replace(" ", "+").replace("-", "+").replace("_", "+").replace("var.", "+")]
+    for pic_search in pic_searches:
+        url = str(r'https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo|categories&+generator=search&gsrsearch=File:') + str(pic_search) + str('&format=jsonfm&origin=*&iiprop=extmetadata&iiextmetadatafilter=ImageDescription|ObjectName')
+        response = url_request(url)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        spans = soup.find_all('span', {'class': 's2'})
+        lines = [span.get_text() for span in spans]
+        new_list = [item.replace('"', '') for item in lines]
+        new_list2 = [x for x in new_list if x.startswith('File')]
+        new_list3 = [x[5:] for x in new_list2]
+        new_list4 = [x.replace(' ','_') for x in new_list3]
+        list = []
+        for image in new_list4:
+            if image.lower().endswith(".pdf") or image.lower().endswith(".png") or image.lower().endswith(".svg"):
+                continue;
+            i = image.find("\\")
+            if (i >= 0 and len(image) > i + 1 and image[i + 1] != "u"):
                 continue
-            slo_name += words[i] + " "
+            if (image.count(".") > 1):
+                continue
+            list.append(image);
 
-        imenaOSGS2013.append((unidecode(name.strip()), slo_name.strip()))
+        srch = pic_search.split('+')
+        for image in list:
+            found = True
+            for s in srch:
+                if s not in image:
+                    found = False
+                    break
+            if found:   
+                return image
+
+        for image in list:
+            for s in srch:
+                if s in image:
+                    return image
+
+        for image in list:
+            return image
+
+def extractImena():
+    file = open('imena.csv', mode="r", encoding="utf-8")
+    for line in file.readlines():
+        if line.startswith(";sin;"):
+            continue
+        l = line.split(";")
+
+        if (len(l) < 5):
+            continue
+        
+        name = l[2].strip()
+        slo_name = l[4].strip()
+        imena.append((unidecode(name), slo_name))
 
 rod = sys.argv[1]
+imena = []
+extractImena()
 
-wiki_out = []
-
-imenaOSGS2013 = []
-extractOSGS2013()
-
-for i in imenaOSGS2013:
-    if i[0].startswith(rod):
-        wiki_out.append("*[[{}|{} (''{}'')]]".format(i[1], i[1], i[0]))
-        
 conn = sqlite3.connect('gobe.db')
 cursor = conn.cursor()
-
-utf8stdout = open(1, 'w', encoding='utf-8', closefd=False)
-
 cursor.execute("SELECT name, name_slo FROM vrste WHERE name like '%{}%' ORDER BY name_slo".format(rod))
 records = cursor.fetchall()
 for row in records:
-    wiki_out.append("*[[{}|{} (''{}'')]]".format(row[1], row[1], row[0]))
+   if (not row in imena):
+        imena.append((row[0], row[1]))
 
-
-wiki_out = list(set(wiki_out))
-locale.setlocale(locale.LC_ALL, "")
-wiki_out.sort(key=locale.strxfrm)
-
-for w in wiki_out:
-    print(w)
+first = True
+for row in imena:
+    if not row[0].startswith(rod + " "):
+        continue
+    if first:
+        first = False
+        rod_slo = row[1].split(" ")[1]
+        print('== Seznam {} Slovenije<ref>{{{{Navedi knjigo|title=Seznam gliv Slovenije|publisher=Mikološka zveza Slovenije|year=2022|isbn=978-961-90647-2-6|cobiss=130237443}}}}</ref> =='.format(rod_slo))
+        print('{| class="wikitable sortable"')
+        print('! znanstveno ime')
+        print('! slovensko ime')
+	        print('! class="unsortable" | slika')
+    print('|-')
+    print("|''{}''".format(row[0]))
+    print("|[[{}]]".format(row[1]))
+    print("|[[Slika:{}|brezokvirja]]".format(extractImageFromWikidata(row[0])))
+    
+print('|}')
