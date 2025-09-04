@@ -2,3 +2,5 @@
 *.pkl
 *.pdf
 .~lock*
+build
+dist

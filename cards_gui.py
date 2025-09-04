@@ -8,14 +8,35 @@ import qrcode
 import time
 import os
 import csv
+import io
 import subprocess
+import tempfile
 import platform
+import sys
 
 DB_PATH = 'gobe.db'
 PDF_PATH = 'selected_mushrooms.pdf'
+
+def get_resource_path(relative_path):
+    """Get absolute path to resource, works for dev and for PyInstaller"""
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
+def get_font_path():
+    """Get the path to the Arial Unicode font file"""
+    return get_resource_path('arialuni.ttf')
+
+def get_db_path():
+    """Get the path to the database file"""
+    return get_resource_path('gobe.db')
+
 # Database search function
 def search_mushrooms(query):
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(get_db_path())
     cursor = conn.cursor()
     query = query.strip().lower()  # Convert query to lowercase
     results = []
@@ -178,7 +199,10 @@ def createCard(pdf, x1, y1, x2, y2, opis):
 
         img = qr.make_image(fill_color="black", back_color="white")
         
-        qrn = "qr"+ text2.strip() +".png"
+        # Use a temporary file name that's less likely to conflict
+        with tempfile.NamedTemporaryFile(suffix='.png', delete=False) as tmp_file:
+            qrn = tmp_file.name
+        
         img.save(qrn)
         
         # Center QR code vertically on the right side of the card
@@ -186,7 +210,12 @@ def createCard(pdf, x1, y1, x2, y2, opis):
         qr_y = y1 + (height - qr_image_width) / 2  # Center vertically
         
         pdf.image(qrn, qr_x, qr_y, qr_image_width, qr_image_width)
-        os.remove(qrn)
+        
+        # Clean up immediately after use
+        try:
+            os.remove(qrn)
+        except OSError:
+            pass  # Ignore if file is already deleted
 
     if text6:
         # Calculate maximum allowed width (with small margins)
@@ -220,7 +249,7 @@ card_width = page_width / n_columns
 card_height = page_height / n_rows
 
 def generate_pdf(selected_ids, progress_callback=None):
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(get_db_path())
     cursor = conn.cursor()
     opisi = []
     
@@ -264,7 +293,12 @@ def generate_pdf(selected_ids, progress_callback=None):
     pdf_time = int(time.time())
     pdf = FPDF('P', 'mm', 'A4')
     pdf.add_page()
-    pdf.add_font("ArialUni", "", "arialuni.ttf", uni=True)
+    
+    # Use cached font path for faster loading
+    if progress_callback:
+        progress_callback("Loading font...")
+    pdf.add_font("ArialUni", "", MushroomApp._font_path_cache or get_font_path(), uni=True)
+    
     opis_index = 0
     num = len(opisi)
     cards_created = 0
@@ -291,14 +325,25 @@ def generate_pdf(selected_ids, progress_callback=None):
 
 # GUI Application
 class MushroomApp:
+    # Class-level font path cache for better performance
+    _font_path_cache = None
+    
     def __init__(self, root):
         self.root = root
-        self.root.title("Kartice razstave gob")
+        self.root.title("Razstava gob")
         self.root.state('zoomed')  # Maximize window on Windows
         self.selected_mushrooms = []  # List of (id, name)
         self.printed_mushrooms = []  # List of (id, name, latin_name) sorted by latin name
         self.csv_file = "printed_mushrooms.csv"
         self.pdf_already_printed = False  # Track if current PDF has been printed
+        
+        # Pre-cache font path for faster PDF generation
+        if MushroomApp._font_path_cache is None:
+            MushroomApp._font_path_cache = get_font_path()
+            # Validate font file exists
+            if not os.path.exists(MushroomApp._font_path_cache):
+                messagebox.showerror("Font Error", f"Font file not found: {MushroomApp._font_path_cache}")
+            
         self.load_printed_mushrooms()
         self.setup_ui()
 
@@ -365,8 +410,8 @@ class MushroomApp:
         # Button frame for PDF and Print buttons
         button_frame = Frame(right_frame)
         button_frame.pack(pady=10)
-        Button(button_frame, text="Generiraj", command=self.generate_and_preview_pdf, bg="lightblue", font=("Arial", 12, "bold")).pack(side=tk.LEFT, padx=5)
-        Button(button_frame, text="Natisni", command=self.print_pdf, bg="lightgreen", font=("Arial", 12, "bold")).pack(side=tk.LEFT, padx=5)
+        Button(button_frame, text="Generiraj", command=self.generate_and_preview_pdf, font=("Arial", 12, "bold")).pack(side=tk.LEFT, padx=5)
+        Button(button_frame, text="Natisni", command=self.print_pdf, font=("Arial", 12, "bold")).pack(side=tk.LEFT, padx=5)
 
         Label(right_frame, text="Predogled:", font=("Arial", 12, "bold")).pack(anchor=tk.W)
         self.pdf_preview_label = Label(right_frame, text="Predogled še ni generiran", bg="white", relief="sunken")
@@ -512,7 +557,7 @@ class MushroomApp:
         mushrooms_to_move = self.selected_mushrooms[:num_to_move]
         
         # Get full mushroom data for CSV
-        conn = sqlite3.connect(DB_PATH)
+        conn = sqlite3.connect(get_db_path())
         cursor = conn.cursor()
         
         for mushroom_id, display_name in mushrooms_to_move:
@@ -549,7 +594,7 @@ class MushroomApp:
 
     def save_printed_to_csv(self):
         try:
-            conn = sqlite3.connect(DB_PATH)
+            conn = sqlite3.connect(get_db_path())
             cursor = conn.cursor()
             
             with open(self.csv_file, 'w', newline='', encoding='utf-8') as csvfile:
