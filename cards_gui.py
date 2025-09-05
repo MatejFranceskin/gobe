@@ -334,7 +334,11 @@ class MushroomApp:
         self.root.state('zoomed')  # Maximize window on Windows
         self.selected_mushrooms = []  # List of (id, name)
         self.printed_mushrooms = []  # List of (id, name, latin_name) sorted by latin name
-        self.csv_file = "printed_mushrooms.csv"
+        
+        # Find the latest exhibition CSV file to use as default
+        latest_exhibition = self.find_latest_exhibition_csv()
+        self.exhibition_name = StringVar(value=latest_exhibition)
+        self.csv_file = f"{latest_exhibition}.csv"
         self.pdf_already_printed = False  # Track if current PDF has been printed
         
         # Pre-cache font path for faster PDF generation
@@ -343,9 +347,44 @@ class MushroomApp:
             # Validate font file exists
             if not os.path.exists(MushroomApp._font_path_cache):
                 messagebox.showerror("Font Error", f"Font file not found: {MushroomApp._font_path_cache}")
-            
+        
+        # Load printed mushrooms from the detected CSV file
         self.load_printed_mushrooms()
+        
         self.setup_ui()
+
+    def find_latest_exhibition_csv(self):
+        """Find the most recently modified exhibition CSV file, excluding system files"""
+        system_files = {'gobe.csv', 'imena.csv', 'SlovenianNames.csv'}
+        
+        try:
+            # Get all CSV files in the current directory
+            csv_files = []
+            for file in os.listdir('.'):
+                if file.endswith('.csv') and file not in system_files:
+                    try:
+                        # Check if this file has the expected structure by trying to read it
+                        with open(file, 'r', newline='', encoding='utf-8') as csvfile:
+                            reader = csv.DictReader(csvfile)
+                            fieldnames = reader.fieldnames
+                            # Check if it has the expected exhibition CSV structure
+                            if fieldnames and 'znanstveno ime' in fieldnames and 'slovensko ime' in fieldnames:
+                                file_stat = os.stat(file)
+                                csv_files.append((file, file_stat.st_mtime))
+                    except Exception:
+                        # Skip files that can't be read or don't have the expected structure
+                        continue
+            
+            if csv_files:
+                # Sort by modification time (newest first) and get the filename without extension
+                latest_file = sorted(csv_files, key=lambda x: x[1], reverse=True)[0][0]
+                return latest_file[:-4]  # Remove .csv extension
+            else:
+                return "razstava gob"  # Default name if no valid CSV files found
+                
+        except Exception as e:
+            print(f"Error finding latest exhibition CSV: {e}")
+            return "razstava gob"  # Default name on error
 
     def setup_ui(self):
         # Main frame with grid layout for better control
@@ -363,6 +402,12 @@ class MushroomApp:
         
         # Make the window larger
         self.root.geometry("1200x800")
+        
+        # Exhibition name input at the top
+        Label(left_frame, text="Razstava:", font=("Arial", 12, "bold")).pack(anchor=tk.W)
+        self.exhibition_entry = Entry(left_frame, textvariable=self.exhibition_name, width=80, font=("Arial", 12))
+        self.exhibition_entry.pack(fill=tk.X, pady=(0, 10))
+        self.exhibition_entry.bind('<KeyRelease>', self.on_exhibition_name_change)
         
         Label(left_frame, text="Ime vrste:", font=("Arial", 12, "bold")).pack(anchor=tk.W)
         self.search_var = StringVar()
@@ -418,6 +463,9 @@ class MushroomApp:
         self.pdf_preview_label.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
         self.update_printed_list()
+        
+        # Mark setup as completed so exhibition name changes work properly
+        self.setup_completed = True
 
     def fix_slovenian_chars(self, text):
         """Fix incorrectly mapped Slovenian characters from Windows input method"""
@@ -434,6 +482,32 @@ class MushroomApp:
             text = text.replace(wrong_char, correct_char)
         
         return text
+
+    def on_exhibition_name_change(self, event=None):
+        """Handle changes to the exhibition name and update CSV file"""
+        exhibition_name = self.exhibition_name.get().strip()
+        if not exhibition_name:
+            exhibition_name = "razstava gob"
+            self.exhibition_name.set(exhibition_name)
+        
+        # Create new CSV filename
+        new_csv_file = f"{exhibition_name}.csv"
+        
+        # If the filename changed, save current data and load new file if it exists
+        if new_csv_file != self.csv_file:
+            # Save current data to the old file if there's any data
+            if self.printed_mushrooms and self.csv_file and hasattr(self, 'setup_completed'):
+                self.save_printed_to_csv()
+            
+            # Update the CSV file path
+            self.csv_file = new_csv_file
+            
+            # Clear current printed mushrooms and load from new file if it exists
+            # Only do this if setup is completed to avoid clearing during initialization
+            if hasattr(self, 'setup_completed'):
+                self.printed_mushrooms = []
+                self.load_printed_mushrooms()
+                self.update_printed_list()
 
     def on_search(self, event=None):
         query = self.search_var.get()
@@ -655,22 +729,43 @@ class MushroomApp:
             try:
                 with open(self.csv_file, 'r', newline='', encoding='utf-8') as csvfile:
                     reader = csv.DictReader(csvfile)
+                    
+                    # Connect to database to get mushroom IDs
+                    conn = sqlite3.connect(get_db_path())
+                    cursor = conn.cursor()
+                    
                     for row in reader:
-                        # Create display name from available data
-                        parts = [row['latin_name'], row['slovenian_name']]
-                        if row['old_latin_name']:
-                            parts.append(row['old_latin_name'])
-                        if row['old_slovenian_name']:
-                            parts.append(row['old_slovenian_name'])
-                        display_name = " / ".join(parts)
-                        
-                        self.printed_mushrooms.append((int(row['id']), display_name, row['latin_name']))
+                        # Get mushroom ID by searching for the scientific name
+                        scientific_name = row.get('znanstveno ime', '')
+                        if scientific_name:
+                            cursor.execute('SELECT id FROM vrste WHERE name = ?', (scientific_name,))
+                            result = cursor.fetchone()
+                            if result:
+                                mushroom_id = result[0]
+                                
+                                # Create display name from CSV data
+                                parts = []
+                                if row.get('znanstveno ime'):
+                                    parts.append(row['znanstveno ime'])
+                                if row.get('slovensko ime'):
+                                    parts.append(row['slovensko ime'])
+                                if row.get('staro znanstveno ime'):
+                                    parts.append(row['staro znanstveno ime'])
+                                if row.get('staro slovensko ime'):
+                                    parts.append(row['staro slovensko ime'])
+                                
+                                display_name = " / ".join(parts)
+                                latin_name = row.get('znanstveno ime', '')
+                                
+                                self.printed_mushrooms.append((mushroom_id, display_name, latin_name))
+                    
+                    conn.close()
                 
                 # Sort by latin name
                 self.printed_mushrooms.sort(key=lambda x: x[2])
                 
             except Exception as e:
-                print(f"Error loading printed mushrooms: {e}")
+                print(f"Error loading printed mushrooms from {self.csv_file}: {e}")
 
 if __name__ == "__main__":
     root = tk.Tk()
