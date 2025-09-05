@@ -490,6 +490,16 @@ class MushroomApp:
             self.update_printed_list()
             self.save_printed_to_csv()  # Update the CSV file
 
+    def restore_window_focus(self):
+        """Restore focus to the main window - useful after external processes"""
+        try:
+            self.root.lift()  # Bring window to front
+            self.root.attributes('-topmost', True)  # Temporarily make it topmost
+            self.root.after(100, lambda: self.root.attributes('-topmost', False))  # Remove topmost after 100ms
+            self.root.focus_force()  # Force focus
+        except Exception:
+            pass  # Ignore any focus-related errors
+
     def generate_and_preview_pdf(self):
         if not self.selected_mushrooms:
             messagebox.showinfo("Ni izbire", "Prosim izberite vsaj eno vrsto.")
@@ -507,6 +517,7 @@ class MushroomApp:
         except Exception as e:
             messagebox.showerror("PDF Generation Error", f"Error generating PDF: {e}")
             self.pdf_preview_label.config(text=f"Error: {e}", bg="lightcoral")
+            self.restore_window_focus()  # Restore focus after error
             return
             
         # Convert first page of PDF to image and display
@@ -522,6 +533,9 @@ class MushroomApp:
                 text=f"PDF generated successfully!\nFile: {PDF_PATH}\n\nCards generated: {len(ids)}\n\nFor preview, install poppler:\nhttps://github.com/oschwartz10612/poppler-windows/releases/", 
                 image="", bg="lightyellow", justify=tk.LEFT
             )
+        
+        # Restore focus to main window after PDF generation
+        self.restore_window_focus()
 
     def print_pdf(self):
         if not os.path.exists(PDF_PATH):
@@ -547,6 +561,7 @@ class MushroomApp:
             
         except Exception as e:
             messagebox.showerror("Error", f"Could not open PDF file: {e}")
+            self.restore_window_focus()  # Restore focus after error
 
     def move_to_printed(self):
         if not self.selected_mushrooms:
