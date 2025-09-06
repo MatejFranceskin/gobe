@@ -391,9 +391,9 @@ class MushroomApp:
         main_frame = Frame(self.root)
         main_frame.pack(fill=tk.BOTH, expand=True)
         
-        # Configure grid weights: both sections get equal space
-        main_frame.grid_columnconfigure(0, weight=1)  # Left section: 50% of space
-        main_frame.grid_columnconfigure(1, weight=1)  # Right section: 50% of space
+        # Configure grid weights: left section gets most space, right section gets fixed space for A4 preview
+        main_frame.grid_columnconfigure(0, weight=2)  # Left section: 66.67% of space
+        main_frame.grid_columnconfigure(1, weight=1)  # Right section: 33.33% of space for A4 preview
         main_frame.grid_rowconfigure(0, weight=1)
 
         # Left section (wider)
@@ -404,51 +404,81 @@ class MushroomApp:
         self.root.geometry("1200x800")
         
         # Exhibition name input at the top
-        Label(left_frame, text="Razstava:", font=("Arial", 12, "bold")).pack(anchor=tk.W)
-        self.exhibition_entry = Entry(left_frame, textvariable=self.exhibition_name, width=80, font=("Arial", 12))
-        self.exhibition_entry.pack(fill=tk.X, pady=(0, 10))
+        exhibition_container = Frame(left_frame)
+        exhibition_container.pack(fill=tk.X, pady=(0, 10))
+        Label(exhibition_container, text="Razstava:", font=("Arial", 12, "bold")).pack(anchor=tk.W)
+        self.exhibition_entry = Entry(exhibition_container, textvariable=self.exhibition_name, font=("Arial", 12))
+        self.exhibition_entry.pack(fill=tk.X, padx=(0, 35))  # Leave space for X button alignment
         self.exhibition_entry.bind('<KeyRelease>', self.on_exhibition_name_change)
         
-        Label(left_frame, text="Ime vrste:", font=("Arial", 12, "bold")).pack(anchor=tk.W)
+        # Search input
+        search_container = Frame(left_frame)
+        search_container.pack(fill=tk.X)
+        Label(search_container, text="Ime vrste:", font=("Arial", 12, "bold")).pack(anchor=tk.W)
         self.search_var = StringVar()
-        self.search_entry = Entry(left_frame, textvariable=self.search_var, width=80, font=("Arial", 12))
-        self.search_entry.pack(fill=tk.X)
+        self.search_entry = Entry(search_container, textvariable=self.search_var, font=("Arial", 12))
+        self.search_entry.pack(fill=tk.X, padx=(0, 35))  # Leave space for X button alignment
         self.search_entry.bind('<KeyRelease>', self.on_search)
         suggestion_frame = Frame(left_frame)
         suggestion_frame.pack(fill=tk.X, pady=5)
-        self.suggestion_scroll = tk.Scrollbar(suggestion_frame, orient=tk.VERTICAL)
-        self.suggestion_list = Listbox(suggestion_frame, height=8, width=80, yscrollcommand=self.suggestion_scroll.set, font=("Arial", 12))
+        
+        # Suggestion listbox with scrollbar (aligned like the others)
+        suggestion_list_frame = Frame(suggestion_frame)
+        suggestion_list_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        
+        self.suggestion_scroll = tk.Scrollbar(suggestion_list_frame, orient=tk.VERTICAL)
+        self.suggestion_list = Listbox(suggestion_list_frame, height=8, yscrollcommand=self.suggestion_scroll.set, font=("Arial", 12))
         self.suggestion_list.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         self.suggestion_list.bind('<<ListboxSelect>>', self.on_select_suggestion)
         self.suggestion_scroll.config(command=self.suggestion_list.yview)
         self.suggestion_scroll.pack(side=tk.RIGHT, fill=tk.Y)
-        Label(left_frame, text="Izbrane gobe:", font=("Arial", 12, "bold")).pack(anchor=tk.W, pady=(10,0))
+        
+        # Empty space to align with X buttons of other listboxes
+        Frame(suggestion_frame, width=35).pack(side=tk.RIGHT)
+        
+        # Selected mushrooms section
+        selected_label_container = Frame(left_frame)
+        selected_label_container.pack(fill=tk.X, pady=(10,0))
+        Label(selected_label_container, text="Izbrane gobe:", font=("Arial", 12, "bold")).pack(anchor=tk.W)
 
-        # Selected mushrooms frame with scrollbar
-        selected_frame = Frame(left_frame)
-        selected_frame.pack(fill=tk.X, pady=5)
+        # Selected mushrooms frame with scrollbar and remove button
+        selected_container = Frame(left_frame)
+        selected_container.pack(fill=tk.X, pady=5)
+        
+        selected_frame = Frame(selected_container)
+        selected_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        
         self.selected_scroll = tk.Scrollbar(selected_frame, orient=tk.VERTICAL)
-        self.selected_list = Listbox(selected_frame, height=12, width=80, yscrollcommand=self.selected_scroll.set, font=("Arial", 12))
+        self.selected_list = Listbox(selected_frame, height=12, yscrollcommand=self.selected_scroll.set, font=("Arial", 12))  # Fixed height of 12 to always show 12 species
         self.selected_list.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         self.selected_scroll.config(command=self.selected_list.yview)
         self.selected_scroll.pack(side=tk.RIGHT, fill=tk.Y)
         
-        Button(left_frame, text="Odstrani izbrane", command=self.remove_selected, font=("Arial", 12, "bold")).pack(pady=5)
+        # Remove button on the right
+        Button(selected_container, text="X", command=self.remove_selected, font=("Arial", 12, "bold"), width=3).pack(side=tk.RIGHT, padx=(5,0))
 
-        # Printed mushrooms section
-        Label(left_frame, text="Natisnjene vrste:", font=("Arial", 12, "bold")).pack(anchor=tk.W, pady=(10,0))
-        printed_frame = Frame(left_frame)
-        printed_frame.pack(fill=tk.X, pady=5)
+        # Printed mushrooms section - make it fill remaining space
+        printed_label_container = Frame(left_frame)
+        printed_label_container.pack(fill=tk.X, pady=(10,0))
+        Label(printed_label_container, text="Natisnjene vrste:", font=("Arial", 12, "bold")).pack(anchor=tk.W)
+        
+        printed_container = Frame(left_frame)
+        printed_container.pack(fill=tk.BOTH, expand=True, pady=5)
+        
+        printed_frame = Frame(printed_container)
+        printed_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        
         self.printed_scroll = tk.Scrollbar(printed_frame, orient=tk.VERTICAL)
-        self.printed_list = Listbox(printed_frame, height=8, width=80, yscrollcommand=self.printed_scroll.set, font=("Arial", 12))
+        self.printed_list = Listbox(printed_frame, yscrollcommand=self.printed_scroll.set, font=("Arial", 12))  # Expandable width
         self.printed_list.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         self.printed_scroll.config(command=self.printed_list.yview)
         self.printed_scroll.pack(side=tk.RIGHT, fill=tk.Y)
         self.update_printed_list()
         
-        Button(left_frame, text="Odstrani izbrane", command=self.remove_printed, font=("Arial", 12, "bold")).pack(pady=5)
+        # Remove button on the right
+        Button(printed_container, text="X", command=self.remove_printed, font=("Arial", 12, "bold"), width=3).pack(side=tk.RIGHT, padx=(5,0))
 
-        # Right section (50% of total width)
+        # Right section (25% of total width - appropriate for A4 preview)
         right_frame = Frame(main_frame)
         right_frame.grid(row=0, column=1, sticky="nsew", padx=10, pady=10)
         
