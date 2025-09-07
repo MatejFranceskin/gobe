@@ -1,0 +1,471 @@
+URL;LatinName;SlovenianName;FullName;Uzitnost
+https://www.gobe.si/Gobe/StereumSanguinolentum;Stereum sanguinolentum;krvaveča slojevka;Stéreum sanguinolentum (Alb. & Schwein.) Fr. (1838);neužitna
+https://www.gobe.si/Lisaji/CladoniaRangiferina;Cladonia rangiferina;jelenova kladonija;;neužitna
+https://www.gobe.si/Gobe/BoletusBadiorufus;Boletus badiorufus;vresin goban;Bolétus badiorúfus R. Heim (1960);užitna
+https://www.gobe.si/Gobe/CalonariusNapus;Calonarius napus;sivolistni koprenar;Calonárius nápus (Fr.) Niskanen & Liimat. (2022);užitna
+https://www.gobe.si/Gobe/CortinariusBadiolatus;Cortinarius badiolatus;datljeva koprenka;Cortinárius badiolátus (M.M. Moser) M.M. Moser (1967);užitna
+https://www.gobe.si/Gobe/LeucoagaricusBarssii;Leucoagaricus barssii;korenčasti kukmakovec;Leucoagáricus bárssii (Zeller) Vellinga (2000);užitna
+https://www.gobe.si/Gobe/SuillusLeptopus;Suillus leptopus;kratkobetna lupljivka;Suíllus léptopus A. Marchand (1971);užitna
+https://www.gobe.si/Gobe/HygrophorusPonderatus;Hygrophorus ponderatus;stasita polževka;Hygróphorus ponderátus Britzelm. (1891);užitna
+https://www.gobe.si/Gobe/LepistaVernicosa;Lepista vernicosa;firneževa kolesnica;Lepísta vernicósa (Fr.) Bon (1996);užitna
+https://www.gobe.si/Gobe/AgaricusBenesii;Agaricus benesii;Benešev kukmak;Agáricus benésii (Pilát) Pilát (1951);užitna
+https://www.gobe.si/Gobe/SuillusBresadolae;Suillus bresadolae;Bresadolova lupljivka;Suíllus bresádolae (Quél.) Gerhold (1985);<p>suíllus bresádolae (quél.) gerhold (1985);neužitna
+https://www.gobe.si/Gobe/ThaxterogasterVariegatus;Thaxterogaster variegatus;večbarvna trebušarka;Thaxtérogáster variegátus (Bres.) Niskanen & Liimat. (2022);užitna
+https://www.gobe.si/Gobe/RamariaRufescens;Ramaria rufescens;rdečkasta griva;Ramária ruféscens (Schäff.) Corner (1950);užitna
+https://www.gobe.si/Gobe/TuberMelanosporum;Tuber melanosporum;perigordska gomoljika;Túber melanósporum Vittad. (1831);užitna
+https://www.gobe.si/Gobe/AspropaxillusGiganteus;Aspropaxillus giganteus;orjaški velepodvihanec;Aspropaxíllus gigánteus (Sowerby) Kühner & Maire (1934);užitna
+https://www.gobe.si/Gobe/HygrophorusDiscoxanthus;Hygrophorus discoxanthus;rumeneča polževka;Hygróphorus discoxánthus Rea (1908);užitna
+https://www.gobe.si/Gobe/GymnopusOcior;Gymnopus ocior;žoltolistni korenovec;Gýmnopus ócior (Pers.) Antonín & Noordel. (1997);užitna
+https://www.gobe.si/Gobe/RussulaRubroalba;Russula rubroalba;belobetna golobica;Rússula rubroálba (Singer) Romagn. (1967);užitna
+https://www.gobe.si/Gobe/TricholomaHordum;Tricholoma hordum;vijoličnorjava kolobarnica;Tricholóma hórdum (Fr.) Quél. (1872);užitna
+https://www.gobe.si/Gobe/RussulaVersatilis;Russula versatilis;(spreminjava golobica);Rússula versátilis Romagn. (1962);užitna
+https://www.gobe.si/Gobe/LeccinumPiceinum;Leccinum piceinum;smrečji turek;Leccínum piceínum Pilát & Dermek (1974);užitna
+https://www.gobe.si/Gobe/HygrophorusFagi;Hygrophorus fagi;bukova polževka;Hygróphorus fági G. Becker & Bon (1974);užitna
+https://www.gobe.si/Gobe/PluteusLuctuosus;Pluteus luctuosus;rjavoroba ščitovka;Plúteus luctuósus Boud. (1905);užitna
+https://www.gobe.si/Gobe/LactariusQuieticolor;Lactarius quieticolor;rjava sirovka;Lactárius quietícolor Romagn. (1958);užitna
+https://www.gobe.si/Gobe/RussulaPuellaris;Russula puellaris;voščenolistna golobica;Rússula puelláris Fr. (1838);užitna
+https://www.gobe.si/Gobe/CollybiaPorrea;Collybia porrea;porova korenovka;Collýbia pórrea (Pers.) P. Kumm. 1871;užitna
+https://www.gobe.si/Gobe/TricholomaArgyraceum;Tricholoma argyraceum;srebrnkasta kolobarnica;Tricholóma argyráceum (Bull.) Gillet (1874);užitna
+https://www.gobe.si/Gobe/LepistaOvispora;Lepista ovispora;šopasta kolesnica;Lepísta ovíspora (J.E. Lange) Gulden (1983);<p>lepísta ovíspora (j.e. lange) gulden (1983)
+https://www.gobe.si/Gobe/HygrocybeCinerea;Hygrocybe cinerea;pepelnosiva vlažnica;Hygrócybe cinérea (Pers.) P.D. Orton & Watling (1969);užitna
+https://www.gobe.si/Gobe/LyophyllumDeliberatum;Lyophyllum deliberatum;okajeni zajček;Lyophýllum deliberátum (Britzelm.) Kreisel (1984);užitna
+https://www.gobe.si/Gobe/XerocomusQuercinus;Xerocomus quercinus;hrastova polstenka;Xerócomus quercínus H. Engel & T. Brückn. (1996);užitna
+https://www.gobe.si/Gobe/RussulaHydrophila;Russula hydrophila;sivkastobetna golobica;Rússula hydróphila Horniček (1958);užitna
+https://www.gobe.si/Gobe/CortinariusPseudonapus;Cortinarius pseudonapus;nizka koprenka;Cortinárius pseudonápus Rob. Henry (1943);užitna
+https://www.gobe.si/Gobe/RamariaLutea;Ramaria lutea;rumenkasta griva;Ramária lútea (Vent.) Schild (1977);užitna
+https://www.gobe.si/Gobe/CystodermellaAmbrosii;Cystodermella ambrosii;Ambrožev zrnovec;Cystodermélla ambrósii (Bres.) Harmaja (2002);užitna
+https://www.gobe.si/Gobe/RussulaPseudo-olivascens;Russula pseudo-olivascens;olivnozelenkasta golobica;Rússula pseudo-oliváscens Kärcher (2002);užitna
+https://www.gobe.si/Gobe/TuberBorchii;Tuber borchii;marčna gomoljika;Túber bórchii Vittad. (1831);užitna
+https://www.gobe.si/Gobe/CortinariusFulminoides;Cortinarius fulminoides;oranžnorjava koprenka;Cortinárius fulminoídes (M.M. Moser) M.M. Moser (1967);užitna
+https://www.gobe.si/Gobe/RussulaAmethystina;Russula amethystina;vijoličnordeča golobica;Rússula amethýstina Quél. (1898);užitna
+https://www.gobe.si/Gobe/LepistaLuscina;Lepista luscina;narebrana kolesnica;Lepísta luscína (Fr.) Singer (1951);užitna
+https://www.gobe.si/Gobe/CortinariusLatobalteatus;Cortinarius latobalteatus;tršata koprenka;Cortinárius látobalteátus (Jul. Schäff.) M.M. Moser (1967);užitna
+https://www.gobe.si/Gobe/LeccinumPulchrum;Leccinum pulchrum;marogasti ded;Leccínum púlchrum Lannoy & Estadès (1991);užitna
+https://www.gobe.si/Gobe/AgaricusFuscofibrillosus;Agaricus fuscofibrillosus;rjavovlaknati kukmak;Agáricus fúscofibrillósus (F.H. Møller) Pilát (1951);užitna
+https://www.gobe.si/Gobe/AgaricusAbruptibulbus;Agaricus abruptibulbus;odsekanodniščni kukmak;Agáricus abruptibúlbus Peck (1905);užitna
+https://www.gobe.si/Gobe/RussulaAzurea;Russula azurea;sinja golobica;Rússula azúrea Bres. (1882);užitna
+https://www.gobe.si/Gobe/CortinariusCollinitoparvus;Cortinarius collinitoparvus;sluzovenčna koprenka;Cortinárius collinítopárvus Rob. Henry (1963);užitna
+https://www.gobe.si/Gobe/HygrophorusDichrous;Hygrophorus dichrous;gabrovinska polževka;Hygróphorus díchrous Kühner & Romagn. (1953);užitna
+https://www.gobe.si/Gobe/CantharellusSubcibarius;Cantharellus subcibarius;bleda lisička;Cantharéllus súbcibarius Corner (1966);užitna
+https://www.gobe.si/Gobe/HygrophorusFuscoalbus;Hygrophorus fuscoalbus;rjavobela polževka;Hygróphorus fuscoálbus Fr. (1838);užitna
+https://www.gobe.si/Gobe/HygrophorusPurpurascens;Hygrophorus purpurascens;koprenasta polževka;Hygróphorus purpuráscens (Alb. & Schwein.) Fr. (1838);užitna
+https://www.gobe.si/Gobe/RussulaFont-queri;Russula font-queri;žleboroba golobica;Rússula fónt-quéri Singer (1947);užitna
+https://www.gobe.si/Gobe/OtideaCochleata;Otidea cochleata;polžasto uho;Otídea cochleáta (Huds.) Fuckel (1870);užitna
+https://www.gobe.si/Gobe/PleurotusFlabellatus;Pleurotus flabellatus;rdeči ostrigar;Pleurótus flabellátus (Berk. & Broome) Sacc. (1887);užitna
+https://www.gobe.si/Gobe/RussulaSericatula;Russula sericatula;gabrinska golobica;Rússula sericátula Romagn. (1958);užitna
+https://www.gobe.si/Gobe/RussulaVinosobrunnea;Russula vinosobrunnea;vinskorjava golobica;Rússula vinósobrúnnea (Bres.) Romagn. (1967);užitna
+https://www.gobe.si/Gobe/HygrophorusGliocyclus;Hygrophorus gliocyclus;sluzovenčna polževka;Hygróphorus gliocýclus Fr. (1861);užitna
+https://www.gobe.si/Gobe/AtractosporocybeInornata;Atractosporocybe inornata;neokrašeni lijaček;Atractosporócybe inornáta (Sowerby) P. Alvarado, G. Moreno & Vizzini (2015);užitna
+https://www.gobe.si/Gobe/LeccinumMolle;Leccinum molle;mehki ded;Leccínum mólle (Bon) Bon (1989);užitna
+https://www.gobe.si/Gobe/CortinariusRoseolimbatus;Cortinarius roseolimbatus;rožastoroba koprenka;Cortinárius róseolimbátus Secr. ex Quél. (1888);užitna
+https://www.gobe.si/Gobe/PseudoclitocybeExpallens;Pseudoclitocybe expallens;zbledela palivka;Pseudoclitócybe expállens (Pers.) M.M. Moser (1967);užitna
+https://www.gobe.si/Gobe/RussulaAurantiaca;Russula aurantiaca;oranžna golobica;Rússula aurantíaca (Schäff.) Romagn. (1967);užitna
+https://www.gobe.si/Gobe/EntolomaMadidum;Entoloma madidum;modrinasta rdečelistka;Entolóma madídum Gillet (1876);užitna
+https://www.gobe.si/Gobe/AgaricusDulcidulus;Agaricus dulcidulus;osladni kukmak;Agáricus dulcídulus Schulzer (1874);užitna
+https://www.gobe.si/Gobe/SuillusAmericanus;Suillus americanus;sibirska lupljivka;Suíllus americánus (Peck) Snell (1944);užitna
+https://www.gobe.si/Gobe/RhodocollybiaFodiens;Rhodocollybia fodiens;žlebasta korenarka;Rhodocollýbia fódiens (Kalchbr.) Antonín & Noordel. (1997);užitna
+https://www.gobe.si/Gobe/SuillusPlorans;Suillus plorans;cemprinova lupljivka;Suíllus plórans (Rolland) Kuntze (1898);užitna
+https://www.gobe.si/Gobe/RussulaRoseipes;Russula roseipes;rožnobetna golobica;Rússula roséipes Secr. ex Bres. (1883);užitna
+https://www.gobe.si/Gobe/LeucoagaricusCarneifolius;Leucoagaricus carneifolius;grbičasti kukmakovec;Leucoagáricus carneifólius (Gillet) Wasser (1977);užitna
+https://www.gobe.si/Gobe/RussulaMelzeri;Russula melzeri;Melzerjeva golobica;Rússula mélzeri Zvára (1927);užitna
+https://www.gobe.si/Gobe/HygrophorusMesotephrus;Hygrophorus mesotephrus;obuta polževka;Hygrophorus mesótephrus Berk. (1854);užitna
+https://www.gobe.si/Protozoa/TrichiaBotrytis;Trichia botrytis;škrlatna zlatenka;Tríchia botrýtis (Pers. ex J.F. Gmel.) Pers. (1794);neužitna
+https://www.gobe.si/Gobe/CortinariusRubicundulus;Cortinarius rubicundulus;rdečeča koprenka;Cortinárius rubicúndulus (Rea) A. Pearson (1946);strupena
+https://www.gobe.si/Gobe/CeriporiaPurpurea;Ceriporia purpurea;škrlatni jamičar;Ceripória purpúrea (Fr.) Donk (1971);neužitna
+https://www.gobe.si/Gobe/PorotheleumFimbriatum;Porotheleum fimbriatum;resasti pajčevinopor;Porothéleum fimbriátum (Pers.) Fr. (1818);neužitna
+https://www.gobe.si/Gobe/EntolomaPlacidum;;;Entoloma placidum (Fr.) Noordel. (1981);neužitna
+https://www.gobe.si/Gobe/LyophyllumInfumatum;Lyophyllum infumatum;okajeni zajček;Lyophyllum infumatum (Bres.) Kühner (1938);
+https://www.gobe.si/Gobe/ConocybeSemiglobata;;;Conocybe semiglobata Kühner & Watling (1980);
+https://www.gobe.si/Gobe/OssicaulisLignatilis;Ossicaulis lignatilis;lesna livača;Ossicaulis lignatilis (Pers.) Redhead & Ginns (1985);neužitna
+https://www.gobe.si/Gobe/MelanoleucaResplendens;Melanoleuca resplendens;dvobarvna gostolistka;Melanoléuca respléndens (Fr.) Murrill (1914);neužitna
+https://www.gobe.si/Gobe/InocybePusio;Inocybe pusio;porisana razcepljenka;Inócybe púsio P. Karst. (1889);strupena
+https://www.gobe.si/Gobe/MorchellaGigas;Morchella gigas;veliki smrček;Morchélla gígas (Batsch) Pers. (1801);neužitna
+https://www.gobe.si/Gobe/PsathyrellaNoli-tangere;Psathyrella noli-tangere;nažlebičena črnivka;Psathyrélla noli-tángere (Fr.) A. Pearson & Dennis (1948);neužitna
+https://www.gobe.si/Gobe/HomophronCernuum;Homophron cernuum;želodasta črnjavka;Homóphron cérnuum (Vahl) Örstadius & E. Larss. (2015);neužitna
+https://www.gobe.si/Gobe/GeastrumFornicatum;Geastrum fornicatum;oblokasta zvezdica;Geástrum fornicátum (Huds.) Hook. (1821);<p>geástrum fornicátum (huds.) hook. (1821);neužitna
+https://www.gobe.si/Gobe/LycoperdonFloccosum;Lycoperdon floccosum;kosmata prašnica;Lycopérdon floccósum Lloyd (1905);mlada užitna
+https://www.gobe.si/Gobe/BovistaLimosa;Bovista limosa;nordijski kadilček;Bovísta limósa Rostr. (1894);mlada užitna
+https://www.gobe.si/Gobe/MycetinisPrasiosmus;Mycetinis prasiosmus;porova česnovka;Mycétinis prasiósmus (Fr.) R.H. Petersen, Petersen & Hughes (2017);neužitna
+https://www.gobe.si/Gobe/GautieriaMorchelliformis;Gautieria morchelliformis;smrčkasta trebuhovka;Gautiéria morchellifórmis Vittad. (1831);
+https://www.gobe.si/Gobe/RheubarbariboletusPersicolor;;;Rheubarbariboletus persicolor (H. Engel, Klofac, H. Grünert & R. Grünert) Vizzini, Simonini & Gelardi (2015);neužitna
+https://www.gobe.si/Gobe/EntolomaExile;;;Entoloma exile (Fr.) Hesler (1967);neužitna
+https://www.gobe.si/Gobe/EntolomaOchromicaceum;;;Entoloma ochromicaceum Noordel. & Liiv (1992);neužitna
+https://www.gobe.si/Gobe/PsathyrellaAmmophila;Psathyrella ammophila;peščinska črnivka;Psathyrélla ammóphila (Durieu & Lév.) P.D. Orton (1960);neužitna
+https://www.gobe.si/Gobe/InocybeEuviolacea;;;Inocybe euviolacea E. Ludw. (2017);neužitna
+https://www.gobe.si/Gobe/RussulaAlnetorum;Russula alnetorum;jelšina golobica;Rússula alnetórum Romagn. (1956);neužitna
+https://www.gobe.si/Gobe/StrophariaMelanosperma;Stropharia melanosperma;črnotrosna strniščnica;Strophária melanospérma (Bull.) Gillet (1878);neužitna
+https://www.gobe.si/Gobe/LeratiomycesSquamosus;Leratiomyces squamosus;luskati strniščar;Leratiómyces squamósus (Pers.) Bridge & Spooner (2008);neužitna
+https://www.gobe.si/Gobe/PholiotaAurivella;Pholiota aurivella;žolti luskinar;Pholióta aurivélla (Batsch) Fr. (1871);neužitna
+https://www.gobe.si/Gobe/PholiotaAdiposa;Pholiota adiposa;sluzasti luskinar;Pholióta adipósa (Batsch) P. Kumm. (1871);neužitna
+https://www.gobe.si/Gobe/InfundibulicybeSplendoides;Infundibulicybe splendoides;rumeneča lijevka;Infundibulícybe splendoídes (H.E. Bigelow) Vesterh. (2008);neužitna
+https://www.gobe.si/Gobe/GanodermaTsugae;Ganoderma tsugae;japonska pološčenka;Ganoderma tsugae Murrill (1902);neužitna
+https://www.gobe.si/Gobe/MelanogasterVariegatus;Melanogaster variegatus;pisani kamrovec;Melanogáster variegátus (Vittad.) Tul. & C. Tul. (1851);mlada užitna
+https://www.gobe.si/Gobe/HeterobasidionAbietinum;Heterobasidion abietinum;jelov trohnobnež;Heterobasídion abietínum Niemelä & Korhonen (1998);neužitna
+https://www.gobe.si/Gobe/EchinodermaPerplexum;Echinoderma perplexum;ostroluska trnovka;Echinodérma perpléxum (Knudsen) Bon (1991);neužitna
+https://www.gobe.si/Gobe/PhlegmaciumOlidum;Phlegmacium olidum;travnodišeča sluzarka;Phlegmácium ólidum (J.E. Lange) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/BotryobasidiumVagum;Botryobasidium vagum;smrekova raševinovka;Botryobasídium vágum (Berk. & M.A. Curtis) D.P. Rogers (1935);neužitna
+https://www.gobe.si/Gobe/XenasmatellaVaga;Xenasmatella vaga;rumenkasti raševinec;Xenasmatélla vága (Fr.) Stalpers (1996);neužitna
+https://www.gobe.si/Gobe/InocybeLangei;Inocybe langei;kratkobetna razcepljenka;Inócybe lángei R. Heim (1931);neužitna
+https://www.gobe.si/Gobe/PostiaBalsamea;Postia balsamea;dišeči skutovec;Póstia balsámea (Peck) Jülich (1982);neužitna
+https://www.gobe.si/Gobe/BovistaPaludosa;Bovista paludosa;močvirski kadilček;Bovísta paludósa Lév. (1846);neužitna
+https://www.gobe.si/Gobe/CortinariusHysginus;Cortinarius hysginus;srnja koprenka;Cortinárius hýsginus (M.M. Moser) M.M. Moser (1967);neužitna
+https://www.gobe.si/Gobe/HypholomaRadicosum;Hypholoma radicosum;korenasta žveplenjača;Hypholóma radicósum J.E. Lange (1923);neužitna
+https://www.gobe.si/Gobe/RussulaConsobrina;Russula consobrina;skandinavska golobica;Rússula consobrína (Fr.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/CeriporiaRhodella;Ceriporia rhodella;pordeli jamičar;Ceripória rhodélla (Fr.) Donk (1933);neužitna
+https://www.gobe.si/Gobe/HypholomaEricaeum;Hypholoma ericaeum;resina žveplenjača;Hypholóma erícaeum (Pers.) Kühner (1936);neužitna
+https://www.gobe.si/Gobe/DiatrypeBullata;Diatrype bullata;blazinasti predirnik;Diátrype bulláta (Hoffm.) Fr. (1849);neužitna
+https://www.gobe.si/Gobe/MarasmiusCollinus;Marasmius collinus;mazasta sehlíca;Marásmius collínus (Scop.) Singer (1942);neužitna
+https://www.gobe.si/Gobe/CalvatiaCandida;Calvatia candida;pritlikava plešivka;Calvátia cándida (Rostk.) Hollós (1902);mlada užitna
+https://www.gobe.si/Gobe/CortinariusSafranopes;Cortinarius safranopes;žafranastobetna koprenka;Cortinárius safránopes Rob. Henry (1938);neužitna
+https://www.gobe.si/Gobe/ConocybeBulbifera;Conocybe bulbifera;gomoljasta stožka;Conócybe bulbífera (Kauffman) Romagn. (1944);neužitna
+https://www.gobe.si/Gobe/CortinariusSaniosus;Cortinarius saniosus;kalužna koprenka;Cortinárius saniósus (Fr.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/LactariusPterosporus;Lactarius pterosporus;trosokrilna mlečnica;Lactárius pterósporus Romagn. (1949);neužitna
+https://www.gobe.si/Gobe/ArrheniaEpichysium;Arrhenia epichysium;lesni jezičar;Arrhénia epichýsium (Pers.) Redhead, Lutzoni, Moncalvo & Vilgalys (2002);neužitna
+https://www.gobe.si/Gobe/CortinariusLeochrous;Cortinarius leochrous;levjebarvna koprenka;Cortinárius leóchrous Jul. Schäff. (1949);užitnost neznana
+https://www.gobe.si/Gobe/CalonariusAlnobetulae;Calonarius alnobetulae;jelšev koprenar;Calonárius alnobétulae (Kühner) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/InocybeGlabripes;Inocybe glabripes;drobnotrosna razcepljenka;Inócybe glábripes Ricken (1915);neužitna
+https://www.gobe.si/Gobe/HyphodontiaMicrospora;Hyphodontia microspora;(drobnotrosni zobniček);Hyphodóntia micróspora J. Erikss. & Hjortstam (1976);neužitna
+https://www.gobe.si/Gobe/TrametesCoccinea;Trametes coccinea;(cinobrinasta ploskocevka);Tramétes coccínea (Fr.) Hai J. Li & S.H. He (2014);užitnost neznana
+https://www.gobe.si/Gobe/ClitocybeHydrogramma;Clitocybe hydrogramma;vodnata livka;Clitócybe hydrográmma (Bull.) P. Kumm. (1871);strupena
+https://www.gobe.si/Gobe/TremellaCandida;Tremella candida;bela drhtavka;Tremélla cándida Pers. (1801);neužitna
+https://www.gobe.si/Gobe/RussulaOlivaceoviolascens;Russula olivaceoviolascens;olivnolilasta golobica;Rússula oliváceovioláscens Gillet (1874);neužitna
+https://www.gobe.si/Gobe/GymnopusExsculptus;Gymnopus exsculptus;rumenolistni korenovec;Gýmnopus exscúlptus (Fr.) Murrill (1916);neužitna
+https://www.gobe.si/Gobe/LeucoagaricusBadhamii;Leucoagaricus badhamii;Badhamov kukmakovec;Leucoagáricus badhámii (Berk. & Broome) Singer (1951);pogojno užitna
+https://www.gobe.si/Gobe/CortinariusArmeniacus;Cortinarius armeniacus;marelična koprenka;Cortinárius armeníacus (Schäff.) Fr. (1838);užitnost neznana
+https://www.gobe.si/Gobe/CortinariusSubglutinosus;Cortinarius subglutinosus;klejasta koprenka;Cortinárius subglutinósus P. Karst. (1879);užitnost neznana
+https://www.gobe.si/Gobe/EntolomaVersatile;Entoloma versatile;spreminjava rdečelistka;Entolóma versátile (V. Brig.) M.M. Moser (1978);neužitna
+https://www.gobe.si/Gobe/CortinariusTofaceus;Cortinarius tofaceus;lehnjakova koprenka;Cortinárius tofáceus Fr. (1838);strupena
+https://www.gobe.si/Gobe/LycoperdonDecipiens;Lycoperdon decipiens;varljiva prašnica;Lycopérdon decípiens Durieu & Mont. (1848);mlada užitna
+https://www.gobe.si/Gobe/LeucoagaricusMeleagris;Leucoagaricus meleagris;grahasti kukmakovec;Leucoagáricus meleágris (Gray) Singer (1951);strupena
+https://www.gobe.si/Gobe/CortinariusLivido-ochraceus;Cortinarius livido-ochraceus;nabrana koprenka;Cortinárius lívido-ochráceus (Berk.) Berk. (1860);užitnost neznana
+https://www.gobe.si/Gobe/PerenniporiaMedulla-panis;Perenniporia medulla-panis;topotrosni večnoluknjičar;Perennipória medúlla-pánis (Jacq.) Donk (1967);neužitna
+https://www.gobe.si/Gobe/InocybePseudodestricta;Inocybe pseudodestricta;širokolistna razcepljenka;Inócybe pseudodestrícta Stangl & J. Veselský (1973);strupena
+https://www.gobe.si/Gobe/InonotusCuticularis;Inonotus cuticularis;nanizani luknjač;Inonótus cuticuláris (Bull.) P. Karst. (1880);neužitna
+https://www.gobe.si/Gobe/LycoperdonDermoxanthum;Lycoperdon dermoxanthum;mala prašnica;Lycopérdon dermoxánthum Vittad. (1842);mlada užitna
+https://www.gobe.si/Gobe/HebelomaPallidoluctuosum;Hebeloma pallidoluctuosum;pusta medlenka;Hebelóma pállidoluctuósum Gröger & Zschiesch. (1984);neužitna
+https://www.gobe.si/Gobe/PholiotaMixta;Pholiota mixta;citronasti luskinar;Pholióta míxta (Fr.) Kuyper & Tjall.-Beuk. (1986);neužitna
+https://www.gobe.si/Gobe/ConocybeNeoantipus;Conocybe neoantipus;korenasta stožka;Conócybe neoántipus (G.F. Atk.) Singer (1936);neužitna
+https://www.gobe.si/Gobe/ExidiaThuretiana;Exidia thuretiana;beloblazinasta zamazanka;Exídia thuretiána (Lév.) Fr. (1874);neužitna
+https://www.gobe.si/Gobe/RamariaIgnicolor;Ramaria ignicolor;ognjena griva;Ramária ignícolor Corner (1950);strupena
+https://www.gobe.si/Gobe/CortinariusMacropus;Cortinarius macropus;dolgobetna koprenka;Cortinárius mácropus (Fr.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/PseudospermaFlavellum;Pseudosperma flavellum;rumena parazcepljenka;Pseudospérma flavéllum (P. Karst.) Matheny & Esteve-Rav. (2019);neužitna
+https://www.gobe.si/Gobe/MycenaAlbidolilacea;Mycena albidolilacea;vijoličastobela čeladica;Mycéna álbidolilácea Kühner & Maire (1938);neužitna
+https://www.gobe.si/Gobe/MyriostomaColiforme;Myriostoma coliforme;sitasti prašnikar;Myrióstoma colifórme (Dicks.) Corda (1842);neužitna
+https://www.gobe.si/Gobe/InocybeRufoalba;Inocybe rufoalba;medlenkasta razcepljenka;Inócybe rufoálba Sacc. (1887);neužitna
+https://www.gobe.si/Gobe/StereumOstrea;Stereum ostrea;kolobarčasta slojevka;Stéreum óstrea (Blume & T. Nees) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/HebelomaCircinans;Hebeloma circinans;kolobarna medlenka;Hebelóma círcinans (Quél.) Sacc. (1891);neužitna
+https://www.gobe.si/Gobe/ThaxterogasterPluvialis;Thaxterogaster pluvialis;pelinova trebušarka;Thaxtérogáster pluviális (Kühner) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusErythrinus;Cortinarius erythrinus;rožnobetna koprenka;Cortinárius erýthrinus (Fr.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/CortinariusBulbosus;Cortinarius bulbosus;trebuhasta koprenka;Cortinárius bulbósus (Sowerby) Grey (1821);neužitna
+https://www.gobe.si/Gobe/LepiotaParvannulata;Lepiota parvannulata;travniški dežniček;Lepióta parvannuláta (Lasch) Gillet (1874);neužitna
+https://www.gobe.si/Gobe/AgaricusMinimus;Agaricus minimus;drobceni kukmak;Agáricus mínimus (Ricken) Pilát (1951);neužitna
+https://www.gobe.si/Gobe/ClitocybeCacabus;Clitocybe cacabus;kakavnorjava livka;Clitócybe cácabus (Fr.) Gillet (1874);neužitna
+https://www.gobe.si/Gobe/LeucopaxillusPhaeopus;Leucopaxillus phaeopus;rjavobetna velepodvihanka;Leucopaxíllus phaéopus (J. Favre & Poluzzi) Bon (1987);neužitna
+https://www.gobe.si/Gobe/SarcodontiaSpumea;Sarcodontia spumea;penasta bodičevka;Sarcodóntia spúmea (Sowerby) Spirin (2001);neužitna
+https://www.gobe.si/Gobe/PsathyrellaProna;Psathyrella prona;travniška črnivka;Psathyrélla próna (Fr.) Gillet (1878);neužitna
+https://www.gobe.si/Gobe/LyophyllumKonradianum;Lyophyllum konradianum;Konradov zajček;Lyophýllum konradiánum (Maire) Kühner & Romagn. (1953);neužitna
+https://www.gobe.si/Gobe/HebelomaMalenconii;Hebeloma malenconii;obledela medlenka;Hebelóma malencónii Bellù & Lanzoni (1988);neužitna
+https://www.gobe.si/Gobe/PluteusCinereofuscus;Pluteus cinereofuscus;gladkokožna ščitovka;Plúteus cinéreofúscus J.E. Lange (1917);neužitna
+https://www.gobe.si/Gobe/OrbiliaXanthostigma;Orbilia xanthostigma;žolta oblovka;Orbília xanthostígma (Fr.) Fr. (1849);<p>orbília xanthostígma (fr.) fr. (1849)
+https://www.gobe.si/Gobe/ArrheniaObatra;Arrhenia obatra;dimasti jezičar;Arrhénia obátra (J. Favre) Redhead, Lutzoni, Moncalvo & Vilgalys (2002);neužitna
+https://www.gobe.si/Gobe/HypocreaLactea;Hypocrea lactea;bela blazinovka;Hypócrea láctea (Fr.) Fr. (1849);neužitna
+https://www.gobe.si/Gobe/MycenaPterigena;Mycena pterigena;steljina čeladica;Mycéna pterígena (Fr.) P. Kumm. (1871);neužitna
+https://www.gobe.si/Gobe/HydnoporiaTabacina;Hydnoporia tabacina;tobakasti usnjevec;Hydnopória tabacína (Sowerby) Spirin, Miettinen & KH Larss. (2019);neužitna
+https://www.gobe.si/Gobe/RussulaAquosa;Russula aquosa;močvirska golobica;Rússula aquósa Leclair (1933);neužitna
+https://www.gobe.si/Gobe/CortinariusSphagnogenus;Cortinarius sphagnogenus;šotna koprenka;Cortinárius sphagnógenus (M.M. Moser) Nezdojm. (1976);neužitna
+https://www.gobe.si/Gobe/CortinariusImpennis;Cortinarius impennis;prepregasta koprenka;Cortinárius impénnis Fr. (1838);neužitna
+https://www.gobe.si/Gobe/AgaricusBernardii;Agaricus bernardii;Bernardov kukmak;Agáricus bernárdii Quél. (1878);neužitna
+https://www.gobe.si/Gobe/GymnopilusPicreus;Gymnopilus picreus;rezka plamenka;Gymnopílus pícreus (Pers.) P. Karst. (1879);<p>gymnopílus pícreus (pers.) p. karst. (1879);neužitna
+https://www.gobe.si/Gobe/CalonariusFulvoincarnatus;Calonarius fulvoincarnatus;mesnorjavi koprenar;Calonárius fúlvoincarnátus (Joach. ex Bid., Moën.-Locc. & Reum.) Nisk. & Liim. (2022);neužitna
+https://www.gobe.si/Gobe/LactariusFlexuosus;Lactarius flexuosus;vegasta mlečnica;Lactárius flexuósus (Pers.) Gray (1821);neužitna
+https://www.gobe.si/Gobe/CalvatiaCyathiformis;Calvatia cyathiformis;skledasta plešivka;Calvátia cyathifórmis (Bosc) Morgan (1890);mlada užitna
+https://www.gobe.si/Gobe/PseudoclitocybeObbata;Pseudoclitocybe obbata;obgozdna palivka;Pseudoclitócybe obbáta (Fr.) Singer (1962);neužitna
+https://www.gobe.si/Gobe/XerulaRenati;Xerula renati;Renejev širokolistar;Xérula renáti (Clémençon) Contu (1998);neužitna
+https://www.gobe.si/Gobe/LeucocoprinusMagnusianus;Leucocoprinus magnusianus;rumenogrbi dežnikovec;Leucocóprinus magnusiánus (Henn.) Singer (1951);neužitna
+https://www.gobe.si/Gobe/SphaerobolusStellatus;Sphaerobolus stellatus;bleščavi bucikar;Sphaeróbolus stellátus Tode (1790);neužitna
+https://www.gobe.si/Gobe/TyromycesKmetii;Tyromyces kmetii;oranžni sirovec;Tyrómyces kmétii (Bres.) Bondartsev & Singer (1941);neužitna
+https://www.gobe.si/Gobe/CortinariusImbutus;Cortinarius imbutus;prežeta koprenka;Cortinárius imbútus Fr. (1838);užitnost neznana
+https://www.gobe.si/Gobe/InocybeAssimilata;Inocybe assimilata;šopasta razcepljenka;Inócybe assimiláta Britzelm. (1881);strupena
+https://www.gobe.si/Gobe/AntrodiaAlbida;Antrodia albida;belkasta trhlica;Antródia álbida (Fr.) Donk (1966);neužitna
+https://www.gobe.si/Gobe/LactariusRuginosus;Lactarius ruginosus;rebrava mlečnica;Lactárius ruginósus Romagn. (1957);neužitna
+https://www.gobe.si/Gobe/RussulaSphagnophila;Russula sphagnophila;mahova golobica;Rússula sphagnóphila Kauffman (1909);neužitna
+https://www.gobe.si/Gobe/EntolomaPlatyphylloides;Entoloma platyphylloides;širokolistna rdečelistka;Entolóma plátyphylloídes (Romagn.) Largent (1974);užitnost neznana
+https://www.gobe.si/Gobe/PhanerochaeteSordida;Phanerochaete sordida;belkasta mrenovka;Phanerochaéte sórdida (P. Karst.) J. Erikss. & Ryvarden (1978);neužitna
+https://www.gobe.si/Gobe/LepiotaClypeolarioides;Lepiota clypeolarioides;polobuti dežniček;Lepióta clypeolarioídes Rea (1922);neužitna
+https://www.gobe.si/Gobe/CortinariusAffinis;Cortinarius affinis;mravljiščna koprenka;Cortinárius affínis Allesch. (1892);užitnost neznana
+https://www.gobe.si/Gobe/PodofomesTrogii;Podofomes trogii;jelkin irhovec;Podofómes trógii (Fr.) Pouzar (1971);neužitna
+https://www.gobe.si/Gobe/HydnellumScabrosum;Hydnellum scabrosum;hrapava ježevka;Hydnéllum scabrósum (Fr.) E. Larss., K.H. Larss. & Kõljalg (2019);neužitna
+https://www.gobe.si/Gobe/PlicaturaNivea;Plicatura nivea;jelševa nabranka;Plicatúra nívea (Sommerf.) P. Karst. (1889);neužitna
+https://www.gobe.si/Gobe/VolvariellaPusilla;Volvariella pusilla;pritlikava nožničarka;Volvariélla pusílla (Pers.) Singer (1951);neužitna
+https://www.gobe.si/Gobe/CortinariusCastaneus;Cortinarius castaneus;kostanjevorjava koprenka;Cortinárius castáneus (Bull.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/AmanitaGracilior;Amanita gracilior;koničastoluska mušnica;Amaníta gracílior Bas & Honrubia (1982);užitnost neznana
+https://www.gobe.si/Gobe/CortinariusComptulus;Cortinarius comptulus;nakosmičena koprenka;Cortinárius cómptulus M.M. Moser (1968);neužitna
+https://www.gobe.si/Gobe/CortinariusSphagneti;Cortinarius sphagneti;barjanska koprenka;Cortinárius sphagnéti P.D. Orton (1949);neužitna
+https://www.gobe.si/Gobe/HymenopellisXeruloides;Hymenopellis xeruloides;podaljšana širokolistarica;Hymenopéllis xeruloídes (Bon) R.H. Petersen (2010);neužitna
+https://www.gobe.si/Gobe/DiatrypeDisciformis;Diatrype disciformis;bukov predirnik;Diátrype discifórmis (Hoffm.) Fr. (1849);neužitna
+https://www.gobe.si/Gobe/CortinariusFinitimus;Cortinarius finitimus;nižinska koprenka;Cortinárius finítimus (Weinm.) P. Karst. (1879);strupena
+https://www.gobe.si/Gobe/InocybeHystrix;Inocybe hystrix;bodičasta razcepljenka;Inócybe hýstrix (Fr.) P. Karst. (1879);neužitna
+https://www.gobe.si/Gobe/InocybeCurvipes;Inocybe curvipes;krivobetna razcepljenka;Inócybe cúrvipes P. Karst. (1890);neužitna
+https://www.gobe.si/Gobe/InocybePraetervisa;Inocybe praetervisa;zgodnja razcepljenka;Inócybe praetervísa Quél. (1883);užitnost neznana
+https://www.gobe.si/Gobe/PhloeomanaHiemalis;Phloeomana hiemalis;(zimska čeladka);Phloeómana hiemális (Osbeck) Redhead (2016);neužitna
+https://www.gobe.si/Gobe/CiboriaCaucus;Ciboria caucus;mačični kelihovec;Cibória cáucus (Rebent.) Fuckel (1870);neužitna
+https://www.gobe.si/Gobe/HebelomaPopulinum;Hebeloma populinum;(topolova medlenka);Hebelóma populínum Romagn. (1965);neužitna
+https://www.gobe.si/Gobe/PhloeomanaSpeirea;Phloeomana speirea;popkasta čeladka;Phloeómana speírea (Fr.) Redhead (2013);neužitna
+https://www.gobe.si/Gobe/PluteusPseudorobertii;Pluteus pseudorobertii;črnomekinasta ščitovka;Plúteus pseudorobértii M.M. Moser (1953);neužitna
+https://www.gobe.si/Gobe/CortinariusPrivignoides;Cortinarius privignoides;debelobetna koprenka;Cortinárius privignoídes Rob. Henry (1948);neužitna
+https://www.gobe.si/Gobe/PsathyrellaPseudogracilis;Psathyrella pseudogracilis;vitka črnivka;Psathyrélla pseudográcilis (Romagn.) M.M. Moser (1967);Psathyrélla pseudográcilis (romagn.) m.m. moser (1967);neužitna
+https://www.gobe.si/Gobe/CortinariusArgentatus;Cortinarius argentatus;srebrna koprenka;Cortinárius argentátus (Pers.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/MycenellaBryophila;Mycenella bryophila;mahova žametnica;Mycenélla bryóphila (Voglino) Singer (1951);neužitna
+https://www.gobe.si/Gobe/CortinariusArgenteopileatus;Cortinarius argenteopileatus;posrebrena koprenka;Cortinárius argénteopileátus Nezdojm. (1983);užitnost neznana
+https://www.gobe.si/Gobe/EntolomaCatalaunicum;Entoloma catalaunicum;planinska rdečelistka;Entolóma cataláunicum (Singer) Noordel. (1982);strupena
+https://www.gobe.si/Gobe/StereumOchraceoflavum;Stereum ochraceoflavum;vejina slojevka;Stéreum ochráceoflávum (Schwein.) Fr. (Schwein.) Sacc. (1888);neužitna
+https://www.gobe.si/Gobe/CortinariusAmigochrous;Cortinarius amigochrous;lešnikasta koprenka;Cortinárius amigóchrous Kühner (1989);užitnost neznana
+https://www.gobe.si/Gobe/RussulaViolacea;Russula violacea;vijoličasta golobica;Rússula violácea Quél. (1883);strupena
+https://www.gobe.si/Gobe/ClitocybeObsoleta;Clitocybe obsoleta;dišeča livka;Clitócybe obsoléta (Batsch) Quél. (1872);strupena
+https://www.gobe.si/Gobe/LactariusResimus;Lactarius resimus;zavihana mlečnica;Lactárius resímus (Fr.) Fr. (1838);pogojno užitna
+https://www.gobe.si/Gobe/CortinariusSordescens;Cortinarius sordescens;umazana koprenka;Cortinárius sordéscens Rob. Henry (1944);neužitna
+https://www.gobe.si/Gobe/CortinariusLeucopus;Cortinarius leucopus;neznačilna koprenka;Cortinárius léucopus (Bull.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/PhlebiaCoccineofulva;Phlebia coccineofulva;rumena žilnica;Phlébia coccíneofúlva Schwein. (1834);neužitna
+https://www.gobe.si/Gobe/ClavariaArgillacea;Clavaria argillacea;glinasta kijevka;Clavária argillácea Pers. (1797);neužitna
+https://www.gobe.si/Gobe/PhellinusLaevigatus;Phellinus laevigatus;brezov plutač;Phéllinus laevigátus (Fr.) Bourdot & Galzin (1928);neužitna
+https://www.gobe.si/Gobe/RussulaCuprea;Russula cuprea;bakrenasta golobica;Rússula cúprea (Krombh.) J.E. Lange (1926);neužitna
+https://www.gobe.si/Gobe/HypholomaEpixanthum;Hypholoma epixanthum;rjavolistna žveplenjača;Hypholóma epixánthum (Fr.) Quél. (1872);neužitna
+https://www.gobe.si/Gobe/InocutisRheades;Inocutis rheades;trepetlikin luknjar;Inocútis rheádes (Pers.) Fiasson & Niemelä (1984);neužitna
+https://www.gobe.si/Gobe/LyophyllumCapniocephalum;Lyophyllum capniocephalum;šopasti zajček;Lyophýllum capniocéphalum (Bull.) Kühner (1938);neužitna
+https://www.gobe.si/Gobe/AntrodiellaParasitica;Antrodiella parasitica;zajedalska trhlička;Antrodiélla parasítica Vampola (1991);neužitna
+https://www.gobe.si/Gobe/CortinariusPachypus;Cortinarius pachypus;tolsta koprenka;Cortinárius páchypus M.M. Moser (1968);neužitna
+https://www.gobe.si/Gobe/InocybeOblectabilis;Inocybe oblectabilis;poletna razcepljenka;Inócybe oblectábilis (Britzelm.) Sacc. (1882);užitnost neznana
+https://www.gobe.si/Gobe/EntolomaQueletii;Entoloma queletii;Quéletova rdečelistka;Entolóma quelétii (Boud.) Noordel. (1983);strupena
+https://www.gobe.si/Gobe/FuscopostiaLeucomallella;Fuscopostia leucomallella;rjavopasasta sirnica;Fuscopóstia leucomallélla (Murrill) B.K. Cui, L.L. Shen & Y.C. Dai (2019);neužitna
+https://www.gobe.si/Gobe/CalonariusXanthochlorus;Calonarius xanthochlorus;rumenozeleni koprenar;Calonárius xánthochlórus (Rob. Henry) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/RussulaGracillima;Russula gracillima;sloka golobica;Rússula gracíllima Jul. Schäff. (1931);neužitna
+https://www.gobe.si/Gobe/GalerinaHypnorum;Galerina hypnorum;mahovna kučmica;Galerína hypnórum (Schrank) Kühner (1935);neužitna
+https://www.gobe.si/Gobe/MembranomycesSpurius;Membranomyces spurius;kožasta predivovka;Membranómyces spúrius (Bourdot) Jülich (1975);neužitna
+https://www.gobe.si/Gobe/CortinariusGlandicolor;Cortinarius glandicolor;črnikasta koprenka;Cortinárius glandícolor (Fr.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/CortinariusIntermedius;Cortinarius intermedius;vmesna koprenka;Cortinárius intermédius Rob. Henry (1952);užitnost neznana
+https://www.gobe.si/Gobe/DitiolaRadicata;Ditiola radicata;pecljata zdrizovka;Ditíola radicáta (Alb. & Schwein.) Fr. (1822);neužitna
+https://www.gobe.si/Gobe/AleurodiscusDisciformis;Aleurodiscus disciformis;diskasti kolutec;Aleurodíscus discifórmis (DC.) Pat. (1894);neužitna
+https://www.gobe.si/Gobe/CortinariusTurgidus;Cortinarius turgidus;nabuhla koprenka;Cortinárius túrgidus Fr. (1838);neužitna
+https://www.gobe.si/Gobe/TricholomaFucatum;Tricholoma fucatum;naličena kolobarnica;Tricholóma fucátum (Fr.) P. Kumm. (1871);užitnost neznana
+https://www.gobe.si/Gobe/TricholomaRapipes;Tricholoma rapipes;debelobetna kolobarnica;Tricholóma rápipes (Krombh.) Heilm.-Claus. & Mort. Chr. (2017);pogojno užitna
+https://www.gobe.si/Gobe/RussulaPseudointegra;Russula pseudointegra;grenkobna golobica;Rússula pseudoíntegra Arnould & Goris (1907);neužitna
+https://www.gobe.si/Gobe/PluteusDietrichii;Pluteus dietrichii;razpokana ščitovka;Plúteus dietríchii Bres. (1905);neužitna
+https://www.gobe.si/Gobe/CortinariusViridipes;Cortinarius viridipes;zelenobetna koprenka;Cortinárius virídipes M.M. Moser (1957);neužitna
+https://www.gobe.si/Gobe/PholiotaHeteroclita;Pholiota heteroclita;vonjavi luskinar;Pholióta heteroclíta (Fr.) Quél. (1872);neužitna
+https://www.gobe.si/Gobe/JackrogersellaCohaerens;Jackrogersella cohaerens;grozdasti bulovec;Jackrogersélla cohaérens (Pers.) L. Wendt, Kuhnert & M. Stadler (2017);neužitna
+https://www.gobe.si/Gobe/CortinariusHinnuloides;Cortinarius hinnuloides;jasminova koprenka;Cortinárius hinnuloídes Rob. Henry (1941);neužitna
+https://www.gobe.si/Gobe/CortinariusEmollitus;Cortinarius emollitus;votličasta koprenka;Cortinárius emollítus Fr. (1838);užitnost neznana
+https://www.gobe.si/Gobe/PholiotinaBlattaria;Pholiotina blattaria;ovenčani luskinček;Pholiotína blattária (Fr.) Fayod (1889);neužitna
+https://www.gobe.si/Gobe/EntolomaXanthochroum;Entoloma xanthochroum;rumena rdečelistka;Entolóma xanthóchroum (P.D. Orton) Noordel. (1985);neužitna
+https://www.gobe.si/Gobe/RussulaAurantiolutea;Russula aurantiolutea;oranžasta golobica;Rússula aurántiolútea Kauffman (1909);neužitna
+https://www.gobe.si/Gobe/CortinariusOpimus;Cortinarius opimus;obilna koprenka;Cortinárius opímus Fr. (1838);neužitna
+https://www.gobe.si/Gobe/CortinariusPseudocandelaris;Cortinarius pseudocandelaris;zvonasta koprenka;Cortinárius pseudocandeláris (M.M. Moser) M.M. Moser (1967);neužitna
+https://www.gobe.si/Gobe/CortinariusAnthracinus;Cortinarius anthracinus;rjavoškrlatna koprenka;Cortinárius anthrácinus (Fr.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/MycenaUstalis;Mycena ustalis;brinova čeladica;Mycéna ustális Aronsen & Maas Geest. (1989);neužitna
+https://www.gobe.si/Gobe/HydropusMarginellus;Hydropus marginellus;žlebičasti vlagobetnež;Hýdropus marginéllus (Pers.) Singer (1948);neužitna
+https://www.gobe.si/Gobe/PhragmotrichumChailletii;Phragmotrichum chailletii;storževa pregradnica;Phragmotríchum chaillétii Kunze (1823);neužitna
+https://www.gobe.si/Gobe/InocybeAmblyspora;Inocybe amblyspora;topotrosna razcepljenka;Inócybe amblýspora Kühner (1955);neužitna
+https://www.gobe.si/Gobe/CortinariusEpipoleus;Cortinarius epipoleus;ilnatolistna koprenka;Cortinárius epipóleus Fr. (1838);neužitna
+https://www.gobe.si/Gobe/SebacinaEpigaea;Sebacina epigaea;pozemska štrlinka;Sebacína epigaéa (Berk. & Broome) Bourdot & Galzin (1928);neužitna
+https://www.gobe.si/Gobe/LactariusAspideus;Lactarius aspideus;močvirska mlečnica;Lactárius aspídeus (Fr.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/InocybeAuricoma;Inocybe auricoma;pozlačena razcepljenka;Inócybe aurícoma (Batsch) Sacc. (1887);neužitna
+https://www.gobe.si/Gobe/LactariusViolascens;Lactarius violascens;vijoličasta mlečnica;Lactárius violáscens (J. Otto) Fr. (1838);pogojno užitna
+https://www.gobe.si/Gobe/CortinariusSubolivellus;Cortinarius subolivellus;stopničasta koprenka;Cortinárius subolivéllus Carteret & Reumaux (2009);strupena
+https://www.gobe.si/Gobe/RamariaTestaceoflava;Ramaria testaceoflava;rjaveča griva;Ramária testáceofláva (Bres.) Corner (1950);neužitna
+https://www.gobe.si/Gobe/CortinariusTubarius;Cortinarius tubarius;mahova koprenka;Cortinárius tubárius Ammirati & A.H. Sm. (1972);neužitna
+https://www.gobe.si/Gobe/CortinariusDeceptivus;Cortinarius deceptivus;zavedljiva koprenka;Cortinárius deceptívus Kauffman (1905);neužitna
+https://www.gobe.si/Gobe/PatinellariaSanguinea;Patinellaria sanguinea;(krvnordeča nov-rod-Patinellaria);Patinellaria sanguínea (Pers.) P. Karst. (1885);užitnost neznana
+https://www.gobe.si/Gobe/MycenaStylobates;Mycena stylobates;podstavljena čeladica;Mycéna stylobátes (Pers.) P. Kumm. (1871);neužitna
+https://www.gobe.si/Gobe/ClitocybeVelenovskyi;Clitocybe velenovskyi;jelšina livka;Clitócybe velenóvskyi Singer (1943);strupena
+https://www.gobe.si/Gobe/InocybeAppendiculata;Inocybe appendiculata;ovešena razcepljenka;Inócybe appendiculáta Kühner (1955);neužitna
+https://www.gobe.si/Gobe/HebelomaOchroalbidum;Hebeloma ochroalbidum;bledikasta medlenka;Hebelóma ochroálbidum Bohus (1972);neužitna
+https://www.gobe.si/Gobe/TricholomaInamoenum;Tricholoma inamoenum;neprijetna kolobarnica;Tricholóma inamoénum (Fr.) Gillet (1874);strupena
+https://www.gobe.si/Gobe/CortinariusAtrocaeruleus;Cortinarius atrocaeruleus;temnogrba koprenka;Cortinárius átrocaerúleus M.M. Moser (1967);neužitna
+https://www.gobe.si/Gobe/RussulaPersicina;Russula persicina;breskvobarvna golobica;Rússula persícina Krombh. (1845);neužitna
+https://www.gobe.si/Gobe/ConocybeCoprophila;Conocybe coprophila;govnova stožka;Conócybe copróphila (Kühner) Kühner (1935);neužitna
+https://www.gobe.si/Gobe/CortinariusHelobius;Cortinarius helobius;(vlagoljubna koprenka);Cortinárius helóbius Romagn. (1952);užitnost neznana
+https://www.gobe.si/Gobe/AntrodiaHeteromorpha;Antrodia heteromorpha;raznolična trhlica;Antródia heteromórpha (Fr.) Donk (1966);neužitna
+https://www.gobe.si/Gobe/PhaeocollybiaCidaris;Phaeocollybia cidaris;škrlatna temačnica;Phaeocollýbia cídaris (Fr.) Romagn. (1942);neužitna
+https://www.gobe.si/Gobe/CalonariusOdoratus;Calonarius odoratus;vonjavni koprenar;Calonárius odorátus (Joguet ex M.M. Moser) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/HyphodermaCremeoalbum;Hyphoderma cremeoalbum;smetanasti strgalkar;Hyphodérma crémeoálbum (Höhn. & Litsch.) Jülich (1974);neužitna
+https://www.gobe.si/Gobe/ThaxterogasterEburneus;Thaxterogaster eburneus;bela trebušarka;Thaxtérogáster ebúrneus (Velen.) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/RigidoporusSanguinolentus;Rigidoporus sanguinolentus;rdečeča trdocevka;Rigidóporus sanguinoléntus (Alb. & Schwein.) Donk (1966);neužitna
+https://www.gobe.si/Gobe/ExidiaRecisa;Exidia recisa;pecljata zamazanka;Exídia recísa (Ditmar) Fr. (1822);neužitna
+https://www.gobe.si/Gobe/CortinariusTriformis;Cortinarius triformis;vlažnoroba koprenka;Cortinárius trifórmis Fr. (1838);užitnost neznana
+https://www.gobe.si/Gobe/PholiotaPinicola;Pholiota pinicola;borov luskinar;Pholióta pinícola Jacobsson (1986);neužitna
+https://www.gobe.si/Gobe/OsteinaUndosa;Osteina undosa;velikoluknjičasta koščenjača;Ostéina undósa (Peck) Zmitr. (2018);neužitna
+https://www.gobe.si/Gobe/CortinariusCaesiocanescens;Cortinarius caesiocanescens;sivomodrikasta koprenka;Cortinárius caésiocanéscens M.M. Moser (1952);užitnost neznana
+https://www.gobe.si/Gobe/InocybeAlnea;Inocybe alnea;jelševa razcepljenka;Inócybe álnea Stangl (1979);neužitna
+https://www.gobe.si/Gobe/CortinariusFoetens;Cortinarius foetens;smradna koprenka;Cortinárius foétens (M.M. Moser) M.M. Moser (1967);neužitna
+https://www.gobe.si/Gobe/HyphodontiaPallidula;Hyphodontia pallidula;bledikasti zobniček;Hyphodóntia pallídula (Bres.) J. Erikss. (1958);neužitna
+https://www.gobe.si/Gobe/HebelomaSordescens;Hebeloma sordescens;temnodniščna medlenka;Hebelóma sordéscens Vesterh. (1989);neužitna
+https://www.gobe.si/Gobe/RussulaAnthracina;Russula anthracina;črnorjava golobica;Rússula anthrácina Romagn. (1962);neužitna
+https://www.gobe.si/Gobe/InospermaCervicolor;Inosperma cervicolor;srnjerjavi razcepljenec;Inospérma cervícolor (Pers.) Matheny & Esteve-Rav. (2019);neužitna
+https://www.gobe.si/Gobe/HypoxylonFraxinophilum;Hypoxylon fraxinophilum;jesenov skorjeder;Hypóxylon fraxinóphilum Pouzar (1972);neužitna
+https://www.gobe.si/Gobe/ThaxterogasterLeucophanes;Thaxterogaster leucophanes;bledična trebušarka;Thaxtérogáster leucophánes (P. Karst.) Niskanen & Liimat. (2022);užitnost neznana
+https://www.gobe.si/Gobe/GalerinaSphagnorum;Galerina sphagnorum;šotna kučmica;Galerína sphagnórum (Pers.) Kühner (1935);neužitna
+https://www.gobe.si/Gobe/SerpulaHimantioides;Serpula himantioides;gozdni lesomor;Sérpula himantioídes (Fr.) P. Karst. (1884);neužitna
+https://www.gobe.si/Gobe/LepiotaRufipes;Lepiota rufipes;dvobarvni dežniček;Lepióta rúfipes Morgan (1906);strupena
+https://www.gobe.si/Gobe/CalonariusGlaucescens;Calonarius glaucescens;modrozelenkasti koprenar;Calonárius glaucéscens (Jul. Schäff.) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusNanceiensis;Cortinarius nanceiensis;dekliška koprenka;Cortinárius nanceiénsis Maire (1911);neužitna
+https://www.gobe.si/Gobe/CortinariusSubviolascens;Cortinarius subviolascens;obročna koprenka;Cortinárius subvioláscens Rob. Henry ex Nezdojm. (1983);neužitna
+https://www.gobe.si/Gobe/OmphalinaSubhepatica;Omphalina subhepatica;jetrasta popkarica;Omphálina subhepática (Batsch) Murrill (1916);neužitna
+https://www.gobe.si/Gobe/EnerthenemaPapillatum;Enerthenema papillatum;pecljata prosenka;Enerthenéma papillátum (Pers.) Rostaf. (1876);neužitna
+https://www.gobe.si/Gobe/DiatrypeDecorticata;Diatrype decorticata;obližasti predirnik;Diátrype decórticata (Pers.) Rappaz (1987);neužitna
+https://www.gobe.si/Gobe/PleurotusCalyptratus;Pleurotus calyptratus;trepetlikin ostrigar;Pleurótus calyptrátus (Lindblad) Sacc. (1887);mlada užitna
+https://www.gobe.si/Gobe/LepiotaFelina;Lepiota felina;črnoluski dežniček;Lepióta felína (Pers.) P. Karst. (1879);neužitna
+https://www.gobe.si/Gobe/AgaricusCupreobrunneus;Agaricus cupreobrunneus;bakreni kukmak;Agaricus cúpreobrúnneus (Jul. Schäff. & Steer) Pilát (1951);užitnost neznana
+https://www.gobe.si/Gobe/AgrocybeElatella;Agrocybe elatella;močvirska njivnica;Agrócybe elatélla (P. Karst.) Vesterh. (1989);neužitna
+https://www.gobe.si/Gobe/LepiotaCortinarius;Lepiota cortinarius;koprenasti dežniček;Lepióta cortinárius J.E. Lange (1915);neužitna
+https://www.gobe.si/Gobe/ThaxterogasterHerpeticus;Thaxterogaster herpeticus;marogasta trebušarka;Thaxtérogáster herpeticus (Fr.) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/TricholomaRobustum;Tricholoma robustum;čokata kolobarnica;Tricholóma robústum (Alb. & Schwein.) Ricken (1915);neužitna
+https://www.gobe.si/Gobe/LeucoagaricusSubcretaceus;Leucoagaricus subcretaceus;mekinasti kukmakovec;Leucoagáricus subcretáceus Bon (1983);užitnost neznana
+https://www.gobe.si/Gobe/CortinariusMulticolor;Cortinarius multicolor;(mnogobarvna koprenka);Cortinárius multicólor M.M. Moser (1967);neužitna
+https://www.gobe.si/Gobe/ThaxterogasterCausticus;Thaxterogaster causticus;rjaveča trebušarka;Thaxtérogáster cáusticus (Fr.) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusPrivignus;Cortinarius privignus;zapognjena koprenka;Cortinárius privígnus (Fr.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/TricholomopsisOrnata;Tricholomopsis ornata;okrašena trhlenka;Tricholomópsis ornáta (Fr.) Singer (1943);pogojno užitna
+https://www.gobe.si/Gobe/CortinariusCrassifolius;Cortinarius crassifolius;debelolistna koprenka;Cortinárius crassifólius (Velen.) Kühner & Romagn. ex Bon (1986);neužitna
+https://www.gobe.si/Gobe/CortinariusSaturninus;Cortinarius saturninus;svetloroba koprenka;Cortinarius saturnínus (Fr.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/CortinariusFuscoperonatus;Cortinarius fuscoperonatus;rjavopasasta koprenka;Cortinárius fúscoperonátus Kühner (1953);neužitna
+https://www.gobe.si/Gobe/InocybeCatalaunica;Inocybe catalaunica;višinska razcepljenka;Inócybe cataláunica Singer (1947);neužitna
+https://www.gobe.si/Gobe/RamariaFlavobrunnescens;Ramaria flavobrunnescens;rjastožolta griva;Ramária flávobrunnéscens (G.F. Atk.) Corner (1950);neužitna
+https://www.gobe.si/Gobe/LentinellusFlabelliformis;Lentinellus flabelliformis;pahljačasta žilavka;Lentinéllus flabellifórmis (Bolton) S. Ito (1959);neužitna
+https://www.gobe.si/Gobe/CortinariusAvellaneocoeruleus;Cortinarius avellaneocoeruleus;smrekova koprenka;Cortinárius avelláneocoerúleus (M.M. Moser) M.M. Moser (1967);užitnost neznana
+https://www.gobe.si/Gobe/CortinariusLividoviolaceus;Cortinarius lividoviolaceus;bledovijoličasta koprenka;Cortinárius lívidovioláceus (Rob. Henry ex M.M. Moser) M.M. Moser (1967);užitnost neznana
+https://www.gobe.si/Gobe/CiboriaRufofusca;Ciboria rufofusca;jelkov kelihovec;Cibória rufofúsca (O. Weberb.) Sacc. (1889);neužitna
+https://www.gobe.si/Gobe/XylariaOxyacanthae;Xylaria oxyacanthae;glogova lesenjača;Xylária oxyacánthae Tul. & C. Tul. (1863);neužitna
+https://www.gobe.si/Gobe/PhlegmaciumSaginum;Phlegmacium saginum;oblotrosna sluzarka;Phlegmácium sagínum (Fr.) Niskanen & Liimat. (2022);užitnost neznana
+https://www.gobe.si/Gobe/PeniophoraLycii;Peniophora lycii;vrbova opnovka;Penióphora lýcii (Pers.) Höhn. & Litsch. (1907);<p>penióphora lýcii (pers.) höhn. & litsch. (1907);neužitna
+https://www.gobe.si/Gobe/HebelomaBirrus;Hebeloma birrus;rožnata medlenka;Hebelóma bírrus (Fr.) Gillet (1884);neužitna
+https://www.gobe.si/Gobe/PezizaFimeti;Peziza fimeti;govnova skledica;Pezíza fiméti (Fuckel) Seaver (1928);neužitna
+https://www.gobe.si/Gobe/CortinariusBetulinus;Cortinarius betulinus;brezova koprenka;Cortinárius betulínus J. Favre (1948);neužitna
+https://www.gobe.si/Gobe/RussulaPelargonia;Russula pelargonia;gorečnična golobica;Rússula pelargónia Niolle (1941);neužitna
+https://www.gobe.si/Gobe/MycenaClavicularis;Mycena clavicularis;žebljasta čeladica;Mycéna claviculáris (Fr.) Gillet (1874);neužitna
+https://www.gobe.si/Gobe/CystodermaFallax;Cystoderma fallax;varljiva zrnovka;Cystodérma fállax A.H. Sm. & Singer (1945);neužitna
+https://www.gobe.si/Gobe/GymnopusVernus;Gymnopus vernus;snežni korenovec;Gýmnopus vérnus (Ryman) Antonín & Noordel. (2008);užitnost neznana
+https://www.gobe.si/Gobe/CortinariusSubelegantior;Cortinarius subelegantior;grudičasta koprenka;Cortinárius subelegántior Rob. Henry (1987);užitnost neznana
+https://www.gobe.si/Gobe/GymnopusImpudicus;Gymnopus impudicus;zoprni korenovec;Gýmnopus impudícus (Fr.) Antonín, Halling & Noordel. (1997);neužitna
+https://www.gobe.si/Gobe/CollybiaIngrata;Collybia ingrata;pusta korenovka;Collýbia ingráta (Schumach.) Quél. (1872);neužitna
+https://www.gobe.si/Gobe/PleurotusNebrodensis;Pleurotus nebrodensis;gorski ostrigar;Pleurótus nebrodénsis (Inzenga) Quél. (1886);mlada užitna
+https://www.gobe.si/Gobe/MycenaLatifolia;Mycena latifolia;širokolistna čeladica;Mycéna latifólia (Peck) A.H. Sm. (1935);neužitna
+https://www.gobe.si/Gobe/CalonariusAtrovirens;Calonarius atrovirens;črnozeleni koprenar;Calonárius atróvirens (Kalchbr.) Niskanen & Liimat. (2022);strupena
+https://www.gobe.si/Gobe/MacrotyphulaRigida;Macrotyphula rigida;korenasti kijevec;Macrotýphula rígida Berthier (1976);<p>macrotýphula rígida berthier (1976);neužitna
+https://www.gobe.si/Gobe/ThaxterogasterScaurus;Thaxterogaster scaurus;kruljasta trebušarka;Thaxtérogáster scáurus (Fr.) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusCyanophyllus;Cortinarius cyanophyllus;rižasta koprenka;Cortinárius cyanophýllus (Rob. Henry) M.M. Moser (1978);užitnost neznana
+https://www.gobe.si/Gobe/RutstroemiaFirma;Rutstroemia firma;hrastova plitvíca;Rutstroémia fírma (Pers.) P. Karst. (1871);neužitna
+https://www.gobe.si/Gobe/ThaxterogasterPorphyropus;Thaxterogaster porphyropus;lepobetna trebušarka;Thaxtérogáster porphýropus (Alb. & Schwein.) Niskanen & Liimat. (2022);užitnost neznana
+https://www.gobe.si/Gobe/CalocybeGangraenosa;Calocybe gangraenosa;smrdeča lepoglavka;Calócybe gangraénosa (Fr.) V. Hofst., Moncalvo, Redhead & Vilgalys (2012);neužitna
+https://www.gobe.si/Gobe/CortinariusOrichalceus;Cortinarius orichalceus;bakrenordeča koprenka;Cortinárius orichálceus (Batsch) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/LacrymariaPyrotricha;Lacrymaria pyrotricha;ognjeni črnivec;Lacrymária pyrótricha (Holmsk.) Konrad & Maubl. (1925);pogojno užitna
+https://www.gobe.si/Gobe/DeconicaMontana;Deconica montana;gorski gologlavec;Decónica montána (Pers.) P.D. Orton (1960);strupena
+https://www.gobe.si/Gobe/HypoxylonRubiginosum;Hypoxylon rubiginosum;opečnati skorjeder;Hypóxylon rubiginósum (Pers.) Fr. (1849);neužitna
+https://www.gobe.si/Gobe/CortinariusCinnamomeoluteus;Cortinarius cinnamomeoluteus;cimetnorumena koprenka;Cortinárius cinnamómeolúteus P.D. Orton (1960);strupena
+https://www.gobe.si/Gobe/CalonariusPlatypus;Calonarius platypus;ploskobetni koprenar;Calonárius plátypus (M.M. Moser) Niskanen & Liimat. (2022);užitnost neznana
+https://www.gobe.si/Gobe/ConocybePubescens;Conocybe pubescens;puhasta stožka;Conócybe pubéscens (Gillet) Kühner (1935);neužitna
+https://www.gobe.si/Gobe/AlloclavariaPurpurea;Alloclavaria purpurea;škrlatna črvičevka;Alloclavária purpúrea (O.F. Müll.) Dentinger & D.J. McLaughlin (2007);neužitna
+https://www.gobe.si/Gobe/GymnopusPutillus;Gymnopus putillus;borov korenovec;Gýmnopus putíllus (Fr.) Antonín, Halling & Noordel. (1997);neužitna
+https://www.gobe.si/Gobe/CortinariusGuttatus;Cortinarius guttatus;cvetlična koprenka;Cortinárius guttátus Rob. Henry (1952);užitnost neznana
+https://www.gobe.si/Gobe/CortinariusHolophaeus;Cortinarius holophaeus;vretenasta koprenka;Cortinárius holophaéus J.E. Lange (1935);neužitna
+https://www.gobe.si/Gobe/CalonariusArcuatorum;Calonarius arcuatorum;živobarvni koprenar;Calonárius arcuatórum (Rob. Henry) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/RussulaVersicolor;Russula versicolor;pisana golobica;Rússula versícolor Jul. Schäff. (1931);neužitna
+https://www.gobe.si/Gobe/InocybeDecipiens;Inocybe decipiens;varljiva razcepljenka;Inócybe decípiens Bres. (1892);strupena
+https://www.gobe.si/Gobe/ThaxterogasterBarbatus;Thaxterogaster barbatus;grenkosluzna trebušarka;Thaxtérogáster barbátus (Batsch) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusScutulatus;Cortinarius scutulatus;ščitasta koprenka;Cortinárius scutulátus (Fr.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/HebelomaAnthracophilum;Hebeloma anthracophilum;pogoriščna medlenka;Hebelóma anthracóphilum Maire (1910);neužitna
+https://www.gobe.si/Gobe/CortinariusOlivellus;Cortinarius olivellus;olivnookrasta koprenka;Cortinárius olivéllus Rob. Henry (1952);neužitna
+https://www.gobe.si/Gobe/XylariaFiliformis;Xylaria filiformis;nitasta lesenjača;Xylária filifórmis (Alb. & Schwein.) Fr. (1849);neužitna
+https://www.gobe.si/Gobe/GeopyxisCarbonaria;Geopyxis carbonaria;oglarska puša;Geópyxis carbonária (Alb. & Schwein.) Sacc. (1889);neužitna
+https://www.gobe.si/Gobe/RussulaAmarissima;Russula amarissima;grenka golobica;Rússula amaríssima Romagn. & E.-J. Gilbert (1943);neužitna
+https://www.gobe.si/Gobe/TricholomaBatschii;Tricholoma batschii;venčasta kolobarnica;Tricholóma bátschii Gulden ex Mort. Chr. & Noordel. (1999);neužitna
+https://www.gobe.si/Gobe/DiatrypellaQuercina;Diatrypella quercina;hrastova predirnica;Diatrypélla quercína (Pers.) Cooke (1866);neužitna
+https://www.gobe.si/Gobe/MycenaDiosma;Mycena diosma;purpurna čeladica;Mycéna diósma Krieglst. & Schwöbel (1982);neužitna
+https://www.gobe.si/Gobe/SeptobasidiumRameale;Septobasidium rameale;vejin slojnik;Septobasídium rameále (Berk.) Bres. (1921);neužitna
+https://www.gobe.si/Gobe/CortinariusFagetorum;Cortinarius fagetorum;bukovinska koprenka;Cortinárius fagetórum M.M. Moser (1967);neužitna
+https://www.gobe.si/Gobe/CalonariusCallochrous;Calonarius callochrous;barviti koprenar;Calonárius callóchrous (Pers.) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/RhizopogonOccidentalis;;;Rhizopogon occidentalis Zeller & C.W. Dodge (1918);neužitna
+https://www.gobe.si/Gobe/StrophariaCyanea;;;Stropharia cyanea (Bull.) Tuomik. (1953);neužitna
+https://www.gobe.si/Gobe/RussulaSqualida;;;Russula squalida Peck (1907);neužitna
+https://www.gobe.si/Gobe/CoprinellusXanthothrix;;;Coprinellus xanthothrix (Romagn.) Vilgalys, Hopple & Jacq. Johnson (2001);neužitna
+https://www.gobe.si/Gobe/LactifluusClaricolor;;;Lactifluus claricolor (R. Heim) Verbeken (2015);neužitna
+https://www.gobe.si/Gobe/MelanoleucaHumilis;Melanoleuca humilis;mekinasta gostolistka;Melanoléuca húmilis (Pers.) Pat. (1900);neužitna
+https://www.gobe.si/Gobe/CortinariusImmissus;;;Cortinarius immissus Schläpf.-Bernh. (1951);neužitna
+https://www.gobe.si/Gobe/PezizaEchinospora;Peziza echinospora;pogoriščna skledica;Pezíza echinóspora P. Karst. (1869);neužitna
+https://www.gobe.si/Gobe/ParaisariaGracilis;;;Paraisaria gracilis (Grev.) Luangsa-ard, Mongkols. & Samson (2019);neužitna
+https://www.gobe.si/Gobe/ParalepistaGilva;Paralepista gilva;lisasti kolesnik;Paralepísta gílva (Pers.) Raithelh. (1996);neužitna
+https://www.gobe.si/Gobe/TricholomellaConstricta;Tricholomella constricta;ovenčani lepoglavnik;Tricholomélla constrícta (Fr.) Zerova ex Kalamees (1992);neužitna
+https://www.gobe.si/Gobe/AgaricusRusiophyllus;Agaricus rusiophyllus;rožnolistni kukmak;Agáricus rusiophýllus Lasch (1828);neužitna
+https://www.gobe.si/Gobe/CorticiumRoseum;Corticium roseum;rožnata skorjevka;Cortícium róseum Pers. (1794);neužitna
+https://www.gobe.si/Gobe/OligoporusLeucospongia;;;Tyromyces leucospongius (Cooke & Harkn.) Bondartsev & Singer (1941);neužitna
+https://www.gobe.si/Gobe/ClavariaPurpurea;Alloclavaria purpurea;škrlatna črvičevka;Alloclavária purpúrea (O.F. Müll.) Dentinger & D.J. McLaughlin (2007);neužitna
+https://www.gobe.si/Gobe/ClitocybeTarda;;;Lepista tarda (Peck) Murrill (1917);neužitna
+https://www.gobe.si/Gobe/InocybeSororia;;;Pseudosperma sororium (Kauffman) Matheny & Esteve-Rav. (2019);neužitna
+https://www.gobe.si/Gobe/RussulaGracilis;;;Russula gracilis Burl. (1915);neužitna
+https://www.gobe.si/Gobe/CollybiaFuscopurpurea;;;Gymnopus fagiphilus (Velen.) Antonín, Halling & Noordel. (1997);neužitna
+https://www.gobe.si/Gobe/StrobilurusTrullisatus;;;Strobilurus trullisatus (Murrill) Lennox (1979);neužitna
+https://www.gobe.si/Gobe/CortinariusRegalis;;;Cortinarius regalis A.H. Sm. & P.M. Rea (1944);neužitna
+https://www.gobe.si/Gobe/CudoniaMonticola;;;Pachycudonia monticola (Mains) S. Imai (1950);neužitna
+https://www.gobe.si/Gobe/SpongipellisSpumeus;Sarcodontia spumea;penasta bodičevka;Sarcodóntia spúmea (Sowerby) Spirin (2001);neužitna
+https://www.gobe.si/Gobe/InocybeCervicolor;Inosperma cervicolor;srnjerjavi razcepljenec;Inospérma cervícolor (Pers.) Matheny & Esteve-Rav. (2019);neužitna
+https://www.gobe.si/Gobe/RussulaElaeodes;Russula pseudo-olivascens;olivnozelenkasta golobica;Rússula pseudo-oliváscens Kärcher (2002);užitna
+https://www.gobe.si/Gobe/BovistaDermoxantha;Lycoperdon dermoxanthum;mala prašnica;Lycopérdon dermoxánthum Vittad. (1842);mlada užitna
+https://www.gobe.si/Gobe/HaematostereumSanguinolentum;Stereum sanguinolentum;krvaveča slojevka;Stéreum sanguinolentum (Alb. & Schwein.) Fr. (1838);neužitna
+https://www.gobe.si/Gobe/CortinariusAlnobetulae;Calonarius alnobetulae;jelšev koprenar;Calonárius alnobétulae (Kühner) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/LasiochlaenaTrogii;Podofomes trogii;jelkin irhovec;Podofómes trógii (Fr.) Pouzar (1971);neužitna
+https://www.gobe.si/Gobe/CollybiaFodiens;Rhodocollybia fodiens;žlebasta korenarka;Rhodocollýbia fódiens (Kalchbr.) Antonín & Noordel. (1997);užitna
+https://www.gobe.si/Gobe/InocybeJacobi;Inocybe rufoalba;medlenkasta razcepljenka;Inócybe rufoálba Sacc. (1887);neužitna
+https://www.gobe.si/Gobe/InocybeUmbrina;Inocybe assimilata;šopasta razcepljenka;Inócybe assimiláta Britzelm. (1881);strupena
+https://www.gobe.si/Gobe/InocybeFlavella;Pseudosperma flavellum;rumena parazcepljenka;Pseudospérma flavéllum (P. Karst.) Matheny & Esteve-Rav. (2019);neužitna
+https://www.gobe.si/Gobe/CortinariusAtrovirens;Calonarius atrovirens;črnozeleni koprenar;Calonárius atróvirens (Kalchbr.) Niskanen & Liimat. (2022);strupena
+https://www.gobe.si/Gobe/CortinariusFulvoincarnatus;Calonarius fulvoincarnatus;mesnorjavi koprenar;Calonárius fúlvoincarnátus (Joach. ex Bid., Moën.-Locc. & Reum.) Nisk. & Liim. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusPlatypus;Calonarius platypus;ploskobetni koprenar;Calonárius plátypus (M.M. Moser) Niskanen & Liimat. (2022);užitnost neznana
+https://www.gobe.si/Gobe/MycenaHiemalis;Phloeomana hiemalis;(zimska čeladka);Phloeómana hiemális (Osbeck) Redhead (2016);neužitna
+https://www.gobe.si/Gobe/CortinariusScaurus;Thaxterogaster scaurus;kruljasta trebušarka;Thaxtérogáster scáurus (Fr.) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/HymenochaeteTabacina;Hydnoporia tabacina;tobakasti usnjevec;Hydnopória tabacína (Sowerby) Spirin, Miettinen & KH Larss. (2019);neužitna
+https://www.gobe.si/Gobe/CortinariusVariegatus;Thaxterogaster variegatus;večbarvna trebušarka;Thaxtérogáster variegátus (Bres.) Niskanen & Liimat. (2022);užitna
+https://www.gobe.si/Gobe/LyophyllumLeucophaeatum;Calocybe gangraenosa;smrdeča lepoglavka;Calócybe gangraénosa (Fr.) V. Hofst., Moncalvo, Redhead & Vilgalys (2012);neužitna
+https://www.gobe.si/Gobe/LyophyllumOvisporum;Lepista ovispora;šopasta kolesnica;Lepísta ovíspora (J.E. Lange) Gulden (1983);<p>lepísta ovíspora (j.e. lange) gulden (1983);neužitna
+https://www.gobe.si/Gobe/CortinariusPorphyropus;Thaxterogaster porphyropus;lepobetna trebušarka;Thaxtérogáster porphýropus (Alb. & Schwein.) Niskanen & Liimat. (2022);užitnost neznana
+https://www.gobe.si/Gobe/TricholomaSaponaceumVarRapipes;Tricholoma rapipes;debelobetna kolobarnica;Tricholóma rápipes (Krombh.) Heilm.-Claus. & Mort. Chr. (2017);pogojno užitna
+https://www.gobe.si/Gobe/TrechisporaVaga;Xenasmatella vaga;rumenkasti raševinec;Xenasmatélla vága (Fr.) Stalpers (1996);neužitna
+https://www.gobe.si/Gobe/OligoporusLeucomallellus;Fuscopostia leucomallella;rjavopasasta sirnica;Fuscopóstia leucomallélla (Murrill) B.K. Cui, L.L. Shen & Y.C. Dai (2019);neužitna
+https://www.gobe.si/Gobe/TricholomaSaponaceumVarNapipes;Tricholoma rapipes;debelobetna kolobarnica;Tricholóma rápipes (Krombh.) Heilm.-Claus. & Mort. Chr. (2017);pogojno užitna
+https://www.gobe.si/Gobe/PsathyrellaPyrotricha;Lacrymaria pyrotricha;ognjeni črnivec;Lacrymária pyrótricha (Holmsk.) Konrad & Maubl. (1925);pogojno užitna
+https://www.gobe.si/Gobe/RussulaUrens;Russula cuprea;bakrenasta golobica;Rússula cúprea (Krombh.) J.E. Lange (1926);neužitna
+https://www.gobe.si/Gobe/CortinariusSaginus;Phlegmacium saginum;oblotrosna sluzarka;Phlegmácium sagínum (Fr.) Niskanen & Liimat. (2022);užitnost neznana
+https://www.gobe.si/Gobe/AgaricusPurpurellus;Agaricus dulcidulus;osladni kukmak;Agáricus dulcídulus Schulzer (1874);užitna
+https://www.gobe.si/Gobe/CortinariusBarbatus;Thaxterogaster barbatus;grenkosluzna trebušarka;Thaxtérogáster barbátus (Batsch) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusCausticus;Thaxterogaster causticus;rjaveča trebušarka;Thaxtérogáster cáusticus (Fr.) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusArcuatorum;Calonarius arcuatorum;živobarvni koprenar;Calonárius arcuatórum (Rob. Henry) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusOlidus;Phlegmacium olidum;travnodišeča sluzarka;Phlegmácium ólidum (J.E. Lange) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CystodermaAmbrosii;Cystodermella ambrosii;Ambrožev zrnovec;Cystodermélla ambrósii (Bres.) Harmaja (2002);užitna
+https://www.gobe.si/Gobe/CortinariusTophaceus;Cortinarius tofaceus;lehnjakova koprenka;Cortinárius tofáceus Fr. (1838);strupena
+https://www.gobe.si/Gobe/OmphalinaObatra;Arrhenia obatra;dimasti jezičar;Arrhénia obátra (J. Favre) Redhead, Lutzoni, Moncalvo & Vilgalys (2002);neužitna
+https://www.gobe.si/Gobe/CortinariusClaricolorVarImmissus;;;Cortinarius immissus Schläpf.-Bernh. (1951);neužitna
+https://www.gobe.si/Gobe/MarasmiusPrasiosmus;Mycetinis prasiosmus;porova česnovka;Mycétinis prasiósmus (Fr.) R.H. Petersen, Petersen & Hughes (2017);
+https://www.gobe.si/Gobe/CortinariusOdoratus;Calonarius odoratus;vonjavni koprenar;Calonárius odorátus (Joguet ex M.M. Moser) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusNapus;Calonarius napus;sivolistni koprenar;Calonárius nápus (Fr.) Niskanen & Liimat. (2022);užitna
+https://www.gobe.si/Gobe/CortinariusPluvialis;Thaxterogaster pluvialis;pelinova trebušarka;Thaxtérogáster pluviális (Kühner) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/XerocomusBadiorufus;Boletus badiorufus;vresin goban;Bolétus badiorúfus R. Heim (1960);užitna
+https://www.gobe.si/Gobe/CortinariusVilior;Cortinarius imbutus;prežeta koprenka;Cortinárius imbútus Fr. (1838);užitnost neznana
+https://www.gobe.si/Gobe/PostiaLeucomallella;Fuscopostia leucomallella;rjavopasasta sirnica;Fuscopóstia leucomallélla (Murrill) B.K. Cui, L.L. Shen & Y.C. Dai (2019);neužitna
+https://www.gobe.si/Gobe/CortinariusInfractusFoOlivellus;Cortinarius subolivellus;stopničasta koprenka;Cortinárius subolivéllus Carteret & Reumaux (2009);strupena
+https://www.gobe.si/Gobe/ClitocybeInornata;Atractosporocybe inornata;neokrašeni lijaček;Atractosporócybe inornáta (Sowerby) P. Alvarado, G. Moreno & Vizzini (2015);užitna
+https://www.gobe.si/Gobe/PholiotaBlattaria;Pholiotina blattaria;ovenčani luskinček;Pholiotína blattária (Fr.) Fayod (1889);neužitna
+https://www.gobe.si/Gobe/CortinariusScaurusVarHerpeticus;Thaxterogaster herpeticus;marogasta trebušarka;Thaxtérogáster herpeticus (Fr.) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/OmphalinaEpichysium;Arrhenia epichysium;lesni jezičar;Arrhénia epichýsium (Pers.) Redhead, Lutzoni, Moncalvo & Vilgalys (2002);Arrhénia epichýsium (pers.) redhead, lutzoni, moncalvo & vilgalys (2002);neužitna
+https://www.gobe.si/Gobe/LepistaGilva;Paralepista gilva;lisasti kolesnik;Paralepísta gílva (Pers.) Raithelh. (1996);
+https://www.gobe.si/Gobe/CortinariusLeucophanes;Thaxterogaster leucophanes;bledična trebušarka;Thaxtérogáster leucophánes (P. Karst.) Niskanen & Liimat. (2022);užitnost neznana
+https://www.gobe.si/Gobe/CortinariusGlaucescens;Calonarius glaucescens;modrozelenkasti koprenar;Calonárius glaucéscens (Jul. Schäff.) Niskanen & Liimat. (2022);neužitna
+https://www.gobe.si/Gobe/CortinariusTraganusVarFinitimus;Cortinarius finitimus;nižinska koprenka;Cortinárius finítimus (Weinm.) P. Karst. (1879);strupena
+https://www.gobe.si/Gobe/CortinariusDecipiensVarAtrocaeruleus;Cortinarius atrocaeruleus;temnogrba koprenka;Cortinárius átrocaerúleus M.M. Moser (1967);neužitna
+https://www.gobe.si/Gobe/GymnopusFagiphilus;;;Gymnopus fagiphilus (Velen.) Antonín, Halling & Noordel. (1997);neužitna
+https://www.gobe.si/Gobe/LepistaTarda;;;Lepista tarda (Peck) Murrill (1917);neužitna
+https://www.gobe.si/Gobe/PseudospermaSororium;;;Pseudosperma sororium (Kauffman) Matheny & Esteve-Rav. (2019);neužitna
+https://www.gobe.si/Gobe/TyromycesLeucospongius;;;Tyromyces leucospongius (Cooke & Harkn.) Bondartsev & Singer (1941);neužitna
+https://www.gobe.si/Gobe/PachycudoniaMonticola;;;Pachycudonia monticola (Mains) S. Imai (1950);neužitna
+https://www.gobe.si/Gobe/PleurotusEryngiiVarNebrodensis;Pleurotus nebrodensis;gorski ostrigar;Pleurótus nebrodénsis (Inzenga) Quél. (1886);mlada užitna
+https://www.gobe.si/Gobe/HebelomaPallidum;Hebeloma malenconii;obledela medlenka;Hebelóma malencónii Bellù & Lanzoni (1988);neužitna
+https://www.gobe.si/Gobe/PsilocybeMontana;Deconica montana;gorski gologlavec;Decónica montána (Pers.) P.D. Orton (1960);strupena
+https://www.gobe.si/Gobe/AgaricusArgyraceus;Tricholoma argyraceum;srebrnkasta kolobarnica;Tricholóma argyráceum (Bull.) Gillet (1874);užitna
+https://www.gobe.si/Gobe/RussulaGriseascens;Russula hydrophila;sivkastobetna golobica;Rússula hydróphila Horniček (1958);užitna
+https://www.gobe.si/Gobe/LeucoagaricusMacrorhizus;Leucoagaricus barssii;korenčasti kukmakovec;Leucoagáricus bárssii (Zeller) Vellinga (2000);užitna

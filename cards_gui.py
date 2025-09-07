@@ -331,7 +331,12 @@ class MushroomApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Razstava gob")
-        self.root.state('zoomed')  # Maximize window on Windows
+        # Maximize window cross-platform
+        try:
+            self.root.state('zoomed')  # Windows
+        except tk.TclError:
+            # Linux/Unix - maximize using geometry
+            self.root.attributes('-zoomed', True)
         self.selected_mushrooms = []  # List of (id, name)
         self.printed_mushrooms = []  # List of (id, name, latin_name) sorted by latin name
         

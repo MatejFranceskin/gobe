@@ -129,6 +129,9 @@ def extractFromSeznamURL(url, mark):
             links = row.find_all('a')
             for link in links:
                 arr.append(link.get('href'))
+            
+            if len(arr) < 4:
+                continue
                 
             cursor.execute("SELECT id FROM vrste WHERE name = ?", (arr[0],))
             data = cursor.fetchall()
@@ -285,6 +288,8 @@ def extractUzitnostUrl(url, id, name):
                     edibility = "mlada užitna"
                 elif (edibility.startswith("mlad je užiten")):
                     edibility = "mlada užitna"
+                elif (edibility.startswith("užiten")):
+                    edibility = "užitna"
                 elif (edibility.startswith("užitna")):
                     edibility = "užitna"
                 elif (edibility.startswith("zelo dobra užitna goba")):
@@ -403,6 +408,219 @@ def extractOSGS2013():
 #        print(words[0].replace('.', '') + " # " + name + " # " + slo_name)
         imenaOSGS2013.append((unidecode(name.strip()), slo_name.strip()))
 
+def extractFromGobeVPripraviPages():
+    """
+    Read gobe_v_pripravi_pages.txt and add entries to database if latin name doesn't exist
+    File format: URL;LatinName;SlovenianName;FullName;Uzitnost
+    """
+    try:
+        with open('gobe_v_pripravi_pages.txt', 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+            
+        # Skip header line
+        for line in lines[1:]:
+            line = line.strip()
+            if not line:
+                continue
+                
+            # Split by semicolon
+            parts = line.split(';')
+            if len(parts) < 5:
+                continue
+                
+            url = parts[0].strip()
+            latin_name = parts[1].strip()
+            slovenian_name = parts[2].strip()
+            full_name = parts[3].strip()
+            uzitnost = parts[4].strip()
+            
+            # Skip if latin name is empty
+            if not latin_name:
+                continue
+                
+            # Check if this latin name already exists in database
+            cursor.execute("SELECT id FROM vrste WHERE name = ?", (latin_name,))
+            existing = cursor.fetchall()
+            
+            if len(existing) == 0:
+                # Insert new entry
+                print(f"Adding new entry: {latin_name} - {slovenian_name}")
+                cursor.execute('''INSERT INTO vrste(name, name_slo, full_name, link, edibility) 
+                                 VALUES(?, ?, ?, ?, ?)''', 
+                              (latin_name, slovenian_name, full_name, url, uzitnost))
+            else:
+                # Update existing entry with additional information
+                print(f"Updating existing entry: {latin_name}")
+                cursor.execute('''UPDATE vrste SET 
+                                 name_slo = CASE WHEN name_slo = '' THEN ? ELSE name_slo END,
+                                 full_name = CASE WHEN full_name = '' THEN ? ELSE full_name END,
+                                 link = CASE WHEN link IS NULL OR link = '' THEN ? ELSE link END,
+                                 edibility = CASE WHEN edibility = '' THEN ? ELSE edibility END
+                                 WHERE name = ?''', 
+                              (slovenian_name, full_name, url, uzitnost, latin_name))
+        
+        conn.commit()
+        print("Successfully processed gobe_v_pripravi_pages.txt")
+        
+    except FileNotFoundError:
+        print("Error: gobe_v_pripravi_pages.txt not found")
+    except Exception as e:
+        print(f"Error processing file: {e}")
+
+def extractFromImena():
+    """
+    Read imena.csv and add entries to database if latin name doesn't exist
+    CSV format: ID;Status;LatinNameWithDiacritics;Author;SlovenianName
+    We skip records where Status (field 2) is "sin"
+    """
+    try:
+        with open('imena.csv', 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+            
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+                
+            # Split by semicolon
+            parts = line.split(';')
+            if len(parts) < 5:
+                continue
+                
+            id_field = parts[0].strip()
+            status_field = parts[1].strip()
+            latin_name_with_diacritics = parts[2].strip()
+            author_field = parts[3].strip()
+            slovenian_name = parts[4].strip()
+            
+            # Skip records where status field is "sin"
+            if status_field == "sin":
+                continue
+                
+            # Skip if latin name is empty
+            if not latin_name_with_diacritics:
+                continue
+                
+            # Remove diacritical signs from latin name
+            latin_name = unidecode(latin_name_with_diacritics)
+            
+            # Compose full name from latin name with diacritics + author
+            full_name = latin_name_with_diacritics + " " + author_field
+            
+            # Check if this latin name already exists in database
+            cursor.execute("SELECT id FROM vrste WHERE name = ?", (latin_name,))
+            existing = cursor.fetchall()
+            
+            if len(existing) == 0:
+                # Insert new entry with empty URL and "užitnost neznana"
+                print(f"Adding new entry from imena.csv: {latin_name} - {slovenian_name}")
+                cursor.execute('''INSERT INTO vrste(name, name_slo, full_name, link, edibility) 
+                                 VALUES(?, ?, ?, '', 'užitnost neznana')''', 
+                              (latin_name, slovenian_name, full_name))
+            else:
+                # Entry already exists in DB, do not update
+                print(f"Entry already exists, skipping: {latin_name}")
+        
+        conn.commit()
+        print("Successfully processed imena.csv")
+        
+    except FileNotFoundError:
+        print("Error: imena.csv not found")
+    except Exception as e:
+        print(f"Error processing imena.csv: {e}")
+
+def checkURLs():
+    """
+    Check for Wikipedia pages for all entries in the database.
+    Priority: 1) Always prefer Slovenian Wikipedia if available
+             2) Use English Wikipedia if no Slovenian exists and (no current URL or current URL is broken)
+    """
+    print("Checking Wikipedia URLs for all entries...")
+    
+    try:
+        # Get all entries from the database
+        cursor.execute("SELECT id, name, name_slo, link FROM vrste")
+        records = cursor.fetchall()
+        
+        updated_count = 0
+        total_count = len(records)
+        
+        for i, (entry_id, latin_name, slovenian_name, current_url) in enumerate(records):
+            print(f"Processing {i+1}/{total_count}: {latin_name}")
+            
+            new_url = None
+            update_reason = ""
+            
+            # Always check for Slovenian Wikipedia first - it has highest priority
+            sl_wiki_url = f"https://sl.wikipedia.org/wiki/{latin_name.replace(' ', '_')}"
+            try:
+                response = url_request(sl_wiki_url)
+                if response.status_code == 200:
+                    # Check if it's not a redirect to a disambiguation or non-existent page
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    # Check if page exists (not a "page does not exist" message)
+                    if not soup.find('div', {'class': 'noarticletext'}):
+                        # Check if current URL is already this Slovenian Wikipedia page
+                        if current_url != sl_wiki_url:
+                            new_url = sl_wiki_url
+                            update_reason = "Found Slovenian Wikipedia (priority over existing URL)"
+                            print(f"  Found Slovenian Wikipedia: {sl_wiki_url}")
+                        else:
+                            print(f"  Already has Slovenian Wikipedia URL: {sl_wiki_url}")
+            except:
+                pass
+            
+            # If no Slovenian Wikipedia found, check English Wikipedia
+            # But only update if current URL is empty, broken, or doesn't exist
+            if not new_url:
+                current_url_valid = False
+                
+                # Check if current URL is valid and working
+                if current_url and current_url.strip() != "":
+                    try:
+                        response = url_request(current_url)
+                        if response.status_code == 200:
+                            current_url_valid = True
+                    except:
+                        pass
+                
+                # Only try English Wikipedia if current URL is invalid or empty
+                if not current_url_valid:
+                    en_wiki_url = f"https://en.wikipedia.org/wiki/{latin_name.replace(' ', '_')}"
+                    try:
+                        response = url_request(en_wiki_url)
+                        if response.status_code == 200:
+                            # Check if it's not a redirect to a disambiguation or non-existent page
+                            soup = BeautifulSoup(response.text, 'html.parser')
+                            # Check if page exists (not a "page does not exist" message)
+                            if not soup.find('div', {'class': 'noarticletext'}):
+                                new_url = en_wiki_url
+                                if not current_url or current_url.strip() == "":
+                                    update_reason = "Found English Wikipedia (no existing URL)"
+                                else:
+                                    update_reason = "Found English Wikipedia (replacing broken URL)"
+                                print(f"  Found English Wikipedia: {en_wiki_url}")
+                    except:
+                        pass
+                else:
+                    print(f"  Current URL is valid, keeping: {current_url}")
+            
+            # Update database if we found a better Wikipedia page
+            if new_url:
+                cursor.execute("UPDATE vrste SET link = ? WHERE id = ?", (new_url, entry_id))
+                updated_count += 1
+                print(f"  Updated URL for {latin_name} - {update_reason}")
+            elif not current_url or current_url.strip() == "":
+                print(f"  No Wikipedia page found for {latin_name}")
+            else:
+                print(f"  Keeping existing URL for {latin_name}")
+        
+        conn.commit()
+        print(f"Successfully processed {total_count} entries, updated {updated_count} URLs")
+        
+    except Exception as e:
+        print(f"Error in checkURLs: {e}")
+
 conn = sqlite3.connect('gobe.db')
 
 conn.execute('''CREATE TABLE IF NOT EXISTS vrste(
@@ -436,15 +654,19 @@ cursor = conn.cursor()
 take_only_first_image = True
 imenaOSGS2013 = []
 
-#extractOSGS2013()
-#extractFromCelotniSeznamURL("https://www.gobe.si/Gobe/Gobe")
-#extractFromCelotniSeznamURL("https://www.gobe.si/Protozoa")
-#checkUzitnost()
-#extractFromRdeciSeznamURL("https://www.gobe.si/Gobe/RdeciSeznam")
-#extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamZacetni", "list80")
-#extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamNadaljevalni", "list240")
-#extractFromZasciteniSeznamURL("https://www.gobe.si/Gobe/ZasciteneGobe")
-checkSlike()
+extractOSGS2013()
+extractFromCelotniSeznamURL("https://www.gobe.si/Gobe/Gobe")
+extractFromCelotniSeznamURL("https://www.gobe.si/Protozoa")
+extractFromCelotniSeznamURL("https://www.gobe.si/Lisaji/Lisaji")
+checkUzitnost()
+extractFromRdeciSeznamURL("https://www.gobe.si/Gobe/RdeciSeznam")
+extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamZacetni", "list80")
+extractFromSeznamURL("https://www.gobe.si/Izobrazevanje/SeznamNadaljevalni", "list240")
+extractFromZasciteniSeznamURL("https://www.gobe.si/Gobe/ZasciteneGobe")
+extractFromGobeVPripraviPages()
+extractFromImena()
+checkURLs()
+#checkSlike()
 
 #sqlite_select_query = '''SELECT * FROM vrste WHERE status != "" ORDER BY name ASC'''
 #sqlite_select_query = '''SELECT name, name_slo, link FROM vrste ORDER BY name ASC'''
