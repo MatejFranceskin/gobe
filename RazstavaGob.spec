@@ -5,7 +5,7 @@ a = Analysis(
     ['cards_gui.py'],
     pathex=[],
     binaries=[],
-    datas=[('gobe.db', '.'), ('arialuni.ttf', '.')],
+    datas=[('gobe.db', '.'), ('arialuni.ttf', '.'), ('icon.png', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -35,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='icon.png',
 )

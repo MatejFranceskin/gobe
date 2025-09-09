@@ -331,6 +331,14 @@ class MushroomApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Razstava gob")
+        
+        # Set window icon
+        try:
+            icon_path = get_resource_path('icon.png')
+            self.root.iconphoto(False, tk.PhotoImage(file=icon_path))
+        except Exception as e:
+            print(f"Could not load icon: {e}")
+            
         # Maximize window cross-platform
         try:
             self.root.state('zoomed')  # Windows

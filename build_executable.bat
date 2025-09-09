@@ -12,7 +12,7 @@ if exist "RazstavaGob.spec" (
     python -m PyInstaller RazstavaGob.spec
 ) else (
     echo Creating new .spec file and building...
-    python -m PyInstaller --onefile --windowed --name "RazstavaGob" --add-data "gobe.db;." --add-data "arialuni.ttf;." cards_gui.py
+    python -m PyInstaller --onefile --windowed --icon=icon.png --name "RazstavaGob" --add-data "gobe.db;." --add-data "arialuni.ttf;." --add-data "icon.png;." cards_gui.py
 )
 
 REM Check if build was successful
