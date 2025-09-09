@@ -15,7 +15,7 @@ import platform
 import sys
 
 DB_PATH = 'gobe.db'
-PDF_PATH = 'selected_mushrooms.pdf'
+PDF_PATH = 'izbrane_gobe.pdf'
 
 def get_resource_path(relative_path):
     """Get absolute path to resource, works for dev and for PyInstaller"""
