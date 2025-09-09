@@ -3,6 +3,7 @@ import sys
 import sqlite3
 import requests
 from unidecode import unidecode
+from datetime import datetime
 
 def url_request(url):
     while True:
@@ -69,6 +70,7 @@ def extractImena():
         imena.append((unidecode(name), slo_name))
 
 rod = sys.argv[1]
+rod_slo = sys.argv[2]
 imena = []
 extractImena()
 
@@ -80,21 +82,34 @@ for row in records:
    if (not row in imena):
         imena.append((row[0], row[1]))
 
-first = True
+print('{{Short description|rod gliv}}')
+print('{{Automatic taxobox')
+print('| taxon = ' + rod)
+print('| diversity = vrst')
+print('| diversity_ref = <ref>{{{{Navedi splet|title={} {{{{!}}}} COL|url=https://www.catalogueoflife.org/data/taxon/54HL|website=www.catalogueoflife.org|accessdate={}}}}}</ref>'.format(rod, datetime.today().strftime('%Y-%m-%d')))
+print('}}')
+print('')
+print("'''{}''' ([[Znanstvena klasifikacija živih bitij|znanstveno ime]] '''''{}''''') so [[rod (biologija)|rod]] [[glive|gliv]] iz [[družina (biologija)|družine]] [[cevarke|cevark]] (''Boletaceae'').".format(rod_slo, rod))
+print('')
+print('== Seznam {} Slovenije<ref>{{{{Navedi knjigo|title=Seznam gliv Slovenije|publisher=Mikološka zveza Slovenije|year=2022|isbn=978-961-90647-2-6|cobiss=130237443}}}}</ref> =='.format(rod_slo))
+
 for row in imena:
     if not row[0].startswith(rod + " "):
         continue
-    if first:
-        first = False
-        rod_slo = row[1].split(" ")[1]
-        print('== Seznam {} Slovenije<ref>{{{{Navedi knjigo|title=Seznam gliv Slovenije|publisher=Mikološka zveza Slovenije|year=2022|isbn=978-961-90647-2-6|cobiss=130237443}}}}</ref> =='.format(rod_slo))
-        print('{| class="wikitable sortable"')
-        print('! znanstveno ime')
-        print('! slovensko ime')
-	        print('! class="unsortable" | slika')
-    print('|-')
-    print("|''{}''".format(row[0]))
-    print("|[[{}]]".format(row[1]))
-    print("|[[Slika:{}|brezokvirja]]".format(extractImageFromWikidata(row[0])))
-    
-print('|}')
+    print("*[[{}]] (''{}'')".format(row[1], row[0]))
+print('')
+   
+print('== Sklici ==')
+print('{{sklici}}')
+print('')
+print('== Zunanje povezave ==')
+print('{{{{Commons|category:{}}}}}'.format(rod))
+print('* [http://www.gobe.si/Mikologija/{} {} na www.gobe.si]'.format(rod, rod_slo))
+print('')
+print('{{Taxonbar}}')
+print('{{normativna kontrola}}')
+print('')
+print('[[Kategorija:rodovi gliv]]')
+print('[[Kategorija:cevarke]]')
+print('[[Kategorija:Taksoni, opisani leta 1822]]')
+
